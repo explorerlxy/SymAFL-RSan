@@ -118,34 +118,6 @@ using namespace llvm::safestack;
 // AArch64 relevant only
 #define ALLOCA_TAGGING
 
-const DenseSet<StringRef> interceptors = {
-  "memcpy",
-  "memset",
-  "memmove",
-  "strcmp",
-  "strncmp",
-  "memcmp",
-  "strlen",
-  "strnlen",
-  "strcat",
-  "strncat",
-  "strcpy",
-  "strncpy",
-  "wcscpy",
-  "printf",
-  "snprintf",
-  "puts",
-  "strdup",
-  "atoi",
-  "atol",
-  "strtol",
-  "atoll",
-  "strtoll",
-  "mmap",
-  "munmap"
-};
-const std::string interceptPrefix = "swiftsan_";
-
 // if true: implicit tagging, else: AArch64 TBI / x86_64 LAM
 bool isImplicitTagging; 
 // if false: assume AArch64
@@ -1000,13 +972,7 @@ class SafeStack {
   SmallVector<Instruction*, 16> SafeMemOps;
   FunctionCallee swiftsan_report_fn = nullptr;
   FunctionCallee swiftsan_argv_fn = nullptr;
-
-  // Mem family functions (to avoid calling LLVM intrinsics)
-  FunctionCallee SwiftsanMemmove, SwiftsanMemcpy, SwiftsanMemset;
-  // Mem Transfers (check source only) -- for safe allocas
-  FunctionCallee SwiftsanMemmoveSrc, SwiftsanMemcpySrc;
-  // Mem Transfers (check dest only) -- for safe allocas
-  FunctionCallee SwiftsanMemmoveDst, SwiftsanMemcpyDst;
+  FunctionCallee SwiftsanPrintf = nullptr;
 
   /// Unsafe stack alignment. Each stack frame must ensure that the stack is
   /// aligned to this value. We need to re-align the unsafe stack if the
@@ -1074,6 +1040,8 @@ class SafeStack {
   std::tuple<Value *, Value *> InsertCheck(Instruction &I, Value &addr, bool write, Type* ptrType);
   std::tuple<Value *, Value *> InsertCheckMeta(Instruction &I, Value &addr, bool write, Type* ptrType, Value *EndOfObj, Value *Tag, bool slowZero);
   void InsertCheckRange(Instruction &I, Value *start, Value *end, Type* ptrType);
+  void InsertCheckBeforeCall(Instruction &I, Value *ptr, Value *size);
+  void InsertCheckAfterCall(CallInst &CI, Value *ptr);
   void AccumulateToUnsafeStackAlloca(Value *V, SmallPtrSetImpl<Value*> &Visited, Value **found, Constant **og_size);
   Constant* getUnsafeStackObjOgSize(Value *V);
 
@@ -1147,32 +1115,9 @@ public:
           FunctionType *swiftsan_argv_ty = FunctionType::get(Type::getInt8PtrTy(F.getContext()), {Type::getInt32Ty(F.getContext()), Type::getInt8PtrTy(F.getContext())}, false);
           swiftsan_argv_fn = F.getParent()->getOrInsertFunction("swiftsan_move_argv_to_heap", swiftsan_argv_ty);
 
-          // mem
-          LLVMContext &C = F.getParent()->getContext();
-          IRBuilder<> builder(C);
-          SwiftsanMemmove = F.getParent()->getOrInsertFunction(
-              interceptPrefix + "memmove", builder.getInt8PtrTy(),
-              builder.getInt8PtrTy(), builder.getInt8PtrTy(), IntPtrTy);
-          SwiftsanMemcpy = F.getParent()->getOrInsertFunction(
-              interceptPrefix + "memcpy", builder.getInt8PtrTy(),
-              builder.getInt8PtrTy(), builder.getInt8PtrTy(), IntPtrTy);
-          SwiftsanMemset = F.getParent()->getOrInsertFunction(
-              interceptPrefix + "memset", builder.getInt8PtrTy(),
-              builder.getInt8PtrTy(), builder.getInt32Ty(), IntPtrTy);
-
-          SwiftsanMemmoveSrc = F.getParent()->getOrInsertFunction(
-              interceptPrefix + "memmove_src_only", builder.getInt8PtrTy(),
-              builder.getInt8PtrTy(), builder.getInt8PtrTy(), IntPtrTy);
-          SwiftsanMemcpySrc = F.getParent()->getOrInsertFunction(
-              interceptPrefix + "memcpy_src_only", builder.getInt8PtrTy(),
-              builder.getInt8PtrTy(), builder.getInt8PtrTy(), IntPtrTy);
-
-          SwiftsanMemmoveDst = F.getParent()->getOrInsertFunction(
-              interceptPrefix + "memmove_dst_only", builder.getInt8PtrTy(),
-              builder.getInt8PtrTy(), builder.getInt8PtrTy(), IntPtrTy);
-          SwiftsanMemcpyDst = F.getParent()->getOrInsertFunction(
-              interceptPrefix + "memcpy_dst_only", builder.getInt8PtrTy(),
-              builder.getInt8PtrTy(), builder.getInt8PtrTy(), IntPtrTy);
+          // printf needs a runtime wrapper to check %s format string arguments
+          SwiftsanPrintf = F.getParent()->getOrInsertFunction("swiftsan_printf",
+              FunctionType::get(Type::getInt32Ty(F.getContext()), {Type::getInt8PtrTy(F.getContext())}, /*isVarArg*/true));
 
   }
 
@@ -2017,13 +1962,13 @@ void SafeStack::InsertCheckRange(Instruction &I, Value *start, Value *end, Type*
   Tag = builder.CreateLShr(PtrAsInt, ConstantInt::get(Int64Ty, tag_shift)); 
 
   Value *MetadataOffset;
-  if(isX86){ // BZHI
-    // mask = BZHI(ptr, tag)
-    Value *BZHImask = builder.CreateIntrinsic(Int64Ty, Intrinsic::x86_bmi_bzhi_64, {PtrAsInt, Tag});
-    // base = ptr XOR mask
-    Value *BZHIbase = builder.CreateXor(BZHImask, PtrAsInt);
+  if(isX86){ // SHL+SHR
+    // base = (ptr >> tag) << tag (zeros lower tag bits)
+    Value *ShiftedRight = builder.CreateLShr(PtrAsInt, Tag);
+    // shifted left back
+    Value *Base = builder.CreateShl(ShiftedRight, Tag);
     // meta = base - 8
-    MetadataOffset = builder.CreateSub(BZHIbase, ConstantInt::get(Int64Ty, 8));
+    MetadataOffset = builder.CreateSub(Base, ConstantInt::get(Int64Ty, 8));
 
   }
   else{ // ptr & (-1 << tag) (or: (ptr >> tag) << tag)
@@ -2096,6 +2041,301 @@ void SafeStack::InsertCheckRange(Instruction &I, Value *start, Value *end, Type*
   // this call is optional if more informative error reports are desired
   builder.CreateCall(swiftsan_report_fn, {Target, TargetFull, EndOfObj}, "swiftsan_report");
 #endif
+
+  if(isX86) {
+    // x86 software interrupt
+    InlineAsm *IA = InlineAsm::get(
+                    FunctionType::get(llvm::Type::getVoidTy(C), {}, false),
+                    StringRef("int3"),
+                    StringRef(""),
+                    /*hasSideEffects=*/ true,
+                    /*isAlignStack*/ false,
+                    InlineAsm::AD_ATT,
+                    /*canThrow*/ false);
+    builder.CreateCall(IA, {});
+  }
+  else {
+    // arm software breakpoint
+    InlineAsm *IA = InlineAsm::get(
+                    FunctionType::get(llvm::Type::getVoidTy(C), {}, false),
+                    StringRef("brk #0x0"),
+                    StringRef(""),
+                    /*hasSideEffects=*/ true,
+                    /*isAlignStack*/ false,
+                    InlineAsm::AD_ATT,
+                    /*canThrow*/ false);
+    builder.CreateCall(IA, {});
+  }
+}
+
+void SafeStack::InsertCheckBeforeCall(Instruction &I, Value *ptr, Value *size) {
+
+  Function *F = I.getParent()->getParent();
+  Module *M = F->getParent();
+  LLVMContext &C = F->getContext();
+  IRBuilder<> builder(C);
+
+  IntegerType *IntPtrTy = DL.getIntPtrType(M->getContext());
+  IntegerType *Int64Ty = Type::getInt64Ty(M->getContext());
+  Type *Int64PtrTy = PointerType::get(Int64Ty, 0);
+
+  // insert check before the instruction
+  builder.SetInsertPoint(&I);
+
+  // Guard: if size == 0, skip the metadata lookup entirely
+  // (avoids base-8 load on potentially NULL or untagged pointers)
+  // This must come BEFORE the metadata lookup to avoid emitting a load that
+  // would crash at runtime on size==0 paths.
+  if (ConstantInt *ConstSize = dyn_cast<ConstantInt>(size)) {
+    if (ConstSize->isZero()) {
+      return; // size is constant zero, no check needed
+    }
+    // size is a non-zero constant, proceed directly without guard
+  } else {
+    // Runtime size - emit a conditional guard
+    Value *SizeNonZero = builder.CreateICmp(CmpInst::Predicate::ICMP_NE, size, ConstantInt::get(size->getType(), 0));
+    // Handle possible constant folding of the comparison
+    if (ConstantInt *ConstCmp = dyn_cast<ConstantInt>(SizeNonZero)) {
+      if (ConstCmp->isZero()) {
+        return; // constant-folded to false: size == 0, skip entirely
+      }
+      // constant-folded to true: size != 0, proceed without guard
+    } else {
+      Instruction *splitAfterSizeCheck = &*std::next(cast<Instruction>(SizeNonZero)->getIterator());
+      // Split: if size != 0, go to metadata+check block; if size == 0, skip
+      Instruction *endOfSizeCheck = SplitBlockAndInsertIfThen(SizeNonZero, splitAfterSizeCheck, /*unreachable*/false, MDBuilder(C).createBranchWeights(1, 10000000), &DT, &LI, nullptr);
+      // Now inside the "size != 0" block — do metadata lookup and check here
+      builder.SetInsertPoint(endOfSizeCheck);
+    }
+  }
+
+  Value *Target = ptr; // lookup metadata on the pointer
+
+  // the end address we compare against for validity
+  Value *EndOfObj;
+  Value *Tag = nullptr;
+  uint64_t tag_shift = 0;
+  if(isImplicitTagging)
+    tag_shift = 41;
+  else
+    tag_shift = 56; // TBI
+
+  // this sets up a load at the base-8
+  Value *PtrAsInt = builder.CreatePtrToInt(Target, IntPtrTy);
+  // tag = ptr >> 56
+  Tag = builder.CreateLShr(PtrAsInt, ConstantInt::get(Int64Ty, tag_shift));
+
+  Value *MetadataOffset;
+  if(isX86){ // SHL+SHR
+    // base = (ptr >> tag) << tag (zeros lower tag bits)
+    Value *ShiftedRight = builder.CreateLShr(PtrAsInt, Tag);
+    // shifted left back
+    Value *Base = builder.CreateShl(ShiftedRight, Tag);
+    // meta = base - 8
+    MetadataOffset = builder.CreateSub(Base, ConstantInt::get(Int64Ty, 8));
+
+  }
+  else{ // ptr & (-1 << tag) (or: (ptr >> tag) << tag)
+    Value *TagMask = builder.CreateShl(ConstantInt::get(Int64Ty, -1), Tag);
+    PtrAsInt = builder.CreateAnd(PtrAsInt, TagMask);
+    MetadataOffset = builder.CreateSub(PtrAsInt, ConstantInt::get(Int64Ty, 8)); // meta = base-8
+  }
+
+  // meta*
+  Value *MetadataPtr = builder.CreateIntToPtr(MetadataOffset, Int64PtrTy);
+  // end_of_obj = *meta;
+  EndOfObj = builder.CreateLoad(Int64PtrTy, MetadataPtr);
+
+  // note that we did the metadata lookup on the original pointer (for underflows)
+  // and now we compute the end address as ptr + size (exclusive end)
+  Value *PtrInt = builder.CreatePtrToInt(Target, Int64Ty);
+  // Zero-extend or truncate size to Int64Ty for the add
+  Value *Size64 = builder.CreateZExtOrTrunc(size, Int64Ty);
+  // end_addr = ptr + size (exclusive)
+  Value *EndAddr = builder.CreateAdd(PtrInt, Size64);
+
+  // compare end_addr > end_of_obj (unsigned greater than, exclusive end)
+  Value *cmp = builder.CreateICmp(CmpInst::Predicate::ICMP_UGT, EndAddr, EndOfObj);
+
+  if(Instruction *RangeChkCmp = dyn_cast<Instruction>(cmp)){
+    RangeChkCmp->setMetadata(F->getParent()->getMDKindID("scev_range_chk"), llvm::MDNode::get(F->getContext(), std::nullopt));
+  }
+
+  // Handle constant-folded comparison
+  if (ConstantInt *ConstCmp = dyn_cast<ConstantInt>(cmp)) {
+    if (ConstCmp->isZero()) {
+      return; // constant-folded to false: in bounds, skip error path
+    }
+    // cmp is constant true: out of bounds, proceed to error
+    // (this is unreachable in practice for valid tagged pointers)
+  }
+
+  // control flow split location (before the target instruction)
+  Instruction *split = &*std::next(cast<Instruction>(cmp)->getIterator());
+
+  LLVMContext* CC = &(F->getContext());
+
+  // if-then branch goes to error handling
+  Instruction *endOfThen = SplitBlockAndInsertIfThen(cmp, split, /*unreachable*/false, MDBuilder(*CC).createBranchWeights(1, 10000000), &DT, &LI, nullptr);
+  builder.SetInsertPoint(endOfThen);
+
+  // Slow check if tag is zero, then we must be dealing with uninstrumented pointers, ignore
+  Value *SlowCheckNonZeroTag = builder.CreateICmp(CmpInst::Predicate::ICMP_EQ, Tag, ConstantInt::get(Int64Ty, 0));
+
+  BasicBlock *Head = endOfThen->getParent(); // splitbefore BB
+  BasicBlock *Tail = BasicBlock::Create(*CC, "", F, Head->getNextNode());
+  new UnreachableInst(*CC, Tail);
+
+  // FIXME: update DTU for this block?
+  if (Loop *L = LI.getLoopFor(Head)) {
+    L->addBasicBlockToLoop(Tail, LI);
+  }
+
+  Instruction *HeadOldTerm = Head->getTerminator();
+  BranchInst *HeadNewTerm = BranchInst::Create(/*ifTrue*/ I.getParent(), /*ifFalse*/ Tail, SlowCheckNonZeroTag);
+  HeadNewTerm->setMetadata(LLVMContext::MD_prof, MDBuilder(*CC).createBranchWeights(1, 10000000));
+  ReplaceInstWithInst(HeadOldTerm, HeadNewTerm);
+
+  // on Tail: Insert error
+  Instruction *NewFailureBlock = Tail->getTerminator();
+  builder.SetInsertPoint(NewFailureBlock);
+
+  if(isX86) {
+    // x86 software interrupt
+    InlineAsm *IA = InlineAsm::get(
+                    FunctionType::get(llvm::Type::getVoidTy(C), {}, false),
+                    StringRef("int3"),
+                    StringRef(""),
+                    /*hasSideEffects=*/ true,
+                    /*isAlignStack*/ false,
+                    InlineAsm::AD_ATT,
+                    /*canThrow*/ false);
+    builder.CreateCall(IA, {});
+  }
+  else {
+    // arm software breakpoint
+    InlineAsm *IA = InlineAsm::get(
+                    FunctionType::get(llvm::Type::getVoidTy(C), {}, false),
+                    StringRef("brk #0x0"),
+                    StringRef(""),
+                    /*hasSideEffects=*/ true,
+                    /*isAlignStack*/ false,
+                    InlineAsm::AD_ATT,
+                    /*canThrow*/ false);
+    builder.CreateCall(IA, {});
+  }
+}
+
+void SafeStack::InsertCheckAfterCall(CallInst &CI, Value *ptr) {
+
+  Function *F = CI.getParent()->getParent();
+  Module *M = F->getParent();
+  LLVMContext &C = F->getContext();
+  IRBuilder<> builder(C);
+
+  IntegerType *IntPtrTy = DL.getIntPtrType(M->getContext());
+  IntegerType *Int64Ty = Type::getInt64Ty(M->getContext());
+  Type *Int64PtrTy = PointerType::get(Int64Ty, 0);
+
+  // insert check after the call
+  Instruction *insertPt = CI.getNextNode();
+  builder.SetInsertPoint(insertPt);
+
+  // Compute the check size: return value + 1 (for the null terminator)
+  // This is placed immediately after the call, before any check IR,
+  // so it dominates all subsequent uses in both branches of the split.
+  Value *sizeVal = builder.CreateAdd(&CI, ConstantInt::get(IntPtrTy, 1));
+
+  Value *Target = ptr; // lookup metadata on the pointer
+
+  // the end address we compare against for validity
+  Value *EndOfObj;
+  Value *Tag = nullptr;
+  uint64_t tag_shift = 0;
+  if(isImplicitTagging)
+    tag_shift = 41;
+  else
+    tag_shift = 56; // TBI
+
+  // this sets up a load at the base-8
+  Value *PtrAsInt = builder.CreatePtrToInt(Target, IntPtrTy);
+  // tag = ptr >> 56
+  Tag = builder.CreateLShr(PtrAsInt, ConstantInt::get(Int64Ty, tag_shift));
+
+  Value *MetadataOffset;
+  if(isX86){ // SHL+SHR
+    // base = (ptr >> tag) << tag (zeros lower tag bits)
+    Value *ShiftedRight = builder.CreateLShr(PtrAsInt, Tag);
+    // shifted left back
+    Value *Base = builder.CreateShl(ShiftedRight, Tag);
+    // meta = base - 8
+    MetadataOffset = builder.CreateSub(Base, ConstantInt::get(Int64Ty, 8));
+
+  }
+  else{ // ptr & (-1 << tag) (or: (ptr >> tag) << tag)
+    Value *TagMask = builder.CreateShl(ConstantInt::get(Int64Ty, -1), Tag);
+    PtrAsInt = builder.CreateAnd(PtrAsInt, TagMask);
+    MetadataOffset = builder.CreateSub(PtrAsInt, ConstantInt::get(Int64Ty, 8)); // meta = base-8
+  }
+
+  // meta*
+  Value *MetadataPtr = builder.CreateIntToPtr(MetadataOffset, Int64PtrTy);
+  // end_of_obj = *meta;
+  EndOfObj = builder.CreateLoad(Int64PtrTy, MetadataPtr);
+
+  // Guard: if sizeVal == 0, skip the check entirely
+  Value *SizeNonZero = builder.CreateICmp(CmpInst::Predicate::ICMP_NE, sizeVal, ConstantInt::get(sizeVal->getType(), 0));
+  Instruction *splitAfterSizeCheck = &*std::next(cast<Instruction>(SizeNonZero)->getIterator());
+  // Split: if sizeVal != 0, go to check block; if sizeVal == 0, skip
+  Instruction *endOfSizeCheck = SplitBlockAndInsertIfThen(SizeNonZero, splitAfterSizeCheck, /*unreachable*/false, MDBuilder(C).createBranchWeights(1, 10000000), &DT, &LI, nullptr);
+  // Now inside the "sizeVal != 0" block (the Then block)
+  builder.SetInsertPoint(endOfSizeCheck);
+
+  // note that we did the metadata lookup on the original pointer (for underflows)
+  // and now we compute the end address as ptr + sizeVal (exclusive end)
+  Value *PtrInt = builder.CreatePtrToInt(Target, Int64Ty);
+  // Zero-extend or truncate sizeVal to Int64Ty for the add
+  Value *Size64 = builder.CreateZExtOrTrunc(sizeVal, Int64Ty);
+  // end_addr = ptr + sizeVal (exclusive)
+  Value *EndAddr = builder.CreateAdd(PtrInt, Size64);
+
+  // compare end_addr > end_of_obj (unsigned greater than, exclusive end)
+  Value *cmp = builder.CreateICmp(CmpInst::Predicate::ICMP_UGT, EndAddr, EndOfObj);
+
+  if(Instruction *RangeChkCmp = dyn_cast<Instruction>(cmp)){
+    RangeChkCmp->setMetadata(F->getParent()->getMDKindID("scev_range_chk"), llvm::MDNode::get(F->getContext(), std::nullopt));
+  }
+
+  // control flow split location (after the call)
+  Instruction *split = &*std::next(cast<Instruction>(cmp)->getIterator());
+
+  LLVMContext* CC = &(F->getContext());
+
+  // if-then branch goes to error handling
+  Instruction *endOfThen = SplitBlockAndInsertIfThen(cmp, split, /*unreachable*/false, MDBuilder(*CC).createBranchWeights(1, 10000000), &DT, &LI, nullptr);
+  builder.SetInsertPoint(endOfThen);
+
+  // Slow check if tag is zero, then we must be dealing with uninstrumented pointers, ignore
+  Value *SlowCheckNonZeroTag = builder.CreateICmp(CmpInst::Predicate::ICMP_EQ, Tag, ConstantInt::get(Int64Ty, 0));
+
+  BasicBlock *Head = endOfThen->getParent(); // splitbefore BB
+  BasicBlock *Tail = BasicBlock::Create(*CC, "", F, Head->getNextNode());
+  new UnreachableInst(*CC, Tail);
+
+  // FIXME: update DTU for this block?
+  if (Loop *L = LI.getLoopFor(Head)) {
+    L->addBasicBlockToLoop(Tail, LI);
+  }
+
+  Instruction *HeadOldTerm = Head->getTerminator();
+  // The "ifTrue" goes back to the block containing instructions after CI
+  BranchInst *HeadNewTerm = BranchInst::Create(/*ifTrue*/ insertPt->getParent(), /*ifFalse*/ Tail, SlowCheckNonZeroTag);
+  HeadNewTerm->setMetadata(LLVMContext::MD_prof, MDBuilder(*CC).createBranchWeights(1, 10000000));
+  ReplaceInstWithInst(HeadOldTerm, HeadNewTerm);
+
+  // on Tail: Insert error
+  Instruction *NewFailureBlock = Tail->getTerminator();
+  builder.SetInsertPoint(NewFailureBlock);
 
   if(isX86) {
     // x86 software interrupt
@@ -2305,13 +2545,13 @@ std::tuple<Value *, Value *> SafeStack::InsertCheck(Instruction &I, Value &addr,
     Tag = builder.CreateLShr(PtrAsInt, ConstantInt::get(Int64Ty, tag_shift)); 
 
     Value *MetadataOffset;
-    if(isX86){ // BZHI
-      // mask = BZHI(ptr, tag)
-      Value *BZHImask = builder.CreateIntrinsic(Int64Ty, Intrinsic::x86_bmi_bzhi_64, {PtrAsInt, Tag});
-      // base = ptr XOR mask
-      Value *BZHIbase = builder.CreateXor(BZHImask, PtrAsInt);
+    if(isX86){ // SHL+SHR
+      // base = (ptr >> tag) << tag (zeros lower tag bits)
+      Value *ShiftedRight = builder.CreateLShr(PtrAsInt, Tag);
+      // shifted left back
+      Value *Base = builder.CreateShl(ShiftedRight, Tag);
       // meta = base - 8
-      MetadataOffset = builder.CreateSub(BZHIbase, ConstantInt::get(Int64Ty, 8));
+      MetadataOffset = builder.CreateSub(Base, ConstantInt::get(Int64Ty, 8));
 
     }
     else{ // ptr & (-1 << tag) (or: (ptr >> tag) << tag)
@@ -4566,6 +4806,8 @@ bool SafeStack::ChecksOnFunc(Function &F, ObjectSizeOffsetVisitor &ObjSizeVis) {
 
 void SafeStack::InstrumentCalls(Function &F) {
   Module *M = F.getParent();
+  LLVMContext &C = F.getContext();
+  IntegerType *IntPtrTy = DL.getIntPtrType(M->getContext());
   std::vector<CallInst *> calls;
   SmallVector<MemIntrinsic *, 16> intrins;
   for (BasicBlock &BB : F) {
@@ -4580,46 +4822,186 @@ void SafeStack::InstrumentCalls(Function &F) {
     }
   }
   
-  // libc memory operations
+  // libc memory operations — inject inline bounds checks instead of replacing calls
   for (CallInst *CI : calls) {
     Function *callTarget = CI->getCalledFunction();
     // Indirect call.
     if (!callTarget)
       continue;
 
-    // Filter out functions not intended to be intercepted.
     std::string name = callTarget->getName().str();
-    if (!interceptors.contains(name))
-      continue;
 
-    std::string replName = interceptPrefix + name;
-    FunctionCallee replacement = M->getOrInsertFunction(replName, callTarget->getFunctionType());
-    {
+    // memcpy(dst, src, n) — check both src and dst
+    if (name == "memcpy" || name == "memmove") {
+      InsertCheckBeforeCall(*CI, CI->getArgOperand(1), CI->getArgOperand(2)); // src
+      InsertCheckBeforeCall(*CI, CI->getArgOperand(0), CI->getArgOperand(2)); // dst
+      continue;
+    }
+
+    // memset(s, c, n) — check dst
+    if (name == "memset") {
+      InsertCheckBeforeCall(*CI, CI->getArgOperand(0), CI->getArgOperand(2));
+      continue;
+    }
+
+    // memcmp(s1, s2, n) — check both
+    if (name == "memcmp") {
+      InsertCheckBeforeCall(*CI, CI->getArgOperand(0), CI->getArgOperand(2));
+      InsertCheckBeforeCall(*CI, CI->getArgOperand(1), CI->getArgOperand(2));
+      continue;
+    }
+
+    // strncmp(s1, s2, n) — check both for n bytes
+    if (name == "strncmp") {
+      InsertCheckBeforeCall(*CI, CI->getArgOperand(0), CI->getArgOperand(2));
+      InsertCheckBeforeCall(*CI, CI->getArgOperand(1), CI->getArgOperand(2));
+      continue;
+    }
+
+    // strnlen(s, n) — check s for n bytes
+    if (name == "strnlen") {
+      InsertCheckBeforeCall(*CI, CI->getArgOperand(0), CI->getArgOperand(1));
+      continue;
+    }
+
+    // strlen(s) — call strlen first, then check s for result+1 bytes
+    if (name == "strlen") {
+      // Post-check: InsertCheckAfterCall computes size = result + 1 internally
+      InsertCheckAfterCall(*CI, CI->getArgOperand(0));
+      continue;
+    }
+
+    // strcpy(dst, src) — call strlen(src), check both for src_len+1
+    if (name == "strcpy") {
       IRBuilder<> builder(CI);
+      Value *src = CI->getArgOperand(1);
+      Value *dst = CI->getArgOperand(0);
+      FunctionCallee strlenFn = M->getOrInsertFunction("strlen", FunctionType::get(IntPtrTy, {builder.getInt8PtrTy()}, false));
+      CallInst *strlenCall = builder.CreateCall(strlenFn, {src});
+      Value *lenPlusOne = builder.CreateAdd(strlenCall, ConstantInt::get(IntPtrTy, 1));
+      InsertCheckBeforeCall(*CI, src, lenPlusOne);
+      InsertCheckBeforeCall(*CI, dst, lenPlusOne);
+      continue;
+    }
+
+    // strcat(dst, src) — strlen(src) + strlen(dst), check both
+    if (name == "strcat") {
+      IRBuilder<> builder(CI);
+      Value *src = CI->getArgOperand(1);
+      Value *dst = CI->getArgOperand(0);
+      FunctionCallee strlenFn = M->getOrInsertFunction("strlen", FunctionType::get(IntPtrTy, {builder.getInt8PtrTy()}, false));
+      CallInst *srcLenCall = builder.CreateCall(strlenFn, {src});
+      CallInst *dstLenCall = builder.CreateCall(strlenFn, {dst});
+      Value *srcCheck = builder.CreateAdd(srcLenCall, ConstantInt::get(IntPtrTy, 1));
+      Value *dstCheck = builder.CreateAdd(builder.CreateAdd(dstLenCall, srcLenCall), ConstantInt::get(IntPtrTy, 1));
+      InsertCheckBeforeCall(*CI, src, srcCheck);
+      InsertCheckBeforeCall(*CI, dst, dstCheck);
+      continue;
+    }
+
+    // strncat(dst, src, n) — strnlen(src,n) + strlen(dst), check both
+    if (name == "strncat") {
+      IRBuilder<> builder(CI);
+      Value *src = CI->getArgOperand(1);
+      Value *dst = CI->getArgOperand(0);
+      Value *n = CI->getArgOperand(2);
+      FunctionCallee strnlenFn = M->getOrInsertFunction("strnlen", FunctionType::get(IntPtrTy, {builder.getInt8PtrTy(), IntPtrTy}, false));
+      FunctionCallee strlenFn = M->getOrInsertFunction("strlen", FunctionType::get(IntPtrTy, {builder.getInt8PtrTy()}, false));
+      CallInst *srcLenCall = builder.CreateCall(strnlenFn, {src, n});
+      CallInst *dstLenCall = builder.CreateCall(strlenFn, {dst});
+      Value *srcCheck = builder.CreateAdd(srcLenCall, ConstantInt::get(IntPtrTy, 1));
+      Value *dstCheck = builder.CreateAdd(builder.CreateAdd(dstLenCall, srcLenCall), ConstantInt::get(IntPtrTy, 1));
+      InsertCheckBeforeCall(*CI, src, srcCheck);
+      InsertCheckBeforeCall(*CI, dst, dstCheck);
+      continue;
+    }
+
+    // strncpy(dst, src, n) — strnlen(src,n), check src for min(len+1,n), dst for n
+    if (name == "strncpy") {
+      IRBuilder<> builder(CI);
+      Value *src = CI->getArgOperand(1);
+      Value *dst = CI->getArgOperand(0);
+      Value *n = CI->getArgOperand(2);
+      FunctionCallee strnlenFn = M->getOrInsertFunction("strnlen", FunctionType::get(IntPtrTy, {builder.getInt8PtrTy(), IntPtrTy}, false));
+      CallInst *srcLenCall = builder.CreateCall(strnlenFn, {src, n});
+      Value *srcLenPlusOne = builder.CreateAdd(srcLenCall, ConstantInt::get(IntPtrTy, 1));
+      // min(src_len+1, n) via select
+      Value *cmpIsSmaller = builder.CreateICmpULT(srcLenPlusOne, n);
+      Value *srcCheckSize = builder.CreateSelect(cmpIsSmaller, srcLenPlusOne, n);
+      InsertCheckBeforeCall(*CI, src, srcCheckSize);
+      InsertCheckBeforeCall(*CI, dst, n);
+      continue;
+    }
+
+    // strcmp(s1, s2) — call strlen on both, check min(len1+1, len2+1)
+    if (name == "strcmp") {
+      IRBuilder<> builder(CI);
+      Value *s1 = CI->getArgOperand(0);
+      Value *s2 = CI->getArgOperand(1);
+      FunctionCallee strlenFn = M->getOrInsertFunction("strlen", FunctionType::get(IntPtrTy, {builder.getInt8PtrTy()}, false));
+      CallInst *len1Call = builder.CreateCall(strlenFn, {s1});
+      CallInst *len2Call = builder.CreateCall(strlenFn, {s2});
+      Value *len1p1 = builder.CreateAdd(len1Call, ConstantInt::get(IntPtrTy, 1));
+      Value *len2p1 = builder.CreateAdd(len2Call, ConstantInt::get(IntPtrTy, 1));
+      // min(len1+1, len2+1)
+      Value *cmpSmaller = builder.CreateICmpULT(len1p1, len2p1);
+      Value *minCheck = builder.CreateSelect(cmpSmaller, len1p1, len2p1);
+      InsertCheckBeforeCall(*CI, s1, minCheck);
+      InsertCheckBeforeCall(*CI, s2, minCheck);
+      continue;
+    }
+
+    // wcscpy(dst, src) — call wcslen(src), check both for (count+1)*sizeof(wchar_t)
+    if (name == "wcscpy") {
+      IRBuilder<> builder(CI);
+      Value *src = CI->getArgOperand(1);
+      Value *dst = CI->getArgOperand(0);
+      FunctionCallee wcslenFn = M->getOrInsertFunction("wcslen", FunctionType::get(IntPtrTy, {builder.getInt8PtrTy()}, false));
+      CallInst *wcslenCall = builder.CreateCall(wcslenFn, {src});
+      // byte count = (wcslen_result + 1) * sizeof(wchar_t)
+      Value *countPlusOne = builder.CreateAdd(wcslenCall, ConstantInt::get(IntPtrTy, 1));
+      Value *wcharSize = ConstantInt::get(IntPtrTy, 4); // sizeof(wchar_t) = 4 on Linux
+      Value *byteLen = builder.CreateMul(countPlusOne, wcharSize);
+      InsertCheckBeforeCall(*CI, src, byteLen);
+      InsertCheckBeforeCall(*CI, dst, byteLen);
+      continue;
+    }
+
+    // snprintf(buf, size, fmt, ...) — check buf for size bytes
+    if (name == "snprintf") {
+      InsertCheckBeforeCall(*CI, CI->getArgOperand(0), CI->getArgOperand(1));
+      continue;
+    }
+
+    // printf: use swiftsan_printf runtime wrapper to check %s string arguments
+    // (format string parsing is too complex for inline IR)
+    if (name == "printf") {
       std::vector<Value *> args;
       for (Value *arg : CI->args())
         args.push_back(arg);
-      CallInst *replacedCall = builder.CreateCall(replacement, args);
-      assert(replacedCall);
+      CallInst *replacedCall = CallInst::Create(SwiftsanPrintf, args, "", CI);
       replacedCall->setMetadata(F.getParent()->getMDKindID("swiftsan"), llvm::MDNode::get(F.getContext(), std::nullopt));
       CI->replaceAllUsesWith(replacedCall);
       CI->eraseFromParent();
+      continue;
     }
+
+    // puts, strdup, atoi, atol, strtol, atoll, strtoll, mmap, munmap:
+    // Skip — no meaningful inline bounds check possible or needed
   }
 
   // llvm memory transfers (mem intrinsics)
   // at this point, any memory transfer/set on an alloca
   // has to be statically safe, because of safestack
-  // for those cases, use dest/src-only checks, or skip the memset
+  // for those cases, skip the check entirely
   // similarly for skipped globals
 
   for (MemIntrinsic *MI : intrins) {
-    IRBuilder<> IRB(MI);
     if (isa<MemTransferInst>(MI)) {
 
-      FunctionCallee targetCall;
       Value *dst = MI->getOperand(0);
       Value *src = MI->getOperand(1);
+      Value *len = MI->getOperand(2);
       bool dst_safe = false;
       bool src_safe = false;
       if (isa<AllocaInst>(getUnderlyingObject(dst))) {
@@ -4641,22 +5023,18 @@ void SafeStack::InstrumentCalls(Function &F) {
       if(src_safe && dst_safe){
         continue;
       }
-      else if(src_safe){ // unsafe dst
-        targetCall = isa<MemMoveInst>(MI) ? SwiftsanMemmoveDst : SwiftsanMemcpyDst;
+      else if(src_safe){ // unsafe dst only
+        InsertCheckBeforeCall(*MI, dst, len);
       }
-      else if(dst_safe){ // unsafe src
-        targetCall = isa<MemMoveInst>(MI) ? SwiftsanMemmoveSrc : SwiftsanMemcpySrc;
+      else if(dst_safe){ // unsafe src only
+        InsertCheckBeforeCall(*MI, src, len);
       }
       else{
         // neither src/dest are provably safe, check both
-        targetCall = isa<MemMoveInst>(MI) ? SwiftsanMemmove : SwiftsanMemcpy;
+        InsertCheckBeforeCall(*MI, src, len);
+        InsertCheckBeforeCall(*MI, dst, len);
       }
-
-      IRB.CreateCall(
-          targetCall,
-          {IRB.CreatePointerCast(MI->getOperand(0), IRB.getInt8PtrTy()),
-           IRB.CreatePointerCast(MI->getOperand(1), IRB.getInt8PtrTy()),
-           IRB.CreateIntCast(MI->getOperand(2), IntPtrTy, false)});
+      // Keep the original intrinsic — do NOT erase
 
     } else if (isa<MemSetInst>(MI)) {
 
@@ -4670,15 +5048,11 @@ void SafeStack::InstrumentCalls(Function &F) {
         }
       }
 
-      IRB.CreateCall(
-          SwiftsanMemset,
-          {IRB.CreatePointerCast(MI->getOperand(0), IRB.getInt8PtrTy()),
-           IRB.CreateIntCast(MI->getOperand(1), IRB.getInt32Ty(), false),
-           IRB.CreateIntCast(MI->getOperand(2), IntPtrTy, false)});
+      InsertCheckBeforeCall(*MI, MI->getOperand(0), MI->getOperand(2));
+      // Keep the original intrinsic — do NOT erase
     } else {
       llvm_unreachable("Neither MemSet nor MemTransfer?");
     }
-    MI->eraseFromParent();
   }
 
 }

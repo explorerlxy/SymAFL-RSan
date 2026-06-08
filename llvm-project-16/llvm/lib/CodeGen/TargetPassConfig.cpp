@@ -46,6 +46,7 @@
 #include "llvm/Target/TargetMachine.h"
 #include "llvm/Transforms/Scalar.h"
 #include "llvm/Transforms/Utils.h"
+#include "SymCC/Pass.h"
 #include <cassert>
 #include <optional>
 #include <string>
@@ -980,6 +981,12 @@ void TargetPassConfig::addISelPrepare() {
   // Add both the safe stack and the stack protection passes: each of them will
   // only protect functions that have corresponding attributes.
   addPass(createSafeStackPass());
+  // Add SymCC symbolic execution instrumentation pass AFTER SafeStack so that
+  // SafeStack's stack splitting and bounds checks are also symbolically tracked.
+  // Note: This runs during CodeGen, which is only invoked during LTO link phase
+  // when -flto=full is used. Per-TU compilations with -flto emit bitcode without
+  // running CodeGen, so SymCC naturally only instruments LTO builds.
+  addPass(createSymCCSymbolizePass());
   addPass(createStackProtectorPass());
 
   if (PrintISelInput)

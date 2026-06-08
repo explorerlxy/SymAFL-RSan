@@ -1,10 +1,10 @@
 # Execute this script with: `source env.sh`
 
 # Change Me! depending on where you cloned the RSan repo
-export RSAN_TOP=/home/ubuntu/floris/rangesanitizer
+export RSAN_TOP=/home/hahafish/SymAFL/RSan
 
 # Change Me! depending on where you installed SPEC CPU2006
-export RSAN_SPEC2006=/home/ubuntu/floris/rangesanitizer/spec2006
+export RSAN_SPEC2006=/home/hahafish/SymAFL/RSan/spec2006
 
 # LLVM/Clang
 export RSAN_LLVM=$RSAN_TOP/llvm-project-16/llvm

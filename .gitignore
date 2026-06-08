@@ -1,0 +1,51 @@
+# Build outputs
+build/
+llvm-build/
+tcmalloc-impl-build/
+tcmalloc-baseline-build/
+tcmalloc-expl-build/
+results/
+SmartMixSan/
+tests/
+bin/
+
+# RSan examples (pre-built binaries)
+examples/*.o
+examples/oob
+examples/uaf
+
+# Python
+__pycache__/
+*.pyc
+
+# Compiled objects
+*.o
+*.a
+*.so
+*.bin
+*.zip
+
+# TCMalloc autotools artifacts
+tcmalloc-implicit/m4/
+tcmalloc-implicit/autom4te.cache
+tcmalloc-implicit/config*
+tcmalloc-implicit/Makefile.in
+tcmalloc-implicit/aclocal.m4
+tcmalloc-implicit/compile
+tcmalloc-implicit/depcomp
+tcmalloc-implicit/install-sh
+tcmalloc-implicit/ltmain.sh
+tcmalloc-implicit/missing
+tcmalloc-implicit/src/config.h.in
+tcmalloc-implicit/test-driver
+
+# Dynamic linker test artifacts
+linker-implicit/libdl/test
+
+# IDE
+.vscode/
+.idea/
+
+# Package artifacts (RPM .spec, etc.)
+*.spec
+*.rpm

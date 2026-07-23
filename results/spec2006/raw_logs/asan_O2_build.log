@@ -1,0 +1,371 @@
+runspec started at Tue Jun 16 21:59:42 2026 on "Ubuntu"
+runspec is: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/runspec
+runspec: runspec --config=infra-asan_O2 --action=build 445.gobmk
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/media/hahafish/Data/ForUbuntu/speccpu2006/config/infra-asan_O2.cfg'
+Verbosity = 5
+Action    = build
+Tune      = base
+Ext       = infra-asan_O2
+Size      = ref
+Machine   = default
+benchmarks= 445.gobmk
+outputs   = raw,flags,ASCII,HTML
+username  = hahafish
+Benchmarks selected: 445.gobmk
+Compiling Binaries
+
+------------------------------------------------------------------------
+When checking options for /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/445.gobmk/exe/gobmk_base.infra-asan_O2, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 445.gobmk ref base infra-asan_O2 default: (
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/445.gobmk/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+build_base_infra-asan_O2.0000)
+Wrote to makefile '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/445.gobmk/run/build_base_infra-asan_O2.0000/Makefile.deps':
+
+# These are the build dependencies
+
+# End dependencies
+Wrote to makefile '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/445.gobmk/run/build_base_infra-asan_O2.0000/Makefile.spec':
+TUNE=base
+EXT=infra-asan_O2
+NUMBER=445
+NAME=gobmk
+SOURCES= sgf/sgf_utils.c sgf/sgftree.c sgf/sgfnode.c engine/aftermath.c \
+	 engine/board.c engine/cache.c engine/combination.c engine/dragon.c \
+	 engine/filllib.c engine/fuseki.c engine/genmove.c engine/hash.c \
+	 engine/influence.c engine/interface.c engine/matchpat.c \
+	 engine/move_reasons.c engine/movelist.c engine/optics.c engine/owl.c \
+	 engine/printutils.c engine/readconnect.c engine/reading.c engine/score.c \
+	 engine/semeai.c engine/sgfdecide.c engine/sgffile.c engine/shapes.c \
+	 engine/showbord.c engine/utils.c engine/value_moves.c engine/worm.c \
+	 engine/globals.c engine/persistent.c engine/handicap.c engine/surround.c \
+	 interface/gtp.c interface/main.c interface/play_ascii.c \
+	 interface/play_gtp.c interface/play_solo.c interface/play_test.c \
+	 patterns/connections.c patterns/dfa.c patterns/helpers.c \
+	 patterns/transform.c patterns/owl_attackpat.c patterns/conn.c \
+	 patterns/patterns.c patterns/apatterns.c patterns/dpatterns.c \
+	 patterns/owl_vital_apat.c patterns/eyes.c patterns/influence.c \
+	 patterns/barriers.c patterns/endgame.c patterns/aa_attackpat.c \
+	 patterns/owl_defendpat.c patterns/fusekipat.c patterns/fuseki9.c \
+	 patterns/fuseki13.c patterns/fuseki19.c patterns/josekidb.c \
+	 patterns/handipat.c utils/getopt.c utils/getopt1.c utils/gg_utils.c \
+	 utils/random.c
+EXEBASE=gobmk
+NEED_MATH=yes
+BENCHLANG=C
+ONESTEP=
+CONESTEP=
+
+BENCH_FLAGS      = -DHAVE_CONFIG_H -I. -I.. -I../include -I./include
+CC               = /home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never
+CLD              = /home/hahafish/rangesanitizer-original/llvm-build/bin/clang -fuse-ld=lld -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -L/media/hahafish/Data/ForUbuntu/rangesanitizer/build/packages/rusage-counters/install/lib -Wl,--whole-archive -l:librusagecounters.a -Wl,--no-whole-archive
+COPTIMIZE        = -std=gnu89
+CXX              = /home/hahafish/rangesanitizer-original/llvm-build/bin/clang++ -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never
+CXXLD            = /home/hahafish/rangesanitizer-original/llvm-build/bin/clang++ -fuse-ld=lld -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -L/media/hahafish/Data/ForUbuntu/rangesanitizer/build/packages/rusage-counters/install/lib -Wl,--whole-archive -l:librusagecounters.a -Wl,--no-whole-archive
+CXXOPTIMIZE      = -std=gnu++98
+FC               = fc 
+FPBASE           = yes
+OS               = unix
+PORTABILITY      = -DSPEC_CPU_LP64
+abstol           = 
+action           = build
+allow_extension_override = 0
+backup_config    = 1
+baseexe          = gobmk
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 445.gobmk
+binary           = 
+bindir           = exe
+calctol          = 0
+changedmd5       = 0
+check_integrity  = 1
+check_md5        = 1
+check_version    = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = gobmk_base.infra-asan_O2
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = /media/hahafish/Data/ForUbuntu/speccpu2006/config/infra-asan_O2.cfg
+copies           = 1
+datadir          = data
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 12345678
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+expid            = 
+ext              = infra-asan_O2
+fake             = 0
+feedback         = 1
+flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+floatcompare     = 
+help             = 0
+http_proxy       = 
+http_timeout     = 30
+ignore_errors    = 0
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+iteration        = -1
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = CPU2006
+log_line_width   = 0
+logname          = /media/hahafish/Data/ForUbuntu/speccpu2006/result/CPU2006.1509.log
+lognum           = 1509
+mach             = default
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makeflags        = -j14
+max_active_compares = 0
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = gobmk
+nc               = 0
+need_math        = yes
+no_input_handler = close
+no_monitor       = 
+notes_wrap_columns = 0
+notes_wrap_indent =     
+num              = 445
+obiwan           = 
+os_exe_ext       = 
+output           = asc
+output_format    = default
+output_root      = 
+outputdir        = output
+path             = /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/445.gobmk
+plain_train      = 1
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+realuser         = your name here
+rebuild          = 0
+reftime          = reftime
+reltol           = 
+reportable       = no
+resultdir        = result
+review           = 0
+run              = all
+runspec          = /media/hahafish/Data/ForUbuntu/speccpu2006/bin/runspec --config=infra-asan_O2 --action=build 445.gobmk
+safe_eval        = 1
+section_specifier_fatal = 1
+sendmail         = /usr/sbin/sendmail
+setpgrp_enabled  = 1
+setprocgroup     = 1
+shrate           = 0
+sigint           = 2
+size             = ref
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specmake         = Makefile.YYYtArGeTYYYspec
+specrun          = specinvoke
+speed            = 0
+srcalt           = 
+srcdir           = src
+stagger          = 10
+strict_rundir_verify = no
+subworkdir       = work
+sysinfo_program  = 
+table            = 1
+teeout           = yes
+teerunout        = no
+top              = /media/hahafish/Data/ForUbuntu/speccpu2006
+tune             = base
+uid              = 1000
+unbuffer         = 1
+update-flags     = 0
+use_submit_for_speed = 0
+username         = hahafish
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+version_url      = http://www.spec.org/auto/cpu2006/current_version
+workdir          = run
+worklist         = list
+  Compile for '445.gobmk' started at: Tue Jun 16 21:59:45 2026 (1781618385)
+Issuing make.clean command 'specmake -j14 clean'
+Start make.clean command: Tue Jun 16 21:59:45 2026 (1781618385)
+rm -rf gobmk gobmk.exe *.o  *.fppized.f*
+find . \( -name \*.o -o -name '*.fppized.f*' \) -print | xargs rm -rf
+rm -rf core 
+Stop make.clean command: Tue Jun 16 21:59:47 2026 (1781618387)
+Elapsed time for make.clean command: 00:00:02 (2)
+Issuing make command 'specmake -j14 build'
+Start make command: Tue Jun 16 21:59:47 2026 (1781618387)
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o sgf/sgf_utils.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         sgf/sgf_utils.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o sgf/sgftree.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         sgf/sgftree.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o sgf/sgfnode.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         sgf/sgfnode.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/aftermath.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/aftermath.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/board.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/board.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/cache.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/cache.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/combination.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/combination.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/dragon.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/dragon.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/filllib.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/filllib.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/fuseki.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/fuseki.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/genmove.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/genmove.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/hash.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/hash.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/influence.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/influence.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/interface.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/interface.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/matchpat.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/matchpat.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/move_reasons.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/move_reasons.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/movelist.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/movelist.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/optics.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/optics.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/owl.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/owl.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/printutils.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/printutils.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/readconnect.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/readconnect.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/reading.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/reading.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/score.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/score.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/semeai.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/semeai.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/sgfdecide.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/sgfdecide.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/sgffile.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/sgffile.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/shapes.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/shapes.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/showbord.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/showbord.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/utils.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/utils.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/value_moves.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/value_moves.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/worm.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/worm.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/globals.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/globals.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/persistent.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/persistent.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/handicap.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/handicap.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o engine/surround.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         engine/surround.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o interface/gtp.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         interface/gtp.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o interface/main.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         interface/main.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o interface/play_ascii.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         interface/play_ascii.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o interface/play_gtp.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         interface/play_gtp.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o interface/play_solo.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         interface/play_solo.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o interface/play_test.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         interface/play_test.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/connections.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/connections.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/dfa.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/dfa.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/helpers.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/helpers.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/transform.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/transform.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/owl_attackpat.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/owl_attackpat.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/conn.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/conn.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/patterns.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/patterns.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/apatterns.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/apatterns.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/dpatterns.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/dpatterns.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/owl_vital_apat.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/owl_vital_apat.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/eyes.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/eyes.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/influence.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/influence.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/barriers.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/barriers.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/endgame.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/endgame.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/aa_attackpat.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/aa_attackpat.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/owl_defendpat.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/owl_defendpat.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/fusekipat.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/fusekipat.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/fuseki9.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/fuseki9.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/fuseki13.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/fuseki13.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/fuseki19.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/fuseki19.c
+patterns/dfa.c:399:14: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  fprintf(f, line);
+             ^~~~
+patterns/dfa.c:399:14: note: treat the string as an argument to avoid this
+  fprintf(f, line);
+             ^
+             "%s", 
+patterns/dfa.c:406:14: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  fprintf(f, line);
+             ^~~~
+patterns/dfa.c:406:14: note: treat the string as an argument to avoid this
+  fprintf(f, line);
+             ^
+             "%s", 
+patterns/dfa.c:411:14: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  fprintf(f, line);
+             ^~~~
+patterns/dfa.c:411:14: note: treat the string as an argument to avoid this
+  fprintf(f, line);
+             ^
+             "%s", 
+patterns/dfa.c:429:14: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  fprintf(f, line);
+             ^~~~
+patterns/dfa.c:429:14: note: treat the string as an argument to avoid this
+  fprintf(f, line);
+             ^
+             "%s", 
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/josekidb.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/josekidb.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o patterns/handipat.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         patterns/handipat.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o utils/getopt.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         utils/getopt.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o utils/getopt1.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         utils/getopt1.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o utils/gg_utils.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         utils/gg_utils.c
+4 warnings generated.
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o utils/random.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         utils/random.c
+/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -fuse-ld=lld -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -L/media/hahafish/Data/ForUbuntu/rangesanitizer/build/packages/rusage-counters/install/lib -Wl,--whole-archive -l:librusagecounters.a -Wl,--no-whole-archive   -std=gnu89  -DSPEC_CPU_LP64        sgf/sgf_utils.o sgf/sgftree.o sgf/sgfnode.o engine/aftermath.o engine/board.o engine/cache.o engine/combination.o engine/dragon.o engine/filllib.o engine/fuseki.o engine/genmove.o engine/hash.o engine/influence.o engine/interface.o engine/matchpat.o engine/move_reasons.o engine/movelist.o engine/optics.o engine/owl.o engine/printutils.o engine/readconnect.o engine/reading.o engine/score.o engine/semeai.o engine/sgfdecide.o engine/sgffile.o engine/shapes.o engine/showbord.o engine/utils.o engine/value_moves.o engine/worm.o engine/globals.o engine/persistent.o engine/handicap.o engine/surround.o interface/gtp.o interface/main.o interface/play_ascii.o interface/play_gtp.o interface/play_solo.o interface/play_test.o patterns/connections.o patterns/dfa.o patterns/helpers.o patterns/transform.o patterns/owl_attackpat.o patterns/conn.o patterns/patterns.o patterns/apatterns.o patterns/dpatterns.o patterns/owl_vital_apat.o patterns/eyes.o patterns/influence.o patterns/barriers.o patterns/endgame.o patterns/aa_attackpat.o patterns/owl_defendpat.o patterns/fusekipat.o patterns/fuseki9.o patterns/fuseki13.o patterns/fuseki19.o patterns/josekidb.o patterns/handipat.o utils/getopt.o utils/getopt1.o utils/gg_utils.o utils/random.o             -lm        -o gobmk
+Stop make command: Tue Jun 16 22:00:22 2026 (1781618422)
+Elapsed time for make command: 00:00:35 (35)
+Issuing options command 'specmake -j14 options'
+Start options command: Tue Jun 16 22:00:22 2026 (1781618422)
+COMP: /home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -c -o options.o -DSPEC_CPU -DNDEBUG -DHAVE_CONFIG_H -I. -I.. -I../include -I./include   -std=gnu89       -DSPEC_CPU_LP64         <source>
+C: CC="/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -O2 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -g -flto=full -Wno-int-conversion -Wno-deprecated-non-prototype -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS="-DHAVE_CONFIG_H -I. -I.. -I../include -I./include"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-std=gnu89"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: /home/hahafish/rangesanitizer-original/llvm-build/bin/clang -fuse-ld=lld -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -L/media/hahafish/Data/ForUbuntu/rangesanitizer/build/packages/rusage-counters/install/lib -Wl,--whole-archive -l:librusagecounters.a -Wl,--no-whole-archive   -std=gnu89  -DSPEC_CPU_LP64        <objects>   -lm        -o options
+C: LD="/home/hahafish/rangesanitizer-original/llvm-build/bin/clang -fuse-ld=lld -fsanitize=address -fno-sanitize-address-use-after-scope -fsanitize-address-use-after-return=never -L/media/hahafish/Data/ForUbuntu/rangesanitizer/build/packages/rusage-counters/install/lib -Wl,--whole-archive -l:librusagecounters.a -Wl,--no-whole-archive"
+O: COPTIMIZE="-std=gnu89"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+Stop options command: Tue Jun 16 22:00:23 2026 (1781618423)
+Elapsed time for options command: 00:00:01 (1)
+  Compile for '445.gobmk' ended at: Tue Jun 16 22:00:23 2026 (1781618423)
+  Elapsed compile for '445.gobmk': 00:00:38 (38)
+
+Build successes: 445.gobmk(base)
+
+Build Complete
+
+The log for this run is in /media/hahafish/Data/ForUbuntu/speccpu2006/result/CPU2006.1509.log
+
+runspec finished at Tue Jun 16 22:00:23 2026; 41 total seconds elapsed

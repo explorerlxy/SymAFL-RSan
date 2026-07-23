@@ -1,0 +1,165 @@
+runspec started at Thu Jun 18 23:47:55 2026 on "Ubuntu"
+runspec is: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/runspec
+runspec: runspec --config=infra-softboundcets_O2 --nobuild --iterations 3 --ignore_errors 483.xalancbmk
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/media/hahafish/Data/ForUbuntu/speccpu2006/config/infra-softboundcets_O2.cfg'
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = infra-softboundcets_O2
+Size      = ref
+Machine   = default
+benchmarks= 483.xalancbmk
+outputs   = raw,flags,ASCII,HTML
+username  = hahafish
+Benchmarks selected: 483.xalancbmk
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 483.xalancbmk ref base infra-softboundcets_O2 default
+
+
+Parsing Flags
+  Looking at 483.xalancbmk base infra-softboundcets_O2 default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 483.xalancbmk ref base infra-softboundcets_O2 default: created (run_base_ref_infra-softboundcets_O2.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running (#1) 483.xalancbmk ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000
+    -o ref.out -e ref.err ../run_base_ref_infra-softboundcets_O2.0000/Xalan_base.infra-softboundcets_O2 -v t5.xml xalanc.xsl
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 23:48:01 2026 (1781797681)
+Stop command: Thu Jun 18 23:50:29 2026 (1781797829)
+Elapsed time for command: 00:02:28 (148)
+
+483.xalancbmk: copy #0 non-zero return code (rc=139, signal=0)
+
+
+****************************************
+Contents of ref.err
+****************************************
+Segmentation fault
+
+****************************************
+Workload elapsed time (0:1) = 139.790762 seconds
+copy 0 finished @ Thu Jun 18 23:50:21 2026.  Total elapsed time: 139.790762
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 23:50:29 2026 (1781797829)
+Stop command: Thu Jun 18 23:50:31 2026 (1781797831)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000/.err'
+*** Miscompare of ref.out, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000/ref.out.mis
+'ref.out' short
+Benchmark Times:
+  Start:    Thu Jun 18 23:48:01 2026 (1781797681)
+  Stop:     Thu Jun 18 23:50:29 2026 (1781797829)
+  Elapsed:  00:02:28 (148)
+  Reported: 139 790949000 139.790949
+ Error 483.xalancbmk base ref ratio=49.36, runtime=139.790949
+
+-----------------------------------
+  Running (#2) 483.xalancbmk ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000
+    -o ref.out -e ref.err ../run_base_ref_infra-softboundcets_O2.0000/Xalan_base.infra-softboundcets_O2 -v t5.xml xalanc.xsl
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 23:50:31 2026 (1781797831)
+Stop command: Thu Jun 18 23:52:59 2026 (1781797979)
+Elapsed time for command: 00:02:28 (148)
+
+483.xalancbmk: copy #0 non-zero return code (rc=139, signal=0)
+
+
+****************************************
+Contents of ref.err
+****************************************
+Segmentation fault
+
+****************************************
+Workload elapsed time (0:1) = 140.302224 seconds
+copy 0 finished @ Thu Jun 18 23:52:51 2026.  Total elapsed time: 140.302224
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 23:52:59 2026 (1781797979)
+Stop command: Thu Jun 18 23:53:01 2026 (1781797981)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000/.err'
+*** Miscompare of ref.out, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000/ref.out.mis
+'ref.out' short
+Benchmark Times:
+  Start:    Thu Jun 18 23:50:31 2026 (1781797831)
+  Stop:     Thu Jun 18 23:52:59 2026 (1781797979)
+  Elapsed:  00:02:28 (148)
+  Reported: 140 302427000 140.302427
+ Error 483.xalancbmk base ref ratio=49.18, runtime=140.302427
+
+-----------------------------------
+  Running (#3) 483.xalancbmk ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000
+    -o ref.out -e ref.err ../run_base_ref_infra-softboundcets_O2.0000/Xalan_base.infra-softboundcets_O2 -v t5.xml xalanc.xsl
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 23:53:02 2026 (1781797982)
+Stop command: Thu Jun 18 23:55:29 2026 (1781798129)
+Elapsed time for command: 00:02:27 (147)
+
+483.xalancbmk: copy #0 non-zero return code (rc=139, signal=0)
+
+
+****************************************
+Contents of ref.err
+****************************************
+Segmentation fault
+
+****************************************
+Workload elapsed time (0:1) = 139.730585 seconds
+copy 0 finished @ Thu Jun 18 23:55:21 2026.  Total elapsed time: 139.730585
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 23:55:29 2026 (1781798129)
+Stop command: Thu Jun 18 23:55:31 2026 (1781798131)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000/.err'
+*** Miscompare of ref.out, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-softboundcets_O2.0000/ref.out.mis
+'ref.out' short
+Benchmark Times:
+  Start:    Thu Jun 18 23:53:02 2026 (1781797982)
+  Stop:     Thu Jun 18 23:55:29 2026 (1781798129)
+  Elapsed:  00:02:27 (147)
+  Reported: 139 730782000 139.730782
+ Error 483.xalancbmk base ref ratio=49.38, runtime=139.730782
+Error: 3x483.xalancbmk
+Producing Reports
+mach: default
+  ext: infra-softboundcets_O2
+    size: ref
+      set: int
+           Flag reduction took 0.0005779s
+        format: raw -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1758.rsf
+        format: flags -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1758.flags.html
+        format: ASCII -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1758.txt
+        format: HTML -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1758.html, CINT2006.1758.gif
+      set: fp
+
+The log for this run is in /media/hahafish/Data/ForUbuntu/speccpu2006/result/CPU2006.1758.log
+
+runspec finished at Thu Jun 18 23:55:31 2026; 456 total seconds elapsed

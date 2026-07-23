@@ -1,0 +1,573 @@
+runspec started at Thu Jun 18 22:42:01 2026 on "Ubuntu"
+runspec is: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/runspec
+runspec: runspec --config=infra-softboundcets_O2 --nobuild --iterations 3 --ignore_errors 403.gcc
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/media/hahafish/Data/ForUbuntu/speccpu2006/config/infra-softboundcets_O2.cfg'
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = infra-softboundcets_O2
+Size      = ref
+Machine   = default
+benchmarks= 403.gcc
+outputs   = raw,flags,ASCII,HTML
+username  = hahafish
+Benchmarks selected: 403.gcc
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 403.gcc ref base infra-softboundcets_O2 default
+
+
+Parsing Flags
+  Looking at 403.gcc base infra-softboundcets_O2 default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 403.gcc ref base infra-softboundcets_O2 default: created (run_base_ref_infra-softboundcets_O2.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running (#1) 403.gcc ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000
+    -o 166.out -e 166.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 166.i -o 166.s
+    -o 200.out -e 200.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 200.i -o 200.s
+    -o c-typeck.out -e c-typeck.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 c-typeck.i -o c-typeck.s
+    -o cp-decl.out -e cp-decl.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 cp-decl.i -o cp-decl.s
+    -o expr.out -e expr.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 expr.i -o expr.s
+    -o expr2.out -e expr2.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 expr2.i -o expr2.s
+    -o g23.out -e g23.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 g23.i -o g23.s
+    -o s04.out -e s04.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 s04.i -o s04.s
+    -o scilab.out -e scilab.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 scilab.i -o scilab.s
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 22:42:07 2026 (1781793727)
+Stop command: Thu Jun 18 22:44:32 2026 (1781793872)
+Elapsed time for command: 00:02:25 (145)
+Workload elapsed time (0:1) = 28.239462 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+
+****************************************
+Contents of 166.err
+****************************************
+[setup-report] begin rusage-counters
+[setup-report] maxrss: 909104
+[setup-report] page_faults: 360828
+[setup-report] io_operations: 2353
+[setup-report] context_switches: 1469
+[setup-report] estimated_runtime: 28.198
+[setup-report] end rusage-counters
+
+****************************************
+
+****************************************
+Contents of 200.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of c-typeck.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of cp-decl.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of expr.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of expr2.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of g23.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of s04.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of scilab.err
+****************************************
+Segmentation fault
+
+****************************************
+Workload elapsed time (0:2) = 0.75461 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:3) = 19.316494 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:4) = 14.877929 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:5) = 20.386085 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:6) = 4.528967 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:7) = 15.188395 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:8) = 26.44572 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:9) = 7.000189 seconds
+copy 0 finished @ Thu Jun 18 22:44:24 2026.  Total elapsed time: 136.737851
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 22:44:32 2026 (1781793872)
+Stop command: Thu Jun 18 22:44:34 2026 (1781793874)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/.err'
+*** Miscompare of 200.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/200.s.mis
+6919:  	.quad	0
+       	.quad	
+             ^
+'200.s' short
+*** Miscompare of c-typeck.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/c-typeck.s.mis
+'c-typeck.s' short
+*** Miscompare of cp-decl.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/cp-decl.s.mis
+'cp-decl.s' short
+*** Miscompare of expr.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/expr.s.mis
+2791:  	jle	.L278
+       	
+       ^
+'expr.s' short
+*** Miscompare of expr2.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/expr2.s.mis
+22858:  	call	emit_insn_before
+        	call	emit_in
+                    ^
+'expr2.s' short
+*** Miscompare of g23.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/g23.s.mis
+'g23.s' short
+*** Miscompare of s04.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/s04.s.mis
+1187:  .L15785:
+       .L1
+         ^
+'s04.s' short
+*** Miscompare of scilab.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/scilab.s.mis
+85177:  	.comm	gigant.1910,8,8
+        	.comm	gigant
+                    ^
+'scilab.s' short
+Benchmark Times:
+  Start:    Thu Jun 18 22:42:07 2026 (1781793727)
+  Stop:     Thu Jun 18 22:44:32 2026 (1781793872)
+  Elapsed:  00:02:25 (145)
+  Reported: 136 737975000 136.737975
+ Error 403.gcc base ref ratio=58.87, runtime=136.737975
+
+-----------------------------------
+  Running (#2) 403.gcc ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000
+    -o 166.out -e 166.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 166.i -o 166.s
+    -o 200.out -e 200.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 200.i -o 200.s
+    -o c-typeck.out -e c-typeck.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 c-typeck.i -o c-typeck.s
+    -o cp-decl.out -e cp-decl.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 cp-decl.i -o cp-decl.s
+    -o expr.out -e expr.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 expr.i -o expr.s
+    -o expr2.out -e expr2.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 expr2.i -o expr2.s
+    -o g23.out -e g23.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 g23.i -o g23.s
+    -o s04.out -e s04.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 s04.i -o s04.s
+    -o scilab.out -e scilab.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 scilab.i -o scilab.s
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 22:44:34 2026 (1781793874)
+Stop command: Thu Jun 18 22:46:59 2026 (1781794019)
+Elapsed time for command: 00:02:25 (145)
+Workload elapsed time (0:1) = 28.058932 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+
+****************************************
+Contents of 166.err
+****************************************
+[setup-report] begin rusage-counters
+[setup-report] maxrss: 892152
+[setup-report] page_faults: 354934
+[setup-report] io_operations: 2353
+[setup-report] context_switches: 1471
+[setup-report] estimated_runtime: 28.018
+[setup-report] end rusage-counters
+
+****************************************
+
+****************************************
+Contents of 200.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of c-typeck.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of cp-decl.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of expr.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of expr2.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of g23.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of s04.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of scilab.err
+****************************************
+Segmentation fault
+
+****************************************
+Workload elapsed time (0:2) = 0.751402 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:3) = 19.234238 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:4) = 14.828054 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:5) = 20.419366 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:6) = 4.54041 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:7) = 15.478864 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:8) = 26.628366 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:9) = 7.006898 seconds
+copy 0 finished @ Thu Jun 18 22:46:51 2026.  Total elapsed time: 136.94653
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 22:46:59 2026 (1781794019)
+Stop command: Thu Jun 18 22:47:02 2026 (1781794022)
+Elapsed time for command: 00:00:03 (3)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/.err'
+*** Miscompare of 200.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/200.s.mis
+6919:  	.quad	0
+       	.quad	
+             ^
+'200.s' short
+*** Miscompare of c-typeck.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/c-typeck.s.mis
+'c-typeck.s' short
+*** Miscompare of cp-decl.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/cp-decl.s.mis
+'cp-decl.s' short
+*** Miscompare of expr.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/expr.s.mis
+2791:  	jle	.L278
+       	
+       ^
+'expr.s' short
+*** Miscompare of expr2.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/expr2.s.mis
+22858:  	call	emit_insn_before
+        	call	emit_in
+                    ^
+'expr2.s' short
+*** Miscompare of g23.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/g23.s.mis
+'g23.s' short
+*** Miscompare of s04.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/s04.s.mis
+1187:  .L15785:
+       .L1
+         ^
+'s04.s' short
+*** Miscompare of scilab.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/scilab.s.mis
+85177:  	.comm	gigant.1910,8,8
+        	.comm	gigant
+                    ^
+'scilab.s' short
+Benchmark Times:
+  Start:    Thu Jun 18 22:44:34 2026 (1781793874)
+  Stop:     Thu Jun 18 22:46:59 2026 (1781794019)
+  Elapsed:  00:02:25 (145)
+  Reported: 136 946912000 136.946912
+ Error 403.gcc base ref ratio=58.78, runtime=136.946912
+
+-----------------------------------
+  Running (#3) 403.gcc ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000
+    -o 166.out -e 166.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 166.i -o 166.s
+    -o 200.out -e 200.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 200.i -o 200.s
+    -o c-typeck.out -e c-typeck.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 c-typeck.i -o c-typeck.s
+    -o cp-decl.out -e cp-decl.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 cp-decl.i -o cp-decl.s
+    -o expr.out -e expr.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 expr.i -o expr.s
+    -o expr2.out -e expr2.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 expr2.i -o expr2.s
+    -o g23.out -e g23.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 g23.i -o g23.s
+    -o s04.out -e s04.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 s04.i -o s04.s
+    -o scilab.out -e scilab.err ../run_base_ref_infra-softboundcets_O2.0000/gcc_base.infra-softboundcets_O2 scilab.i -o scilab.s
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 22:47:02 2026 (1781794022)
+Stop command: Thu Jun 18 22:49:27 2026 (1781794167)
+Elapsed time for command: 00:02:25 (145)
+Workload elapsed time (0:1) = 28.123029 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+
+****************************************
+Contents of 166.err
+****************************************
+[setup-report] begin rusage-counters
+[setup-report] maxrss: 891272
+[setup-report] page_faults: 354418
+[setup-report] io_operations: 2353
+[setup-report] context_switches: 1488
+[setup-report] estimated_runtime: 28.082
+[setup-report] end rusage-counters
+
+****************************************
+
+****************************************
+Contents of 200.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of c-typeck.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of cp-decl.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of expr.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of expr2.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of g23.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of s04.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of scilab.err
+****************************************
+Segmentation fault
+
+****************************************
+Workload elapsed time (0:2) = 0.762979 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:3) = 19.272856 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:4) = 15.001769 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:5) = 20.541512 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:6) = 4.521657 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:7) = 15.210597 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:8) = 26.394049 seconds
+
+403.gcc: copy #0 non-zero return code (rc=139, signal=0)
+
+Workload elapsed time (0:9) = 7.002064 seconds
+copy 0 finished @ Thu Jun 18 22:49:19 2026.  Total elapsed time: 136.830512
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 22:49:27 2026 (1781794167)
+Stop command: Thu Jun 18 22:49:29 2026 (1781794169)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/.err'
+*** Miscompare of 200.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/200.s.mis
+6919:  	.quad	0
+       	.quad	
+             ^
+'200.s' short
+*** Miscompare of c-typeck.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/c-typeck.s.mis
+'c-typeck.s' short
+*** Miscompare of cp-decl.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/cp-decl.s.mis
+'cp-decl.s' short
+*** Miscompare of expr.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/expr.s.mis
+2791:  	jle	.L278
+       	
+       ^
+'expr.s' short
+*** Miscompare of expr2.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/expr2.s.mis
+22858:  	call	emit_insn_before
+        	call	emit_in
+                    ^
+'expr2.s' short
+*** Miscompare of g23.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/g23.s.mis
+'g23.s' short
+*** Miscompare of s04.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/s04.s.mis
+1187:  .L15785:
+       .L1
+         ^
+'s04.s' short
+*** Miscompare of scilab.s, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-softboundcets_O2.0000/scilab.s.mis
+85177:  	.comm	gigant.1910,8,8
+        	.comm	gigant
+                    ^
+'scilab.s' short
+Benchmark Times:
+  Start:    Thu Jun 18 22:47:02 2026 (1781794022)
+  Stop:     Thu Jun 18 22:49:27 2026 (1781794167)
+  Elapsed:  00:02:25 (145)
+  Reported: 136 830655000 136.830655
+ Error 403.gcc base ref ratio=58.83, runtime=136.830655
+Error: 3x403.gcc
+Producing Reports
+mach: default
+  ext: infra-softboundcets_O2
+    size: ref
+      set: int
+           Flag reduction took 0.0003800s
+        format: raw -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1753.rsf
+        format: flags -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1753.flags.html
+        format: ASCII -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1753.txt
+        format: HTML -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1753.html, CINT2006.1753.gif
+      set: fp
+
+The log for this run is in /media/hahafish/Data/ForUbuntu/speccpu2006/result/CPU2006.1753.log
+
+runspec finished at Thu Jun 18 22:49:29 2026; 448 total seconds elapsed

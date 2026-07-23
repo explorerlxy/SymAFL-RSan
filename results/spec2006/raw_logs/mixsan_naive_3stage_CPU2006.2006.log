@@ -1,0 +1,2113 @@
+runspec started at Thu Jul  2 10:10:49 2026 on "Ubuntu"
+runspec is: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/runspec
+runspec: runspec --config=infra-mixsan_O2 --nobuild --iterations 3 --ignore_errors 400.perlbench 401.bzip2 403.gcc 429.mcf 433.milc 444.namd 445.gobmk 447.dealII 450.soplex 453.povray 456.hmmer 458.sjeng 462.libquantum 464.h264ref 470.lbm 471.omnetpp 473.astar 482.sphinx3 483.xalancbmk
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/media/hahafish/Data/ForUbuntu/speccpu2006/config/infra-mixsan_O2.cfg'
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = infra-mixsan_O2
+Size      = ref
+Machine   = default
+benchmarks= 400.perlbench,401.bzip2,403.gcc,429.mcf,433.milc,444.namd,445.gobmk,447.dealII,450.soplex,453.povray,456.hmmer,458.sjeng,462.libquantum,464.h264ref,470.lbm,471.omnetpp,473.astar,482.sphinx3,483.xalancbmk
+outputs   = raw,flags,ASCII,HTML
+username  = hahafish
+Benchmarks selected: 400.perlbench, 401.bzip2, 403.gcc, 429.mcf, 433.milc, 444.namd, 445.gobmk, 447.dealII, 450.soplex, 453.povray, 456.hmmer, 458.sjeng, 462.libquantum, 464.h264ref, 470.lbm, 471.omnetpp, 473.astar, 482.sphinx3, 483.xalancbmk
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 400.perlbench ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 401.bzip2 ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 403.gcc ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 429.mcf ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 433.milc ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 444.namd ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 445.gobmk ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 447.dealII ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 450.soplex ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 453.povray ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 456.hmmer ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 458.sjeng ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 462.libquantum ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 464.h264ref ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 470.lbm ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 471.omnetpp ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 473.astar ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 482.sphinx3 ref base infra-mixsan_O2 default
+
+------------------------------------------------------------------------
+  Up to date 483.xalancbmk ref base infra-mixsan_O2 default
+
+
+Parsing Flags
+  Looking at 400.perlbench base infra-mixsan_O2 default: done
+  Looking at 401.bzip2 base infra-mixsan_O2 default: done
+  Looking at 403.gcc base infra-mixsan_O2 default: done
+  Looking at 429.mcf base infra-mixsan_O2 default: done
+  Looking at 433.milc base infra-mixsan_O2 default: done
+  Looking at 444.namd base infra-mixsan_O2 default: done
+  Looking at 445.gobmk base infra-mixsan_O2 default: done
+  Looking at 447.dealII base infra-mixsan_O2 default: done
+  Looking at 450.soplex base infra-mixsan_O2 default: done
+  Looking at 453.povray base infra-mixsan_O2 default: done
+  Looking at 456.hmmer base infra-mixsan_O2 default: done
+  Looking at 458.sjeng base infra-mixsan_O2 default: done
+  Looking at 462.libquantum base infra-mixsan_O2 default: done
+  Looking at 464.h264ref base infra-mixsan_O2 default: done
+  Looking at 470.lbm base infra-mixsan_O2 default: done
+  Looking at 471.omnetpp base infra-mixsan_O2 default: done
+  Looking at 473.astar base infra-mixsan_O2 default: done
+  Looking at 482.sphinx3 base infra-mixsan_O2 default: done
+  Looking at 483.xalancbmk base infra-mixsan_O2 default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 400.perlbench ref base infra-mixsan_O2 default: existing (run_base_ref_infra-mixsan_O2.0000)
+  Setting up 401.bzip2 ref base infra-mixsan_O2 default: 
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+existing (run_base_ref_infra-mixsan_O2.0000)
+  Setting up 403.gcc ref base infra-mixsan_O2 default: existing (run_base_ref_infra-mixsan_O2.0000)
+  Setting up 429.mcf ref base infra-mixsan_O2 default: 
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+created (run_base_ref_infra-mixsan_O2.0008)
+  Setting up 433.milc ref base infra-mixsan_O2 default: 
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/433.milc/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+existing (run_base_ref_infra-mixsan_O2.0006)
+  Setting up 444.namd ref base infra-mixsan_O2 default: created (run_base_ref_infra-mixsan_O2.0001)
+  Setting up 445.gobmk ref base infra-mixsan_O2 default: 
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/445.gobmk/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+existing (run_base_ref_infra-mixsan_O2.0006)
+  Setting up 447.dealII ref base infra-mixsan_O2 default: existing (run_base_ref_infra-mixsan_O2.0000)
+  Setting up 450.soplex ref base infra-mixsan_O2 default: existing (run_base_ref_infra-mixsan_O2.0000)
+  Setting up 453.povray ref base infra-mixsan_O2 default: 
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+existing (run_base_ref_infra-mixsan_O2.0000)
+  Setting up 456.hmmer ref base infra-mixsan_O2 default: 
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/456.hmmer/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+existing (run_base_ref_infra-mixsan_O2.0006)
+  Setting up 458.sjeng ref base infra-mixsan_O2 default: 
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+created (run_base_ref_infra-mixsan_O2.0001)
+  Setting up 462.libquantum ref base infra-mixsan_O2 default: 
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+created (run_base_ref_infra-mixsan_O2.0001)
+  Setting up 464.h264ref ref base infra-mixsan_O2 default: 
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+existing (run_base_ref_infra-mixsan_O2.0000)
+  Setting up 470.lbm ref base infra-mixsan_O2 default: created (run_base_ref_infra-mixsan_O2.0001)
+  Setting up 471.omnetpp ref base infra-mixsan_O2 default: created (run_base_ref_infra-mixsan_O2.0001)
+  Setting up 473.astar ref base infra-mixsan_O2 default: 
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+existing (run_base_ref_infra-mixsan_O2.0000)
+  Setting up 482.sphinx3 ref base infra-mixsan_O2 default: 
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/482.sphinx3/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+existing (run_base_ref_infra-mixsan_O2.0006)
+  Setting up 483.xalancbmk ref base infra-mixsan_O2 default: existing (run_base_ref_infra-mixsan_O2.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running (#1) 400.perlbench ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err ../run_base_ref_infra-mixsan_O2.0000/perlbench_base.infra-mixsan_O2 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err ../run_base_ref_infra-mixsan_O2.0000/perlbench_base.infra-mixsan_O2 -I./lib diffmail.pl 4 800 10 17 19 300
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err ../run_base_ref_infra-mixsan_O2.0000/perlbench_base.infra-mixsan_O2 -I./lib splitmail.pl 1600 12 26 16 4500
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 10:10:55 2026 (1782958255)
+Stop command: Thu Jul  2 10:20:23 2026 (1782958823)
+Elapsed time for command: 00:09:28 (568)
+Workload elapsed time (0:1) = 336.085664 seconds
+Workload elapsed time (0:2) = 101.037215 seconds
+Workload elapsed time (0:3) = 122.872427 seconds
+copy 0 finished @ Thu Jul  2 10:20:15 2026.  Total elapsed time: 559.995306
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 10:20:23 2026 (1782958823)
+Stop command: Thu Jul  2 10:20:25 2026 (1782958825)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 10:10:55 2026 (1782958255)
+  Stop:     Thu Jul  2 10:20:23 2026 (1782958823)
+  Elapsed:  00:09:28 (568)
+  Reported: 559 995372000 559.995372
+ Success 400.perlbench base ref ratio=17.45, runtime=559.995372
+
+-----------------------------------
+  Running (#1) 401.bzip2 ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000
+    -o input.source.out -e input.source.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 input.source 280
+    -o chicken.jpg.out -e chicken.jpg.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 chicken.jpg 30
+    -o liberty.jpg.out -e liberty.jpg.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 liberty.jpg 30
+    -o input.program.out -e input.program.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 input.program 280
+    -o text.html.out -e text.html.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 text.html 280
+    -o input.combined.out -e input.combined.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 input.combined 200
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 10:20:25 2026 (1782958825)
+Stop command: Thu Jul  2 10:34:30 2026 (1782959670)
+Elapsed time for command: 00:14:05 (845)
+Workload elapsed time (0:1) = 92.045788 seconds
+Workload elapsed time (0:2) = 32.755608 seconds
+Workload elapsed time (0:3) = 100.514576 seconds
+Workload elapsed time (0:4) = 195.555273 seconds
+Workload elapsed time (0:5) = 270.761704 seconds
+Workload elapsed time (0:6) = 145.016284 seconds
+copy 0 finished @ Thu Jul  2 10:34:22 2026.  Total elapsed time: 836.649233
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 10:34:30 2026 (1782959670)
+Stop command: Thu Jul  2 10:34:32 2026 (1782959672)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 10:20:25 2026 (1782958825)
+  Stop:     Thu Jul  2 10:34:30 2026 (1782959670)
+  Elapsed:  00:14:05 (845)
+  Reported: 836 649314000 836.649314
+ Success 401.bzip2 base ref ratio=11.53, runtime=836.649314
+
+-----------------------------------
+  Running (#1) 403.gcc ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000
+    -o 166.out -e 166.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 166.i -o 166.s
+    -o 200.out -e 200.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 200.i -o 200.s
+    -o c-typeck.out -e c-typeck.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 c-typeck.i -o c-typeck.s
+    -o cp-decl.out -e cp-decl.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 cp-decl.i -o cp-decl.s
+    -o expr.out -e expr.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 expr.i -o expr.s
+    -o expr2.out -e expr2.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 expr2.i -o expr2.s
+    -o g23.out -e g23.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 g23.i -o g23.s
+    -o s04.out -e s04.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 s04.i -o s04.s
+    -o scilab.out -e scilab.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 scilab.i -o scilab.s
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 10:34:32 2026 (1782959672)
+Stop command: Thu Jul  2 10:41:53 2026 (1782960113)
+Elapsed time for command: 00:07:21 (441)
+Workload elapsed time (0:1) = 33.744841 seconds
+Workload elapsed time (0:2) = 97.887986 seconds
+Workload elapsed time (0:3) = 51.641044 seconds
+Workload elapsed time (0:4) = 38.123942 seconds
+Workload elapsed time (0:5) = 45.335001 seconds
+Workload elapsed time (0:6) = 62.819978 seconds
+Workload elapsed time (0:7) = 55.967955 seconds
+Workload elapsed time (0:8) = 30.250166 seconds
+Workload elapsed time (0:9) = 17.262463 seconds
+copy 0 finished @ Thu Jul  2 10:41:45 2026.  Total elapsed time: 433.033376
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 10:41:54 2026 (1782960114)
+Stop command: Thu Jul  2 10:41:56 2026 (1782960116)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 10:34:32 2026 (1782959672)
+  Stop:     Thu Jul  2 10:41:53 2026 (1782960113)
+  Elapsed:  00:07:21 (441)
+  Reported: 433 33494000 433.033494
+ Success 403.gcc base ref ratio=18.59, runtime=433.033494
+
+-----------------------------------
+  Running (#1) 429.mcf ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008
+    -o inp.out -e inp.err ../run_base_ref_infra-mixsan_O2.0008/mcf_base.infra-mixsan_O2 inp.in
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 10:41:56 2026 (1782960116)
+Stop command: Thu Jul  2 10:47:00 2026 (1782960420)
+Elapsed time for command: 00:05:04 (304)
+Workload elapsed time (0:1) = 295.798496 seconds
+copy 0 finished @ Thu Jul  2 10:46:52 2026.  Total elapsed time: 295.798496
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 10:47:00 2026 (1782960420)
+Stop command: Thu Jul  2 10:47:02 2026 (1782960422)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 10:41:56 2026 (1782960116)
+  Stop:     Thu Jul  2 10:47:00 2026 (1782960420)
+  Elapsed:  00:05:04 (304)
+  Reported: 295 798542000 295.798542
+ Success 429.mcf base ref ratio=30.83, runtime=295.798542
+
+-----------------------------------
+  Running (#1) 433.milc ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006
+    -i su3imp.in -o su3imp.out -e su3imp.err ../run_base_ref_infra-mixsan_O2.0006/milc_base.infra-mixsan_O2
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 10:47:02 2026 (1782960422)
+Stop command: Thu Jul  2 10:50:04 2026 (1782960604)
+Elapsed time for command: 00:03:02 (182)
+Workload elapsed time (0:1) = 174.754142 seconds
+copy 0 finished @ Thu Jul  2 10:49:56 2026.  Total elapsed time: 174.754142
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006'
+comparing 'su3imp.out' with abstol=2e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 10:50:04 2026 (1782960604)
+Stop command: Thu Jul  2 10:50:06 2026 (1782960606)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 10:47:02 2026 (1782960422)
+  Stop:     Thu Jul  2 10:50:04 2026 (1782960604)
+  Elapsed:  00:03:02 (182)
+  Reported: 174 754184000 174.754184
+ Success 433.milc base ref ratio=52.53, runtime=174.754184
+
+-----------------------------------
+  Running (#1) 444.namd ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001
+    -o namd.stdout -e namd.err ../run_base_ref_infra-mixsan_O2.0001/namd_base.infra-mixsan_O2 --input namd.input --iterations 38 --output namd.out 
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 10:50:07 2026 (1782960607)
+Stop command: Thu Jul  2 10:54:20 2026 (1782960860)
+Elapsed time for command: 00:04:13 (253)
+Workload elapsed time (0:1) = 245.784198 seconds
+copy 0 finished @ Thu Jul  2 10:54:12 2026.  Total elapsed time: 245.784198
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'namd.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 10:54:20 2026 (1782960860)
+Stop command: Thu Jul  2 10:54:22 2026 (1782960862)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 10:50:07 2026 (1782960607)
+  Stop:     Thu Jul  2 10:54:20 2026 (1782960860)
+  Elapsed:  00:04:13 (253)
+  Reported: 245 784238000 245.784238
+ Success 444.namd base ref ratio=32.63, runtime=245.784238
+
+-----------------------------------
+  Running (#1) 445.gobmk ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006
+    -i 13x13.tst -o 13x13.out -e 13x13.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+    -i nngs.tst -o nngs.out -e nngs.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+    -i score2.tst -o score2.out -e score2.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+    -i trevorc.tst -o trevorc.out -e trevorc.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+    -i trevord.tst -o trevord.out -e trevord.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 10:54:23 2026 (1782960863)
+Stop command: Thu Jul  2 11:01:04 2026 (1782961264)
+Elapsed time for command: 00:06:41 (401)
+Workload elapsed time (0:1) = 54.276699 seconds
+Workload elapsed time (0:2) = 141.806511 seconds
+Workload elapsed time (0:3) = 70.743719 seconds
+Workload elapsed time (0:4) = 53.74774 seconds
+Workload elapsed time (0:5) = 72.922573 seconds
+copy 0 finished @ Thu Jul  2 11:00:56 2026.  Total elapsed time: 393.497242
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 11:01:04 2026 (1782961264)
+Stop command: Thu Jul  2 11:01:06 2026 (1782961266)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 10:54:23 2026 (1782960863)
+  Stop:     Thu Jul  2 11:01:04 2026 (1782961264)
+  Elapsed:  00:06:41 (401)
+  Reported: 393 497307000 393.497307
+ Success 445.gobmk base ref ratio=26.66, runtime=393.497307
+
+-----------------------------------
+  Running (#1) 447.dealII ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000
+    -o log -e dealII.err ../run_base_ref_infra-mixsan_O2.0000/dealII_base.infra-mixsan_O2 23
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 11:01:06 2026 (1782961266)
+Stop command: Thu Jul  2 11:04:26 2026 (1782961466)
+Elapsed time for command: 00:03:20 (200)
+Workload elapsed time (0:1) = 191.752162 seconds
+copy 0 finished @ Thu Jul  2 11:04:18 2026.  Total elapsed time: 191.752162
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'grid-0.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-1.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-2.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-3.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-4.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-5.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-6.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-7.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-8.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-0.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-1.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-2.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-3.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-4.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-5.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-6.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-7.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-8.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-10.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-11.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-12.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-13.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-14.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-15.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-16.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-17.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-18.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-19.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-20.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-21.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-22.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-23.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-9.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'log' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-10.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-11.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-12.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-13.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-14.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-15.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-16.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-17.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-18.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-19.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-20.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-21.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-22.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-23.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-9.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 11:04:26 2026 (1782961466)
+Stop command: Thu Jul  2 11:04:40 2026 (1782961480)
+Elapsed time for command: 00:00:14 (14)
+Benchmark Times:
+  Start:    Thu Jul  2 11:01:06 2026 (1782961266)
+  Stop:     Thu Jul  2 11:04:26 2026 (1782961466)
+  Elapsed:  00:03:20 (200)
+  Reported: 191 752204000 191.752204
+ Success 447.dealII base ref ratio=59.66, runtime=191.752204
+
+-----------------------------------
+  Running (#1) 450.soplex ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr ../run_base_ref_infra-mixsan_O2.0000/soplex_base.infra-mixsan_O2 -s1 -e -m45000 pds-50.mps
+    -o ref.out -e ref.stderr ../run_base_ref_infra-mixsan_O2.0000/soplex_base.infra-mixsan_O2 -m3500 ref.mps
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 11:04:40 2026 (1782961480)
+Stop command: Thu Jul  2 11:08:26 2026 (1782961706)
+Elapsed time for command: 00:03:46 (226)
+Workload elapsed time (0:1) = 102.150948 seconds
+Workload elapsed time (0:2) = 115.323386 seconds
+copy 0 finished @ Thu Jul  2 11:08:18 2026.  Total elapsed time: 217.474334
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 11:08:26 2026 (1782961706)
+Stop command: Thu Jul  2 11:08:28 2026 (1782961708)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000/.err'
+*** Miscompare of pds-50.mps.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000/pds-50.mps.stderr.mis
+'pds-50.mps.stderr' long
+*** Miscompare of ref.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000/ref.stderr.mis
+'ref.stderr' long
+Benchmark Times:
+  Start:    Thu Jul  2 11:04:40 2026 (1782961480)
+  Stop:     Thu Jul  2 11:08:26 2026 (1782961706)
+  Elapsed:  00:03:46 (226)
+  Reported: 217 474385000 217.474385
+ Error 450.soplex base ref ratio=38.35, runtime=217.474385
+
+-----------------------------------
+  Running (#1) 453.povray ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000
+    -o SPEC-benchmark-ref.stdout -e SPEC-benchmark-ref.stderr ../run_base_ref_infra-mixsan_O2.0000/povray_base.infra-mixsan_O2 SPEC-benchmark-ref.ini
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 11:08:28 2026 (1782961708)
+Stop command: Thu Jul  2 11:11:53 2026 (1782961913)
+Elapsed time for command: 00:03:25 (205)
+Workload elapsed time (0:1) = 196.776379 seconds
+copy 0 finished @ Thu Jul  2 11:11:45 2026.  Total elapsed time: 196.776379
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'SPEC-benchmark.log' with abstol=0, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'SPEC-benchmark.tga' with abstol=0, binary=1, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=50
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 11:11:53 2026 (1782961913)
+Stop command: Thu Jul  2 11:12:04 2026 (1782961924)
+Elapsed time for command: 00:00:11 (11)
+Benchmark Times:
+  Start:    Thu Jul  2 11:08:28 2026 (1782961708)
+  Stop:     Thu Jul  2 11:11:53 2026 (1782961913)
+  Elapsed:  00:03:25 (205)
+  Reported: 196 776418000 196.776418
+ Success 453.povray base ref ratio=27.04, runtime=196.776418
+
+-----------------------------------
+  Running (#1) 456.hmmer ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006
+    -o nph3.out -e nph3.err ../run_base_ref_infra-mixsan_O2.0006/hmmer_base.infra-mixsan_O2 nph3.hmm swiss41
+    -o retro.out -e retro.err ../run_base_ref_infra-mixsan_O2.0006/hmmer_base.infra-mixsan_O2 --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 11:12:04 2026 (1782961924)
+Stop command: Thu Jul  2 11:18:07 2026 (1782962287)
+Elapsed time for command: 00:06:03 (363)
+Workload elapsed time (0:1) = 110.116522 seconds
+Workload elapsed time (0:2) = 244.904469 seconds
+copy 0 finished @ Thu Jul  2 11:17:59 2026.  Total elapsed time: 355.020991
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=10
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=10
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 11:18:07 2026 (1782962287)
+Stop command: Thu Jul  2 11:18:09 2026 (1782962289)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 11:12:04 2026 (1782961924)
+  Stop:     Thu Jul  2 11:18:07 2026 (1782962287)
+  Elapsed:  00:06:03 (363)
+  Reported: 355 21040000 355.02104
+ Success 456.hmmer base ref ratio=26.28, runtime=355.021040
+
+-----------------------------------
+  Running (#1) 458.sjeng ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001
+    -o ref.out -e ref.err ../run_base_ref_infra-mixsan_O2.0001/sjeng_base.infra-mixsan_O2 ref.txt
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 11:18:09 2026 (1782962289)
+Stop command: Thu Jul  2 11:35:03 2026 (1782963303)
+Elapsed time for command: 00:16:54 (1014)
+Workload elapsed time (0:1) = 1005.409284 seconds
+copy 0 finished @ Thu Jul  2 11:34:55 2026.  Total elapsed time: 1005.409284
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 11:35:03 2026 (1782963303)
+Stop command: Thu Jul  2 11:35:05 2026 (1782963305)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 11:18:09 2026 (1782962289)
+  Stop:     Thu Jul  2 11:35:03 2026 (1782963303)
+  Elapsed:  00:16:54 (1014)
+  Reported: 1005 409328000 1005.409328
+ Success 458.sjeng base ref ratio=12.03, runtime=1005.409328
+
+-----------------------------------
+  Running (#1) 462.libquantum ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001
+    -o ref.out -e ref.err ../run_base_ref_infra-mixsan_O2.0001/libquantum_base.infra-mixsan_O2 1397 8
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 11:35:05 2026 (1782963305)
+Stop command: Thu Jul  2 11:42:14 2026 (1782963734)
+Elapsed time for command: 00:07:09 (429)
+Workload elapsed time (0:1) = 420.540268 seconds
+copy 0 finished @ Thu Jul  2 11:42:06 2026.  Total elapsed time: 420.540268
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 11:42:14 2026 (1782963734)
+Stop command: Thu Jul  2 11:42:16 2026 (1782963736)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 11:35:05 2026 (1782963305)
+  Stop:     Thu Jul  2 11:42:14 2026 (1782963734)
+  Elapsed:  00:07:09 (429)
+  Reported: 420 540311000 420.540311
+ Success 462.libquantum base ref ratio=49.27, runtime=420.540311
+
+-----------------------------------
+  Running (#1) 464.h264ref ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err ../run_base_ref_infra-mixsan_O2.0000/h264ref_base.infra-mixsan_O2 -d foreman_ref_encoder_baseline.cfg
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err ../run_base_ref_infra-mixsan_O2.0000/h264ref_base.infra-mixsan_O2 -d foreman_ref_encoder_main.cfg
+    -o sss_main_encodelog.out -e sss_main_encodelog.err ../run_base_ref_infra-mixsan_O2.0000/h264ref_base.infra-mixsan_O2 -d sss_encoder_main.cfg
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 11:42:16 2026 (1782963736)
+Stop command: Thu Jul  2 11:56:11 2026 (1782964571)
+Elapsed time for command: 00:13:55 (835)
+Workload elapsed time (0:1) = 121.469033 seconds
+Workload elapsed time (0:2) = 72.97922 seconds
+Workload elapsed time (0:3) = 632.494134 seconds
+copy 0 finished @ Thu Jul  2 11:56:03 2026.  Total elapsed time: 826.942387
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 11:56:11 2026 (1782964571)
+Stop command: Thu Jul  2 11:56:13 2026 (1782964573)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 11:42:16 2026 (1782963736)
+  Stop:     Thu Jul  2 11:56:11 2026 (1782964571)
+  Elapsed:  00:13:55 (835)
+  Reported: 826 942441000 826.942441
+ Success 464.h264ref base ref ratio=26.76, runtime=826.942441
+
+-----------------------------------
+  Running (#1) 470.lbm ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001
+    -o lbm.out -e lbm.err ../run_base_ref_infra-mixsan_O2.0001/lbm_base.infra-mixsan_O2 3000 reference.dat 0 0 100_100_130_ldc.of
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 11:56:13 2026 (1782964573)
+Stop command: Thu Jul  2 11:59:29 2026 (1782964769)
+Elapsed time for command: 00:03:16 (196)
+Workload elapsed time (0:1) = 188.105703 seconds
+copy 0 finished @ Thu Jul  2 11:59:21 2026.  Total elapsed time: 188.105703
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'lbm.out' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 11:59:29 2026 (1782964769)
+Stop command: Thu Jul  2 11:59:31 2026 (1782964771)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 11:56:13 2026 (1782964573)
+  Stop:     Thu Jul  2 11:59:29 2026 (1782964769)
+  Elapsed:  00:03:16 (196)
+  Reported: 188 105746000 188.105746
+ Success 470.lbm base ref ratio=73.04, runtime=188.105746
+
+-----------------------------------
+  Running (#1) 471.omnetpp ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001
+    -o omnetpp.log -e omnetpp.err ../run_base_ref_infra-mixsan_O2.0001/omnetpp_base.infra-mixsan_O2 omnetpp.ini
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 11:59:31 2026 (1782964771)
+Stop command: Thu Jul  2 12:10:34 2026 (1782965434)
+Elapsed time for command: 00:11:03 (663)
+Workload elapsed time (0:1) = 654.780181 seconds
+copy 0 finished @ Thu Jul  2 12:10:26 2026.  Total elapsed time: 654.780181
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 12:10:34 2026 (1782965434)
+Stop command: Thu Jul  2 12:10:36 2026 (1782965436)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 11:59:31 2026 (1782964771)
+  Stop:     Thu Jul  2 12:10:34 2026 (1782965434)
+  Elapsed:  00:11:03 (663)
+  Reported: 654 780224000 654.780224
+ Success 471.omnetpp base ref ratio=9.55, runtime=654.780224
+
+-----------------------------------
+  Running (#1) 473.astar ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000
+    -o BigLakes2048.out -e BigLakes2048.err ../run_base_ref_infra-mixsan_O2.0000/astar_base.infra-mixsan_O2 BigLakes2048.cfg
+    -o rivers.out -e rivers.err ../run_base_ref_infra-mixsan_O2.0000/astar_base.infra-mixsan_O2 rivers.cfg
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 12:10:36 2026 (1782965436)
+Stop command: Thu Jul  2 12:22:39 2026 (1782966159)
+Elapsed time for command: 00:12:03 (723)
+Workload elapsed time (0:1) = 317.685396 seconds
+Workload elapsed time (0:2) = 396.799508 seconds
+copy 0 finished @ Thu Jul  2 12:22:31 2026.  Total elapsed time: 714.484904
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 12:22:39 2026 (1782966159)
+Stop command: Thu Jul  2 12:22:41 2026 (1782966161)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 12:10:36 2026 (1782965436)
+  Stop:     Thu Jul  2 12:22:39 2026 (1782966159)
+  Elapsed:  00:12:03 (723)
+  Reported: 714 484955000 714.484955
+ Success 473.astar base ref ratio=9.83, runtime=714.484955
+
+-----------------------------------
+  Running (#1) 482.sphinx3 ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006
+    -o an4.log -e an4.err ../run_base_ref_infra-mixsan_O2.0006/sphinx_livepretend_base.infra-mixsan_O2 ctlfile . args.an4
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 12:22:41 2026 (1782966161)
+Stop command: Thu Jul  2 12:30:06 2026 (1782966606)
+Elapsed time for command: 00:07:25 (445)
+Workload elapsed time (0:1) = 436.749741 seconds
+copy 0 finished @ Thu Jul  2 12:29:58 2026.  Total elapsed time: 436.749741
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006'
+comparing 'an4.log' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'considered.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=0.0004, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'total_considered.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=1e-06, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 12:30:06 2026 (1782966606)
+Stop command: Thu Jul  2 12:30:08 2026 (1782966608)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 12:22:41 2026 (1782966161)
+  Stop:     Thu Jul  2 12:30:06 2026 (1782966606)
+  Elapsed:  00:07:25 (445)
+  Reported: 436 749786000 436.749786
+ Success 482.sphinx3 base ref ratio=44.63, runtime=436.749786
+
+-----------------------------------
+  Running (#1) 483.xalancbmk ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000
+    -o ref.out -e ref.err ../run_base_ref_infra-mixsan_O2.0000/Xalan_base.infra-mixsan_O2 -v t5.xml xalanc.xsl
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 12:30:08 2026 (1782966608)
+Stop command: Thu Jul  2 12:33:13 2026 (1782966793)
+Elapsed time for command: 00:03:05 (185)
+Workload elapsed time (0:1) = 176.590576 seconds
+copy 0 finished @ Thu Jul  2 12:33:05 2026.  Total elapsed time: 176.590576
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 12:33:13 2026 (1782966793)
+Stop command: Thu Jul  2 12:33:16 2026 (1782966796)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Thu Jul  2 12:30:08 2026 (1782966608)
+  Stop:     Thu Jul  2 12:33:13 2026 (1782966793)
+  Elapsed:  00:03:05 (185)
+  Reported: 176 590629000 176.590629
+ Success 483.xalancbmk base ref ratio=39.07, runtime=176.590629
+
+-----------------------------------
+  Running (#2) 400.perlbench ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err ../run_base_ref_infra-mixsan_O2.0000/perlbench_base.infra-mixsan_O2 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err ../run_base_ref_infra-mixsan_O2.0000/perlbench_base.infra-mixsan_O2 -I./lib diffmail.pl 4 800 10 17 19 300
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err ../run_base_ref_infra-mixsan_O2.0000/perlbench_base.infra-mixsan_O2 -I./lib splitmail.pl 1600 12 26 16 4500
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 12:33:16 2026 (1782966796)
+Stop command: Thu Jul  2 12:38:39 2026 (1782967119)
+Elapsed time for command: 00:05:23 (323)
+Workload elapsed time (0:1) = 169.154082 seconds
+Workload elapsed time (0:2) = 51.056215 seconds
+Workload elapsed time (0:3) = 95.266021 seconds
+copy 0 finished @ Thu Jul  2 12:38:31 2026.  Total elapsed time: 315.476318
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 12:38:39 2026 (1782967119)
+Stop command: Thu Jul  2 12:38:41 2026 (1782967121)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 12:33:16 2026 (1782966796)
+  Stop:     Thu Jul  2 12:38:39 2026 (1782967119)
+  Elapsed:  00:05:23 (323)
+  Reported: 315 476384000 315.476384
+ Success 400.perlbench base ref ratio=30.97, runtime=315.476384
+
+-----------------------------------
+  Running (#2) 401.bzip2 ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000
+    -o input.source.out -e input.source.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 input.source 280
+    -o chicken.jpg.out -e chicken.jpg.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 chicken.jpg 30
+    -o liberty.jpg.out -e liberty.jpg.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 liberty.jpg 30
+    -o input.program.out -e input.program.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 input.program 280
+    -o text.html.out -e text.html.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 text.html 280
+    -o input.combined.out -e input.combined.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 input.combined 200
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 12:38:41 2026 (1782967121)
+Stop command: Thu Jul  2 12:47:02 2026 (1782967622)
+Elapsed time for command: 00:08:21 (501)
+Workload elapsed time (0:1) = 92.189971 seconds
+Workload elapsed time (0:2) = 32.756069 seconds
+Workload elapsed time (0:3) = 53.804546 seconds
+Workload elapsed time (0:4) = 107.783151 seconds
+Workload elapsed time (0:5) = 133.929454 seconds
+Workload elapsed time (0:6) = 71.99752 seconds
+copy 0 finished @ Thu Jul  2 12:46:54 2026.  Total elapsed time: 492.460711
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 12:47:02 2026 (1782967622)
+Stop command: Thu Jul  2 12:47:04 2026 (1782967624)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 12:38:41 2026 (1782967121)
+  Stop:     Thu Jul  2 12:47:02 2026 (1782967622)
+  Elapsed:  00:08:21 (501)
+  Reported: 492 460789000 492.460789
+ Success 401.bzip2 base ref ratio=19.60, runtime=492.460789
+
+-----------------------------------
+  Running (#2) 403.gcc ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000
+    -o 166.out -e 166.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 166.i -o 166.s
+    -o 200.out -e 200.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 200.i -o 200.s
+    -o c-typeck.out -e c-typeck.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 c-typeck.i -o c-typeck.s
+    -o cp-decl.out -e cp-decl.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 cp-decl.i -o cp-decl.s
+    -o expr.out -e expr.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 expr.i -o expr.s
+    -o expr2.out -e expr2.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 expr2.i -o expr2.s
+    -o g23.out -e g23.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 g23.i -o g23.s
+    -o s04.out -e s04.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 s04.i -o s04.s
+    -o scilab.out -e scilab.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 scilab.i -o scilab.s
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 12:47:04 2026 (1782967624)
+Stop command: Thu Jul  2 12:51:08 2026 (1782967868)
+Elapsed time for command: 00:04:04 (244)
+Workload elapsed time (0:1) = 15.155508 seconds
+Workload elapsed time (0:2) = 45.159789 seconds
+Workload elapsed time (0:3) = 23.588015 seconds
+Workload elapsed time (0:4) = 17.34218 seconds
+Workload elapsed time (0:5) = 20.20605 seconds
+Workload elapsed time (0:6) = 28.220719 seconds
+Workload elapsed time (0:7) = 40.295517 seconds
+Workload elapsed time (0:8) = 28.875047 seconds
+Workload elapsed time (0:9) = 16.967263 seconds
+copy 0 finished @ Thu Jul  2 12:51:00 2026.  Total elapsed time: 235.810088
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 12:51:08 2026 (1782967868)
+Stop command: Thu Jul  2 12:51:10 2026 (1782967870)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 12:47:04 2026 (1782967624)
+  Stop:     Thu Jul  2 12:51:08 2026 (1782967868)
+  Elapsed:  00:04:04 (244)
+  Reported: 235 810207000 235.810207
+ Success 403.gcc base ref ratio=34.14, runtime=235.810207
+
+-----------------------------------
+  Running (#2) 429.mcf ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008
+    -o inp.out -e inp.err ../run_base_ref_infra-mixsan_O2.0008/mcf_base.infra-mixsan_O2 inp.in
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 12:51:10 2026 (1782967870)
+Stop command: Thu Jul  2 12:55:50 2026 (1782968150)
+Elapsed time for command: 00:04:40 (280)
+Workload elapsed time (0:1) = 271.598328 seconds
+copy 0 finished @ Thu Jul  2 12:55:42 2026.  Total elapsed time: 271.598328
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 12:55:50 2026 (1782968150)
+Stop command: Thu Jul  2 12:55:52 2026 (1782968152)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 12:51:10 2026 (1782967870)
+  Stop:     Thu Jul  2 12:55:50 2026 (1782968150)
+  Elapsed:  00:04:40 (280)
+  Reported: 271 598374000 271.598374
+ Success 429.mcf base ref ratio=33.58, runtime=271.598374
+
+-----------------------------------
+  Running (#2) 433.milc ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006
+    -i su3imp.in -o su3imp.out -e su3imp.err ../run_base_ref_infra-mixsan_O2.0006/milc_base.infra-mixsan_O2
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 12:55:52 2026 (1782968152)
+Stop command: Thu Jul  2 12:58:51 2026 (1782968331)
+Elapsed time for command: 00:02:59 (179)
+Workload elapsed time (0:1) = 171.197182 seconds
+copy 0 finished @ Thu Jul  2 12:58:43 2026.  Total elapsed time: 171.197182
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006'
+comparing 'su3imp.out' with abstol=2e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 12:58:51 2026 (1782968331)
+Stop command: Thu Jul  2 12:58:53 2026 (1782968333)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 12:55:52 2026 (1782968152)
+  Stop:     Thu Jul  2 12:58:51 2026 (1782968331)
+  Elapsed:  00:02:59 (179)
+  Reported: 171 197228000 171.197228
+ Success 433.milc base ref ratio=53.62, runtime=171.197228
+
+-----------------------------------
+  Running (#2) 444.namd ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001
+    -o namd.stdout -e namd.err ../run_base_ref_infra-mixsan_O2.0001/namd_base.infra-mixsan_O2 --input namd.input --iterations 38 --output namd.out 
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 12:58:53 2026 (1782968333)
+Stop command: Thu Jul  2 13:03:07 2026 (1782968587)
+Elapsed time for command: 00:04:14 (254)
+Workload elapsed time (0:1) = 245.495548 seconds
+copy 0 finished @ Thu Jul  2 13:02:59 2026.  Total elapsed time: 245.495548
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'namd.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 13:03:07 2026 (1782968587)
+Stop command: Thu Jul  2 13:03:09 2026 (1782968589)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 12:58:53 2026 (1782968333)
+  Stop:     Thu Jul  2 13:03:07 2026 (1782968587)
+  Elapsed:  00:04:14 (254)
+  Reported: 245 495589000 245.495589
+ Success 444.namd base ref ratio=32.67, runtime=245.495589
+
+-----------------------------------
+  Running (#2) 445.gobmk ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006
+    -i 13x13.tst -o 13x13.out -e 13x13.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+    -i nngs.tst -o nngs.out -e nngs.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+    -i score2.tst -o score2.out -e score2.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+    -i trevorc.tst -o trevorc.out -e trevorc.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+    -i trevord.tst -o trevord.out -e trevord.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 13:03:09 2026 (1782968589)
+Stop command: Thu Jul  2 13:09:42 2026 (1782968982)
+Elapsed time for command: 00:06:33 (393)
+Workload elapsed time (0:1) = 52.900484 seconds
+Workload elapsed time (0:2) = 137.91489 seconds
+Workload elapsed time (0:3) = 69.785004 seconds
+Workload elapsed time (0:4) = 52.815675 seconds
+Workload elapsed time (0:5) = 72.061964 seconds
+copy 0 finished @ Thu Jul  2 13:09:34 2026.  Total elapsed time: 385.478017
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 13:09:42 2026 (1782968982)
+Stop command: Thu Jul  2 13:09:45 2026 (1782968985)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Thu Jul  2 13:03:09 2026 (1782968589)
+  Stop:     Thu Jul  2 13:09:42 2026 (1782968982)
+  Elapsed:  00:06:33 (393)
+  Reported: 385 478078000 385.478078
+ Success 445.gobmk base ref ratio=27.21, runtime=385.478078
+
+-----------------------------------
+  Running (#2) 447.dealII ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000
+    -o log -e dealII.err ../run_base_ref_infra-mixsan_O2.0000/dealII_base.infra-mixsan_O2 23
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 13:09:45 2026 (1782968985)
+Stop command: Thu Jul  2 13:13:03 2026 (1782969183)
+Elapsed time for command: 00:03:18 (198)
+Workload elapsed time (0:1) = 190.033848 seconds
+copy 0 finished @ Thu Jul  2 13:12:55 2026.  Total elapsed time: 190.033848
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'grid-0.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-1.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-2.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-3.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-4.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-5.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-6.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-7.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-8.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-0.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-1.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-2.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-3.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-4.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-5.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-6.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-7.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-8.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-10.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-11.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-12.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-13.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-14.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-15.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-16.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-17.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-18.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-19.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-20.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-21.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-22.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-23.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-9.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'log' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-10.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-11.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-12.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-13.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-14.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-15.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-16.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-17.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-18.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-19.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-20.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-21.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-22.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-23.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-9.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 13:13:03 2026 (1782969183)
+Stop command: Thu Jul  2 13:13:17 2026 (1782969197)
+Elapsed time for command: 00:00:14 (14)
+Benchmark Times:
+  Start:    Thu Jul  2 13:09:45 2026 (1782968985)
+  Stop:     Thu Jul  2 13:13:03 2026 (1782969183)
+  Elapsed:  00:03:18 (198)
+  Reported: 190 33889000 190.033889
+ Success 447.dealII base ref ratio=60.20, runtime=190.033889
+
+-----------------------------------
+  Running (#2) 450.soplex ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr ../run_base_ref_infra-mixsan_O2.0000/soplex_base.infra-mixsan_O2 -s1 -e -m45000 pds-50.mps
+    -o ref.out -e ref.stderr ../run_base_ref_infra-mixsan_O2.0000/soplex_base.infra-mixsan_O2 -m3500 ref.mps
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 13:13:17 2026 (1782969197)
+Stop command: Thu Jul  2 13:16:56 2026 (1782969416)
+Elapsed time for command: 00:03:39 (219)
+Workload elapsed time (0:1) = 99.62096 seconds
+Workload elapsed time (0:2) = 111.383783 seconds
+copy 0 finished @ Thu Jul  2 13:16:48 2026.  Total elapsed time: 211.004743
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 13:16:56 2026 (1782969416)
+Stop command: Thu Jul  2 13:16:58 2026 (1782969418)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000/.err'
+*** Miscompare of pds-50.mps.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000/pds-50.mps.stderr.mis
+'pds-50.mps.stderr' long
+*** Miscompare of ref.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000/ref.stderr.mis
+'ref.stderr' long
+Benchmark Times:
+  Start:    Thu Jul  2 13:13:17 2026 (1782969197)
+  Stop:     Thu Jul  2 13:16:56 2026 (1782969416)
+  Elapsed:  00:03:39 (219)
+  Reported: 211 4794000 211.004794
+ Error 450.soplex base ref ratio=39.53, runtime=211.004794
+
+-----------------------------------
+  Running (#2) 453.povray ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000
+    -o SPEC-benchmark-ref.stdout -e SPEC-benchmark-ref.stderr ../run_base_ref_infra-mixsan_O2.0000/povray_base.infra-mixsan_O2 SPEC-benchmark-ref.ini
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 13:16:58 2026 (1782969418)
+Stop command: Thu Jul  2 13:19:04 2026 (1782969544)
+Elapsed time for command: 00:02:06 (126)
+Workload elapsed time (0:1) = 118.078442 seconds
+copy 0 finished @ Thu Jul  2 13:18:56 2026.  Total elapsed time: 118.078442
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'SPEC-benchmark.log' with abstol=0, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'SPEC-benchmark.tga' with abstol=0, binary=1, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=50
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 13:19:04 2026 (1782969544)
+Stop command: Thu Jul  2 13:19:10 2026 (1782969550)
+Elapsed time for command: 00:00:06 (6)
+Benchmark Times:
+  Start:    Thu Jul  2 13:16:58 2026 (1782969418)
+  Stop:     Thu Jul  2 13:19:04 2026 (1782969544)
+  Elapsed:  00:02:06 (126)
+  Reported: 118 78481000 118.078481
+ Success 453.povray base ref ratio=45.05, runtime=118.078481
+
+-----------------------------------
+  Running (#2) 456.hmmer ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006
+    -o nph3.out -e nph3.err ../run_base_ref_infra-mixsan_O2.0006/hmmer_base.infra-mixsan_O2 nph3.hmm swiss41
+    -o retro.out -e retro.err ../run_base_ref_infra-mixsan_O2.0006/hmmer_base.infra-mixsan_O2 --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 13:19:10 2026 (1782969550)
+Stop command: Thu Jul  2 13:22:14 2026 (1782969734)
+Elapsed time for command: 00:03:04 (184)
+Workload elapsed time (0:1) = 54.770293 seconds
+Workload elapsed time (0:2) = 121.790074 seconds
+copy 0 finished @ Thu Jul  2 13:22:06 2026.  Total elapsed time: 176.560367
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=10
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=10
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 13:22:14 2026 (1782969734)
+Stop command: Thu Jul  2 13:22:16 2026 (1782969736)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 13:19:10 2026 (1782969550)
+  Stop:     Thu Jul  2 13:22:14 2026 (1782969734)
+  Elapsed:  00:03:04 (184)
+  Reported: 176 560410000 176.56041
+ Success 456.hmmer base ref ratio=52.84, runtime=176.560410
+
+-----------------------------------
+  Running (#2) 458.sjeng ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001
+    -o ref.out -e ref.err ../run_base_ref_infra-mixsan_O2.0001/sjeng_base.infra-mixsan_O2 ref.txt
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 13:22:17 2026 (1782969737)
+Stop command: Thu Jul  2 13:30:32 2026 (1782970232)
+Elapsed time for command: 00:08:15 (495)
+Workload elapsed time (0:1) = 487.006251 seconds
+copy 0 finished @ Thu Jul  2 13:30:24 2026.  Total elapsed time: 487.006251
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 13:30:32 2026 (1782970232)
+Stop command: Thu Jul  2 13:30:34 2026 (1782970234)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 13:22:17 2026 (1782969737)
+  Stop:     Thu Jul  2 13:30:32 2026 (1782970232)
+  Elapsed:  00:08:15 (495)
+  Reported: 487 6292000 487.006292
+ Success 458.sjeng base ref ratio=24.85, runtime=487.006292
+
+-----------------------------------
+  Running (#2) 462.libquantum ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001
+    -o ref.out -e ref.err ../run_base_ref_infra-mixsan_O2.0001/libquantum_base.infra-mixsan_O2 1397 8
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 13:30:34 2026 (1782970234)
+Stop command: Thu Jul  2 13:34:48 2026 (1782970488)
+Elapsed time for command: 00:04:14 (254)
+Workload elapsed time (0:1) = 246.692451 seconds
+copy 0 finished @ Thu Jul  2 13:34:40 2026.  Total elapsed time: 246.692451
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 13:34:48 2026 (1782970488)
+Stop command: Thu Jul  2 13:34:50 2026 (1782970490)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 13:30:34 2026 (1782970234)
+  Stop:     Thu Jul  2 13:34:48 2026 (1782970488)
+  Elapsed:  00:04:14 (254)
+  Reported: 246 692493000 246.692493
+ Success 462.libquantum base ref ratio=83.99, runtime=246.692493
+
+-----------------------------------
+  Running (#2) 464.h264ref ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err ../run_base_ref_infra-mixsan_O2.0000/h264ref_base.infra-mixsan_O2 -d foreman_ref_encoder_baseline.cfg
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err ../run_base_ref_infra-mixsan_O2.0000/h264ref_base.infra-mixsan_O2 -d foreman_ref_encoder_main.cfg
+    -o sss_main_encodelog.out -e sss_main_encodelog.err ../run_base_ref_infra-mixsan_O2.0000/h264ref_base.infra-mixsan_O2 -d sss_encoder_main.cfg
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 13:34:50 2026 (1782970490)
+Stop command: Thu Jul  2 13:41:47 2026 (1782970907)
+Elapsed time for command: 00:06:57 (417)
+Workload elapsed time (0:1) = 59.964182 seconds
+Workload elapsed time (0:2) = 36.045662 seconds
+Workload elapsed time (0:3) = 312.803602 seconds
+copy 0 finished @ Thu Jul  2 13:41:39 2026.  Total elapsed time: 408.813446
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 13:41:47 2026 (1782970907)
+Stop command: Thu Jul  2 13:41:49 2026 (1782970909)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 13:34:50 2026 (1782970490)
+  Stop:     Thu Jul  2 13:41:47 2026 (1782970907)
+  Elapsed:  00:06:57 (417)
+  Reported: 408 813495000 408.813495
+ Success 464.h264ref base ref ratio=54.13, runtime=408.813495
+
+-----------------------------------
+  Running (#2) 470.lbm ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001
+    -o lbm.out -e lbm.err ../run_base_ref_infra-mixsan_O2.0001/lbm_base.infra-mixsan_O2 3000 reference.dat 0 0 100_100_130_ldc.of
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 13:41:49 2026 (1782970909)
+Stop command: Thu Jul  2 13:43:31 2026 (1782971011)
+Elapsed time for command: 00:01:42 (102)
+Workload elapsed time (0:1) = 93.305685 seconds
+copy 0 finished @ Thu Jul  2 13:43:23 2026.  Total elapsed time: 93.305685
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'lbm.out' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 13:43:31 2026 (1782971011)
+Stop command: Thu Jul  2 13:43:33 2026 (1782971013)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 13:41:49 2026 (1782970909)
+  Stop:     Thu Jul  2 13:43:31 2026 (1782971011)
+  Elapsed:  00:01:42 (102)
+  Reported: 93 305731000 93.305731
+ Success 470.lbm base ref ratio=147.26, runtime=93.305731
+
+-----------------------------------
+  Running (#2) 471.omnetpp ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001
+    -o omnetpp.log -e omnetpp.err ../run_base_ref_infra-mixsan_O2.0001/omnetpp_base.infra-mixsan_O2 omnetpp.ini
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 13:43:33 2026 (1782971013)
+Stop command: Thu Jul  2 13:48:25 2026 (1782971305)
+Elapsed time for command: 00:04:52 (292)
+Workload elapsed time (0:1) = 284.610443 seconds
+copy 0 finished @ Thu Jul  2 13:48:17 2026.  Total elapsed time: 284.610443
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 13:48:25 2026 (1782971305)
+Stop command: Thu Jul  2 13:48:27 2026 (1782971307)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 13:43:33 2026 (1782971013)
+  Stop:     Thu Jul  2 13:48:25 2026 (1782971305)
+  Elapsed:  00:04:52 (292)
+  Reported: 284 610487000 284.610487
+ Success 471.omnetpp base ref ratio=21.96, runtime=284.610487
+
+-----------------------------------
+  Running (#2) 473.astar ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000
+    -o BigLakes2048.out -e BigLakes2048.err ../run_base_ref_infra-mixsan_O2.0000/astar_base.infra-mixsan_O2 BigLakes2048.cfg
+    -o rivers.out -e rivers.err ../run_base_ref_infra-mixsan_O2.0000/astar_base.infra-mixsan_O2 rivers.cfg
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 13:48:27 2026 (1782971307)
+Stop command: Thu Jul  2 13:54:01 2026 (1782971641)
+Elapsed time for command: 00:05:34 (334)
+Workload elapsed time (0:1) = 132.267622 seconds
+Workload elapsed time (0:2) = 192.904159 seconds
+copy 0 finished @ Thu Jul  2 13:53:53 2026.  Total elapsed time: 325.171781
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 13:54:01 2026 (1782971641)
+Stop command: Thu Jul  2 13:54:03 2026 (1782971643)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 13:48:27 2026 (1782971307)
+  Stop:     Thu Jul  2 13:54:01 2026 (1782971641)
+  Elapsed:  00:05:34 (334)
+  Reported: 325 171831000 325.171831
+ Success 473.astar base ref ratio=21.59, runtime=325.171831
+
+-----------------------------------
+  Running (#2) 482.sphinx3 ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006
+    -o an4.log -e an4.err ../run_base_ref_infra-mixsan_O2.0006/sphinx_livepretend_base.infra-mixsan_O2 ctlfile . args.an4
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 13:54:03 2026 (1782971643)
+Stop command: Thu Jul  2 13:58:29 2026 (1782971909)
+Elapsed time for command: 00:04:26 (266)
+Workload elapsed time (0:1) = 257.790519 seconds
+copy 0 finished @ Thu Jul  2 13:58:21 2026.  Total elapsed time: 257.790519
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006'
+comparing 'an4.log' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'considered.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=0.0004, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'total_considered.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=1e-06, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 13:58:29 2026 (1782971909)
+Stop command: Thu Jul  2 13:58:31 2026 (1782971911)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 13:54:03 2026 (1782971643)
+  Stop:     Thu Jul  2 13:58:29 2026 (1782971909)
+  Elapsed:  00:04:26 (266)
+  Reported: 257 790557000 257.790557
+ Success 482.sphinx3 base ref ratio=75.60, runtime=257.790557
+
+-----------------------------------
+  Running (#2) 483.xalancbmk ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000
+    -o ref.out -e ref.err ../run_base_ref_infra-mixsan_O2.0000/Xalan_base.infra-mixsan_O2 -v t5.xml xalanc.xsl
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 13:58:31 2026 (1782971911)
+Stop command: Thu Jul  2 14:00:59 2026 (1782972059)
+Elapsed time for command: 00:02:28 (148)
+Workload elapsed time (0:1) = 140.45324 seconds
+copy 0 finished @ Thu Jul  2 14:00:51 2026.  Total elapsed time: 140.45324
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 14:00:59 2026 (1782972059)
+Stop command: Thu Jul  2 14:01:01 2026 (1782972061)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 13:58:31 2026 (1782971911)
+  Stop:     Thu Jul  2 14:00:59 2026 (1782972059)
+  Elapsed:  00:02:28 (148)
+  Reported: 140 453279000 140.453279
+ Success 483.xalancbmk base ref ratio=49.13, runtime=140.453279
+
+-----------------------------------
+  Running (#3) 400.perlbench ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err ../run_base_ref_infra-mixsan_O2.0000/perlbench_base.infra-mixsan_O2 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err ../run_base_ref_infra-mixsan_O2.0000/perlbench_base.infra-mixsan_O2 -I./lib diffmail.pl 4 800 10 17 19 300
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err ../run_base_ref_infra-mixsan_O2.0000/perlbench_base.infra-mixsan_O2 -I./lib splitmail.pl 1600 12 26 16 4500
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 14:01:02 2026 (1782972062)
+Stop command: Thu Jul  2 14:06:00 2026 (1782972360)
+Elapsed time for command: 00:04:58 (298)
+Workload elapsed time (0:1) = 149.909443 seconds
+Workload elapsed time (0:2) = 49.925341 seconds
+Workload elapsed time (0:3) = 90.83024 seconds
+copy 0 finished @ Thu Jul  2 14:05:52 2026.  Total elapsed time: 290.665024
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 14:06:00 2026 (1782972360)
+Stop command: Thu Jul  2 14:06:02 2026 (1782972362)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 14:01:02 2026 (1782972062)
+  Stop:     Thu Jul  2 14:06:00 2026 (1782972360)
+  Elapsed:  00:04:58 (298)
+  Reported: 290 665087000 290.665087
+ Success 400.perlbench base ref ratio=33.61, runtime=290.665087
+
+-----------------------------------
+  Running (#3) 401.bzip2 ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000
+    -o input.source.out -e input.source.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 input.source 280
+    -o chicken.jpg.out -e chicken.jpg.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 chicken.jpg 30
+    -o liberty.jpg.out -e liberty.jpg.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 liberty.jpg 30
+    -o input.program.out -e input.program.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 input.program 280
+    -o text.html.out -e text.html.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 text.html 280
+    -o input.combined.out -e input.combined.err ../run_base_ref_infra-mixsan_O2.0000/bzip2_base.infra-mixsan_O2 input.combined 200
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 14:06:02 2026 (1782972362)
+Stop command: Thu Jul  2 14:14:23 2026 (1782972863)
+Elapsed time for command: 00:08:21 (501)
+Workload elapsed time (0:1) = 92.153274 seconds
+Workload elapsed time (0:2) = 32.706135 seconds
+Workload elapsed time (0:3) = 53.8559 seconds
+Workload elapsed time (0:4) = 108.01432 seconds
+Workload elapsed time (0:5) = 134.31636 seconds
+Workload elapsed time (0:6) = 71.91282 seconds
+copy 0 finished @ Thu Jul  2 14:14:15 2026.  Total elapsed time: 492.958809
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/401.bzip2/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 14:14:23 2026 (1782972863)
+Stop command: Thu Jul  2 14:14:26 2026 (1782972866)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Thu Jul  2 14:06:02 2026 (1782972362)
+  Stop:     Thu Jul  2 14:14:23 2026 (1782972863)
+  Elapsed:  00:08:21 (501)
+  Reported: 492 958889000 492.958889
+ Success 401.bzip2 base ref ratio=19.58, runtime=492.958889
+
+-----------------------------------
+  Running (#3) 403.gcc ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000
+    -o 166.out -e 166.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 166.i -o 166.s
+    -o 200.out -e 200.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 200.i -o 200.s
+    -o c-typeck.out -e c-typeck.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 c-typeck.i -o c-typeck.s
+    -o cp-decl.out -e cp-decl.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 cp-decl.i -o cp-decl.s
+    -o expr.out -e expr.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 expr.i -o expr.s
+    -o expr2.out -e expr2.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 expr2.i -o expr2.s
+    -o g23.out -e g23.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 g23.i -o g23.s
+    -o s04.out -e s04.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 s04.i -o s04.s
+    -o scilab.out -e scilab.err ../run_base_ref_infra-mixsan_O2.0000/gcc_base.infra-mixsan_O2 scilab.i -o scilab.s
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 14:14:26 2026 (1782972866)
+Stop command: Thu Jul  2 14:18:28 2026 (1782973108)
+Elapsed time for command: 00:04:02 (242)
+Workload elapsed time (0:1) = 14.909715 seconds
+Workload elapsed time (0:2) = 43.978316 seconds
+Workload elapsed time (0:3) = 23.573062 seconds
+Workload elapsed time (0:4) = 17.3615 seconds
+Workload elapsed time (0:5) = 20.157022 seconds
+Workload elapsed time (0:6) = 28.265867 seconds
+Workload elapsed time (0:7) = 40.364755 seconds
+Workload elapsed time (0:8) = 28.755321 seconds
+Workload elapsed time (0:9) = 16.988813 seconds
+copy 0 finished @ Thu Jul  2 14:18:20 2026.  Total elapsed time: 234.354371
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/403.gcc/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 14:18:28 2026 (1782973108)
+Stop command: Thu Jul  2 14:18:30 2026 (1782973110)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 14:14:26 2026 (1782972866)
+  Stop:     Thu Jul  2 14:18:28 2026 (1782973108)
+  Elapsed:  00:04:02 (242)
+  Reported: 234 354483000 234.354483
+ Success 403.gcc base ref ratio=34.35, runtime=234.354483
+
+-----------------------------------
+  Running (#3) 429.mcf ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008
+    -o inp.out -e inp.err ../run_base_ref_infra-mixsan_O2.0008/mcf_base.infra-mixsan_O2 inp.in
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 14:18:30 2026 (1782973110)
+Stop command: Thu Jul  2 14:23:11 2026 (1782973391)
+Elapsed time for command: 00:04:41 (281)
+Workload elapsed time (0:1) = 272.75216 seconds
+copy 0 finished @ Thu Jul  2 14:23:03 2026.  Total elapsed time: 272.75216
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-mixsan_O2.0008 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 14:23:11 2026 (1782973391)
+Stop command: Thu Jul  2 14:23:13 2026 (1782973393)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 14:18:30 2026 (1782973110)
+  Stop:     Thu Jul  2 14:23:11 2026 (1782973391)
+  Elapsed:  00:04:41 (281)
+  Reported: 272 752206000 272.752206
+ Success 429.mcf base ref ratio=33.44, runtime=272.752206
+
+-----------------------------------
+  Running (#3) 433.milc ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006
+    -i su3imp.in -o su3imp.out -e su3imp.err ../run_base_ref_infra-mixsan_O2.0006/milc_base.infra-mixsan_O2
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 14:23:13 2026 (1782973393)
+Stop command: Thu Jul  2 14:26:12 2026 (1782973572)
+Elapsed time for command: 00:02:59 (179)
+Workload elapsed time (0:1) = 171.127893 seconds
+copy 0 finished @ Thu Jul  2 14:26:04 2026.  Total elapsed time: 171.127893
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006'
+comparing 'su3imp.out' with abstol=2e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/433.milc/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 14:26:12 2026 (1782973572)
+Stop command: Thu Jul  2 14:26:14 2026 (1782973574)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 14:23:13 2026 (1782973393)
+  Stop:     Thu Jul  2 14:26:12 2026 (1782973572)
+  Elapsed:  00:02:59 (179)
+  Reported: 171 127937000 171.127937
+ Success 433.milc base ref ratio=53.64, runtime=171.127937
+
+-----------------------------------
+  Running (#3) 444.namd ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001
+    -o namd.stdout -e namd.err ../run_base_ref_infra-mixsan_O2.0001/namd_base.infra-mixsan_O2 --input namd.input --iterations 38 --output namd.out 
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 14:26:14 2026 (1782973574)
+Stop command: Thu Jul  2 14:30:28 2026 (1782973828)
+Elapsed time for command: 00:04:14 (254)
+Workload elapsed time (0:1) = 245.472287 seconds
+copy 0 finished @ Thu Jul  2 14:30:20 2026.  Total elapsed time: 245.472287
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'namd.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 14:30:28 2026 (1782973828)
+Stop command: Thu Jul  2 14:30:30 2026 (1782973830)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 14:26:14 2026 (1782973574)
+  Stop:     Thu Jul  2 14:30:28 2026 (1782973828)
+  Elapsed:  00:04:14 (254)
+  Reported: 245 472325000 245.472325
+ Success 444.namd base ref ratio=32.67, runtime=245.472325
+
+-----------------------------------
+  Running (#3) 445.gobmk ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006
+    -i 13x13.tst -o 13x13.out -e 13x13.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+    -i nngs.tst -o nngs.out -e nngs.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+    -i score2.tst -o score2.out -e score2.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+    -i trevorc.tst -o trevorc.out -e trevorc.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+    -i trevord.tst -o trevord.out -e trevord.err ../run_base_ref_infra-mixsan_O2.0006/gobmk_base.infra-mixsan_O2 --quiet --mode gtp
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 14:30:30 2026 (1782973830)
+Stop command: Thu Jul  2 14:37:03 2026 (1782974223)
+Elapsed time for command: 00:06:33 (393)
+Workload elapsed time (0:1) = 53.191379 seconds
+Workload elapsed time (0:2) = 137.36264 seconds
+Workload elapsed time (0:3) = 69.895533 seconds
+Workload elapsed time (0:4) = 53.009414 seconds
+Workload elapsed time (0:5) = 71.793323 seconds
+copy 0 finished @ Thu Jul  2 14:36:55 2026.  Total elapsed time: 385.252289
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/445.gobmk/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 14:37:03 2026 (1782974223)
+Stop command: Thu Jul  2 14:37:05 2026 (1782974225)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 14:30:30 2026 (1782973830)
+  Stop:     Thu Jul  2 14:37:03 2026 (1782974223)
+  Elapsed:  00:06:33 (393)
+  Reported: 385 252353000 385.252353
+ Success 445.gobmk base ref ratio=27.23, runtime=385.252353
+
+-----------------------------------
+  Running (#3) 447.dealII ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000
+    -o log -e dealII.err ../run_base_ref_infra-mixsan_O2.0000/dealII_base.infra-mixsan_O2 23
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 14:37:06 2026 (1782974226)
+Stop command: Thu Jul  2 14:40:23 2026 (1782974423)
+Elapsed time for command: 00:03:17 (197)
+Workload elapsed time (0:1) = 189.890225 seconds
+copy 0 finished @ Thu Jul  2 14:40:15 2026.  Total elapsed time: 189.890225
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'grid-0.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-1.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-2.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-3.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-4.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-5.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-6.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-7.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-8.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-0.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-1.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-2.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-3.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-4.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-5.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-6.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-7.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-8.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-10.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-11.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-12.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-13.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-14.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-15.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-16.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-17.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-18.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-19.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-20.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-21.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-22.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-23.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-9.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'log' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-10.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-11.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-12.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-13.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-14.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-15.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-16.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-17.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-18.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-19.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-20.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-21.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-22.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-23.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-9.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 14:40:23 2026 (1782974423)
+Stop command: Thu Jul  2 14:40:38 2026 (1782974438)
+Elapsed time for command: 00:00:15 (15)
+Benchmark Times:
+  Start:    Thu Jul  2 14:37:06 2026 (1782974226)
+  Stop:     Thu Jul  2 14:40:23 2026 (1782974423)
+  Elapsed:  00:03:17 (197)
+  Reported: 189 890269000 189.890269
+ Success 447.dealII base ref ratio=60.25, runtime=189.890269
+
+-----------------------------------
+  Running (#3) 450.soplex ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr ../run_base_ref_infra-mixsan_O2.0000/soplex_base.infra-mixsan_O2 -s1 -e -m45000 pds-50.mps
+    -o ref.out -e ref.stderr ../run_base_ref_infra-mixsan_O2.0000/soplex_base.infra-mixsan_O2 -m3500 ref.mps
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 14:40:38 2026 (1782974438)
+Stop command: Thu Jul  2 14:44:18 2026 (1782974658)
+Elapsed time for command: 00:03:40 (220)
+Workload elapsed time (0:1) = 99.63902 seconds
+Workload elapsed time (0:2) = 112.318008 seconds
+copy 0 finished @ Thu Jul  2 14:44:10 2026.  Total elapsed time: 211.957028
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 14:44:18 2026 (1782974658)
+Stop command: Thu Jul  2 14:44:20 2026 (1782974660)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000/.err'
+*** Miscompare of pds-50.mps.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000/pds-50.mps.stderr.mis
+'pds-50.mps.stderr' long
+*** Miscompare of ref.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-mixsan_O2.0000/ref.stderr.mis
+'ref.stderr' long
+Benchmark Times:
+  Start:    Thu Jul  2 14:40:38 2026 (1782974438)
+  Stop:     Thu Jul  2 14:44:18 2026 (1782974658)
+  Elapsed:  00:03:40 (220)
+  Reported: 211 957075000 211.957075
+ Error 450.soplex base ref ratio=39.35, runtime=211.957075
+
+-----------------------------------
+  Running (#3) 453.povray ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000
+    -o SPEC-benchmark-ref.stdout -e SPEC-benchmark-ref.stderr ../run_base_ref_infra-mixsan_O2.0000/povray_base.infra-mixsan_O2 SPEC-benchmark-ref.ini
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 14:44:20 2026 (1782974660)
+Stop command: Thu Jul  2 14:46:26 2026 (1782974786)
+Elapsed time for command: 00:02:06 (126)
+Workload elapsed time (0:1) = 118.135909 seconds
+copy 0 finished @ Thu Jul  2 14:46:18 2026.  Total elapsed time: 118.135909
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'SPEC-benchmark.log' with abstol=0, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'SPEC-benchmark.tga' with abstol=0, binary=1, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=5e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=50
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/453.povray/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 14:46:26 2026 (1782974786)
+Stop command: Thu Jul  2 14:46:32 2026 (1782974792)
+Elapsed time for command: 00:00:06 (6)
+Benchmark Times:
+  Start:    Thu Jul  2 14:44:20 2026 (1782974660)
+  Stop:     Thu Jul  2 14:46:26 2026 (1782974786)
+  Elapsed:  00:02:06 (126)
+  Reported: 118 135945000 118.135945
+ Success 453.povray base ref ratio=45.03, runtime=118.135945
+
+-----------------------------------
+  Running (#3) 456.hmmer ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006
+    -o nph3.out -e nph3.err ../run_base_ref_infra-mixsan_O2.0006/hmmer_base.infra-mixsan_O2 nph3.hmm swiss41
+    -o retro.out -e retro.err ../run_base_ref_infra-mixsan_O2.0006/hmmer_base.infra-mixsan_O2 --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 14:46:32 2026 (1782974792)
+Stop command: Thu Jul  2 14:49:36 2026 (1782974976)
+Elapsed time for command: 00:03:04 (184)
+Workload elapsed time (0:1) = 54.812094 seconds
+Workload elapsed time (0:2) = 121.634647 seconds
+copy 0 finished @ Thu Jul  2 14:49:28 2026.  Total elapsed time: 176.446741
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=10
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=10
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/456.hmmer/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 14:49:36 2026 (1782974976)
+Stop command: Thu Jul  2 14:49:38 2026 (1782974978)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 14:46:32 2026 (1782974792)
+  Stop:     Thu Jul  2 14:49:36 2026 (1782974976)
+  Elapsed:  00:03:04 (184)
+  Reported: 176 446785000 176.446785
+ Success 456.hmmer base ref ratio=52.88, runtime=176.446785
+
+-----------------------------------
+  Running (#3) 458.sjeng ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001
+    -o ref.out -e ref.err ../run_base_ref_infra-mixsan_O2.0001/sjeng_base.infra-mixsan_O2 ref.txt
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 14:49:38 2026 (1782974978)
+Stop command: Thu Jul  2 14:57:53 2026 (1782975473)
+Elapsed time for command: 00:08:15 (495)
+Workload elapsed time (0:1) = 487.026639 seconds
+copy 0 finished @ Thu Jul  2 14:57:45 2026.  Total elapsed time: 487.026639
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/458.sjeng/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 14:57:53 2026 (1782975473)
+Stop command: Thu Jul  2 14:57:55 2026 (1782975475)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 14:49:38 2026 (1782974978)
+  Stop:     Thu Jul  2 14:57:53 2026 (1782975473)
+  Elapsed:  00:08:15 (495)
+  Reported: 487 26680000 487.02668
+ Success 458.sjeng base ref ratio=24.84, runtime=487.026680
+
+-----------------------------------
+  Running (#3) 462.libquantum ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001
+    -o ref.out -e ref.err ../run_base_ref_infra-mixsan_O2.0001/libquantum_base.infra-mixsan_O2 1397 8
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 14:57:55 2026 (1782975475)
+Stop command: Thu Jul  2 15:02:12 2026 (1782975732)
+Elapsed time for command: 00:04:17 (257)
+Workload elapsed time (0:1) = 248.659371 seconds
+copy 0 finished @ Thu Jul  2 15:02:04 2026.  Total elapsed time: 248.659371
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 15:02:12 2026 (1782975732)
+Stop command: Thu Jul  2 15:02:14 2026 (1782975734)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 14:57:55 2026 (1782975475)
+  Stop:     Thu Jul  2 15:02:12 2026 (1782975732)
+  Elapsed:  00:04:17 (257)
+  Reported: 248 659411000 248.659411
+ Success 462.libquantum base ref ratio=83.33, runtime=248.659411
+
+-----------------------------------
+  Running (#3) 464.h264ref ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err ../run_base_ref_infra-mixsan_O2.0000/h264ref_base.infra-mixsan_O2 -d foreman_ref_encoder_baseline.cfg
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err ../run_base_ref_infra-mixsan_O2.0000/h264ref_base.infra-mixsan_O2 -d foreman_ref_encoder_main.cfg
+    -o sss_main_encodelog.out -e sss_main_encodelog.err ../run_base_ref_infra-mixsan_O2.0000/h264ref_base.infra-mixsan_O2 -d sss_encoder_main.cfg
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 15:02:14 2026 (1782975734)
+Stop command: Thu Jul  2 15:09:10 2026 (1782976150)
+Elapsed time for command: 00:06:56 (416)
+Workload elapsed time (0:1) = 59.994681 seconds
+Workload elapsed time (0:2) = 35.993461 seconds
+Workload elapsed time (0:3) = 312.422969 seconds
+copy 0 finished @ Thu Jul  2 15:09:02 2026.  Total elapsed time: 408.411111
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 15:09:10 2026 (1782976150)
+Stop command: Thu Jul  2 15:09:13 2026 (1782976153)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Thu Jul  2 15:02:14 2026 (1782975734)
+  Stop:     Thu Jul  2 15:09:10 2026 (1782976150)
+  Elapsed:  00:06:56 (416)
+  Reported: 408 411160000 408.41116
+ Success 464.h264ref base ref ratio=54.19, runtime=408.411160
+
+-----------------------------------
+  Running (#3) 470.lbm ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001
+    -o lbm.out -e lbm.err ../run_base_ref_infra-mixsan_O2.0001/lbm_base.infra-mixsan_O2 3000 reference.dat 0 0 100_100_130_ldc.of
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 15:09:13 2026 (1782976153)
+Stop command: Thu Jul  2 15:10:54 2026 (1782976254)
+Elapsed time for command: 00:01:41 (101)
+Workload elapsed time (0:1) = 93.406224 seconds
+copy 0 finished @ Thu Jul  2 15:10:46 2026.  Total elapsed time: 93.406224
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'lbm.out' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/470.lbm/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 15:10:54 2026 (1782976254)
+Stop command: Thu Jul  2 15:10:56 2026 (1782976256)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 15:09:13 2026 (1782976153)
+  Stop:     Thu Jul  2 15:10:54 2026 (1782976254)
+  Elapsed:  00:01:41 (101)
+  Reported: 93 406263000 93.406263
+ Success 470.lbm base ref ratio=147.10, runtime=93.406263
+
+-----------------------------------
+  Running (#3) 471.omnetpp ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001
+    -o omnetpp.log -e omnetpp.err ../run_base_ref_infra-mixsan_O2.0001/omnetpp_base.infra-mixsan_O2 omnetpp.ini
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 15:10:56 2026 (1782976256)
+Stop command: Thu Jul  2 15:15:56 2026 (1782976556)
+Elapsed time for command: 00:05:00 (300)
+Workload elapsed time (0:1) = 292.255141 seconds
+copy 0 finished @ Thu Jul  2 15:15:48 2026.  Total elapsed time: 292.255141
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-mixsan_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 15:15:56 2026 (1782976556)
+Stop command: Thu Jul  2 15:15:58 2026 (1782976558)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 15:10:56 2026 (1782976256)
+  Stop:     Thu Jul  2 15:15:56 2026 (1782976556)
+  Elapsed:  00:05:00 (300)
+  Reported: 292 255184000 292.255184
+ Success 471.omnetpp base ref ratio=21.39, runtime=292.255184
+
+-----------------------------------
+  Running (#3) 473.astar ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000
+    -o BigLakes2048.out -e BigLakes2048.err ../run_base_ref_infra-mixsan_O2.0000/astar_base.infra-mixsan_O2 BigLakes2048.cfg
+    -o rivers.out -e rivers.err ../run_base_ref_infra-mixsan_O2.0000/astar_base.infra-mixsan_O2 rivers.cfg
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 15:15:58 2026 (1782976558)
+Stop command: Thu Jul  2 15:21:34 2026 (1782976894)
+Elapsed time for command: 00:05:36 (336)
+Workload elapsed time (0:1) = 134.644185 seconds
+Workload elapsed time (0:2) = 193.102939 seconds
+copy 0 finished @ Thu Jul  2 15:21:26 2026.  Total elapsed time: 327.747124
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-mixsan_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 15:21:34 2026 (1782976894)
+Stop command: Thu Jul  2 15:21:36 2026 (1782976896)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 15:15:58 2026 (1782976558)
+  Stop:     Thu Jul  2 15:21:34 2026 (1782976894)
+  Elapsed:  00:05:36 (336)
+  Reported: 327 747175000 327.747175
+ Success 473.astar base ref ratio=21.42, runtime=327.747175
+
+-----------------------------------
+  Running (#3) 482.sphinx3 ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006
+    -o an4.log -e an4.err ../run_base_ref_infra-mixsan_O2.0006/sphinx_livepretend_base.infra-mixsan_O2 ctlfile . args.an4
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 15:21:36 2026 (1782976896)
+Stop command: Thu Jul  2 15:26:04 2026 (1782977164)
+Elapsed time for command: 00:04:28 (268)
+Workload elapsed time (0:1) = 259.707077 seconds
+copy 0 finished @ Thu Jul  2 15:25:56 2026.  Total elapsed time: 259.707077
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006'
+comparing 'an4.log' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'considered.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=0.0004, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'total_considered.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=1e-06, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/482.sphinx3/run/run_base_ref_infra-mixsan_O2.0006 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jul  2 15:26:04 2026 (1782977164)
+Stop command: Thu Jul  2 15:26:06 2026 (1782977166)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jul  2 15:21:36 2026 (1782976896)
+  Stop:     Thu Jul  2 15:26:04 2026 (1782977164)
+  Elapsed:  00:04:28 (268)
+  Reported: 259 707115000 259.707115
+ Success 482.sphinx3 base ref ratio=75.05, runtime=259.707115
+
+-----------------------------------
+  Running (#3) 483.xalancbmk ref base infra-mixsan_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000
+    -o ref.out -e ref.err ../run_base_ref_infra-mixsan_O2.0000/Xalan_base.infra-mixsan_O2 -v t5.xml xalanc.xsl
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_infra-mixsan_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jul  2 15:26:06 2026 (1782977166)

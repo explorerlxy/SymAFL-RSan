@@ -1,0 +1,129 @@
+runspec started at Thu Jun 18 23:22:11 2026 on "Ubuntu"
+runspec is: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/runspec
+runspec: runspec --config=infra-softboundcets_O2 --nobuild --iterations 3 --ignore_errors 471.omnetpp
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/media/hahafish/Data/ForUbuntu/speccpu2006/config/infra-softboundcets_O2.cfg'
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = infra-softboundcets_O2
+Size      = ref
+Machine   = default
+benchmarks= 471.omnetpp
+outputs   = raw,flags,ASCII,HTML
+username  = hahafish
+Benchmarks selected: 471.omnetpp
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 471.omnetpp ref base infra-softboundcets_O2 default
+
+
+Parsing Flags
+  Looking at 471.omnetpp base infra-softboundcets_O2 default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 471.omnetpp ref base infra-softboundcets_O2 default: created (run_base_ref_infra-softboundcets_O2.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running (#1) 471.omnetpp ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000
+    -o omnetpp.log -e omnetpp.err ../run_base_ref_infra-softboundcets_O2.0000/omnetpp_base.infra-softboundcets_O2 omnetpp.ini
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 23:22:14 2026 (1781796134)
+Stop command: Thu Jun 18 23:30:46 2026 (1781796646)
+Elapsed time for command: 00:08:32 (512)
+Workload elapsed time (0:1) = 504.022127 seconds
+copy 0 finished @ Thu Jun 18 23:30:38 2026.  Total elapsed time: 504.022127
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 23:30:46 2026 (1781796646)
+Stop command: Thu Jun 18 23:30:48 2026 (1781796648)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jun 18 23:22:14 2026 (1781796134)
+  Stop:     Thu Jun 18 23:30:46 2026 (1781796646)
+  Elapsed:  00:08:32 (512)
+  Reported: 504 22177000 504.022177
+ Success 471.omnetpp base ref ratio=12.40, runtime=504.022177
+
+-----------------------------------
+  Running (#2) 471.omnetpp ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000
+    -o omnetpp.log -e omnetpp.err ../run_base_ref_infra-softboundcets_O2.0000/omnetpp_base.infra-softboundcets_O2 omnetpp.ini
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 23:30:48 2026 (1781796648)
+Stop command: Thu Jun 18 23:39:19 2026 (1781797159)
+Elapsed time for command: 00:08:31 (511)
+Workload elapsed time (0:1) = 503.175332 seconds
+copy 0 finished @ Thu Jun 18 23:39:11 2026.  Total elapsed time: 503.175332
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 23:39:19 2026 (1781797159)
+Stop command: Thu Jun 18 23:39:22 2026 (1781797162)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Thu Jun 18 23:30:48 2026 (1781796648)
+  Stop:     Thu Jun 18 23:39:19 2026 (1781797159)
+  Elapsed:  00:08:31 (511)
+  Reported: 503 175370000 503.17537
+ Success 471.omnetpp base ref ratio=12.42, runtime=503.175370
+
+-----------------------------------
+  Running (#3) 471.omnetpp ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000
+    -o omnetpp.log -e omnetpp.err ../run_base_ref_infra-softboundcets_O2.0000/omnetpp_base.infra-softboundcets_O2 omnetpp.ini
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 23:39:22 2026 (1781797162)
+Stop command: Thu Jun 18 23:47:53 2026 (1781797673)
+Elapsed time for command: 00:08:31 (511)
+Workload elapsed time (0:1) = 503.856945 seconds
+copy 0 finished @ Thu Jun 18 23:47:45 2026.  Total elapsed time: 503.856945
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/471.omnetpp/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 23:47:53 2026 (1781797673)
+Stop command: Thu Jun 18 23:47:56 2026 (1781797676)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Thu Jun 18 23:39:22 2026 (1781797162)
+  Stop:     Thu Jun 18 23:47:53 2026 (1781797673)
+  Elapsed:  00:08:31 (511)
+  Reported: 503 856985000 503.856985
+ Success 471.omnetpp base ref ratio=12.40, runtime=503.856985
+Success: 3x471.omnetpp
+Producing Reports
+mach: default
+  ext: infra-softboundcets_O2
+    size: ref
+      set: int
+           Flag reduction took 0.0003879s
+        format: raw -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1757.rsf
+        format: flags -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1757.flags.html
+        format: ASCII -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1757.txt
+        format: HTML -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1757.html, CINT2006.1757.gif
+      set: fp
+
+The log for this run is in /media/hahafish/Data/ForUbuntu/speccpu2006/result/CPU2006.1757.log
+
+runspec finished at Thu Jun 18 23:47:56 2026; 1545 total seconds elapsed

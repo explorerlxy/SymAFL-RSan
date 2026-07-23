@@ -1,0 +1,1067 @@
+runspec started at Wed Jul  1 16:28:54 2026 on "Ubuntu"
+runspec is: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/runspec
+runspec: runspec --config=infra-baseline_O2 --nobuild --iterations 5 --ignore_errors 429.mcf 447.dealII 450.soplex 462.libquantum 473.astar
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/media/hahafish/Data/ForUbuntu/speccpu2006/config/infra-baseline_O2.cfg'
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = infra-baseline_O2
+Size      = ref
+Machine   = default
+benchmarks= 429.mcf,447.dealII,450.soplex,462.libquantum,473.astar
+outputs   = raw,flags,ASCII,HTML
+username  = hahafish
+Benchmarks selected: 429.mcf, 447.dealII, 450.soplex, 462.libquantum, 473.astar
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 429.mcf ref base infra-baseline_O2 default
+
+------------------------------------------------------------------------
+  Up to date 447.dealII ref base infra-baseline_O2 default
+
+------------------------------------------------------------------------
+  Up to date 450.soplex ref base infra-baseline_O2 default
+
+------------------------------------------------------------------------
+  Up to date 462.libquantum ref base infra-baseline_O2 default
+
+------------------------------------------------------------------------
+  Up to date 473.astar ref base infra-baseline_O2 default
+
+
+Parsing Flags
+  Looking at 429.mcf base infra-baseline_O2 default: done
+  Looking at 447.dealII base infra-baseline_O2 default: done
+  Looking at 450.soplex base infra-baseline_O2 default: done
+  Looking at 462.libquantum base infra-baseline_O2 default: done
+  Looking at 473.astar base infra-baseline_O2 default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 429.mcf ref base infra-baseline_O2 default: 
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+existing (run_base_ref_infra-baseline_O2.0002)
+  Setting up 447.dealII ref base infra-baseline_O2 default: existing (run_base_ref_infra-baseline_O2.0000)
+  Setting up 450.soplex ref base infra-baseline_O2 default: existing (run_base_ref_infra-baseline_O2.0000)
+  Setting up 462.libquantum ref base infra-baseline_O2 default: 
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+existing (run_base_ref_infra-baseline_O2.0002)
+  Setting up 473.astar ref base infra-baseline_O2 default: 
+Notice: Unusable path detected in run directory list file.
+  /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/473.astar/run/list
+references one or more paths which will be ignored, because they are
+not subdirectories of this run directory.  This condition may be a
+result of having moved your SPEC benchmark tree.  If that's what happened,
+and if you don't need the old run directories, you can just remove
+them, along with the list file.  (Usually it's safe to delete old
+run directories, as they are automatically re-created when needed.)
+
+
+existing (run_base_ref_infra-baseline_O2.0001)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running (#1) 429.mcf ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002
+    -o inp.out -e inp.err ../run_base_ref_infra-baseline_O2.0002/mcf_base.infra-baseline_O2 inp.in
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 16:28:57 2026 (1782894537)
+Stop command: Wed Jul  1 16:31:04 2026 (1782894664)
+Elapsed time for command: 00:02:07 (127)
+Workload elapsed time (0:1) = 119.208548 seconds
+copy 0 finished @ Wed Jul  1 16:30:56 2026.  Total elapsed time: 119.208548
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 16:31:04 2026 (1782894664)
+Stop command: Wed Jul  1 16:31:06 2026 (1782894666)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Jul  1 16:28:57 2026 (1782894537)
+  Stop:     Wed Jul  1 16:31:04 2026 (1782894664)
+  Elapsed:  00:02:07 (127)
+  Reported: 119 208592000 119.208592
+ Success 429.mcf base ref ratio=76.50, runtime=119.208592
+
+-----------------------------------
+  Running (#1) 447.dealII ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000
+    -o log -e dealII.err ../run_base_ref_infra-baseline_O2.0000/dealII_base.infra-baseline_O2 23
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 16:31:06 2026 (1782894666)
+Stop command: Wed Jul  1 16:32:47 2026 (1782894767)
+Elapsed time for command: 00:01:41 (101)
+Workload elapsed time (0:1) = 92.951919 seconds
+copy 0 finished @ Wed Jul  1 16:32:39 2026.  Total elapsed time: 92.951919
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000'
+comparing 'grid-0.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-1.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-2.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-3.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-4.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-5.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-6.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-7.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-8.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-0.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-1.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-2.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-3.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-4.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-5.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-6.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-7.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-8.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-10.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-11.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-12.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-13.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-14.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-15.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-16.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-17.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-18.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-19.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-20.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-21.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-22.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-23.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-9.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'log' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-10.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-11.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-12.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-13.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-14.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-15.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-16.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-17.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-18.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-19.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-20.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-21.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-22.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-23.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-9.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 16:32:47 2026 (1782894767)
+Stop command: Wed Jul  1 16:33:01 2026 (1782894781)
+Elapsed time for command: 00:00:14 (14)
+Benchmark Times:
+  Start:    Wed Jul  1 16:31:06 2026 (1782894666)
+  Stop:     Wed Jul  1 16:32:47 2026 (1782894767)
+  Elapsed:  00:01:41 (101)
+  Reported: 92 951963000 92.951963
+ Success 447.dealII base ref ratio=123.07, runtime=92.951963
+
+-----------------------------------
+  Running (#1) 450.soplex ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr ../run_base_ref_infra-baseline_O2.0000/soplex_base.infra-baseline_O2 -s1 -e -m45000 pds-50.mps
+    -o ref.out -e ref.stderr ../run_base_ref_infra-baseline_O2.0000/soplex_base.infra-baseline_O2 -m3500 ref.mps
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 16:33:01 2026 (1782894781)
+Stop command: Wed Jul  1 16:34:51 2026 (1782894891)
+Elapsed time for command: 00:01:50 (110)
+Workload elapsed time (0:1) = 49.832413 seconds
+Workload elapsed time (0:2) = 51.922087 seconds
+copy 0 finished @ Wed Jul  1 16:34:43 2026.  Total elapsed time: 101.7545
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000'
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 16:34:51 2026 (1782894891)
+Stop command: Wed Jul  1 16:34:53 2026 (1782894893)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/.err'
+*** Miscompare of pds-50.mps.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/pds-50.mps.stderr.mis
+'pds-50.mps.stderr' long
+*** Miscompare of ref.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/ref.stderr.mis
+'ref.stderr' long
+Benchmark Times:
+  Start:    Wed Jul  1 16:33:01 2026 (1782894781)
+  Stop:     Wed Jul  1 16:34:51 2026 (1782894891)
+  Elapsed:  00:01:50 (110)
+  Reported: 101 754546000 101.754546
+ Error 450.soplex base ref ratio=81.96, runtime=101.754546
+
+-----------------------------------
+  Running (#1) 462.libquantum ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002
+    -o ref.out -e ref.err ../run_base_ref_infra-baseline_O2.0002/libquantum_base.infra-baseline_O2 1397 8
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 16:34:53 2026 (1782894893)
+Stop command: Wed Jul  1 16:38:41 2026 (1782895121)
+Elapsed time for command: 00:03:48 (228)
+Workload elapsed time (0:1) = 219.744875 seconds
+copy 0 finished @ Wed Jul  1 16:38:33 2026.  Total elapsed time: 219.744875
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 16:38:41 2026 (1782895121)
+Stop command: Wed Jul  1 16:38:43 2026 (1782895123)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Jul  1 16:34:53 2026 (1782894893)
+  Stop:     Wed Jul  1 16:38:41 2026 (1782895121)
+  Elapsed:  00:03:48 (228)
+  Reported: 219 744916000 219.744916
+ Success 462.libquantum base ref ratio=94.29, runtime=219.744916
+
+-----------------------------------
+  Running (#1) 473.astar ref base infra-baseline_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001
+    -o BigLakes2048.out -e BigLakes2048.err ../run_base_ref_infra-baseline_O2.0001/astar_base.infra-baseline_O2 BigLakes2048.cfg
+    -o rivers.out -e rivers.err ../run_base_ref_infra-baseline_O2.0001/astar_base.infra-baseline_O2 rivers.cfg
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 16:38:43 2026 (1782895123)
+Stop command: Wed Jul  1 16:41:34 2026 (1782895294)
+Elapsed time for command: 00:02:51 (171)
+Workload elapsed time (0:1) = 55.043312 seconds
+Workload elapsed time (0:2) = 108.387213 seconds
+copy 0 finished @ Wed Jul  1 16:41:26 2026.  Total elapsed time: 163.430525
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 16:41:34 2026 (1782895294)
+Stop command: Wed Jul  1 16:41:37 2026 (1782895297)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Wed Jul  1 16:38:43 2026 (1782895123)
+  Stop:     Wed Jul  1 16:41:34 2026 (1782895294)
+  Elapsed:  00:02:51 (171)
+  Reported: 163 430570000 163.43057
+ Success 473.astar base ref ratio=42.95, runtime=163.430570
+
+-----------------------------------
+  Running (#2) 429.mcf ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002
+    -o inp.out -e inp.err ../run_base_ref_infra-baseline_O2.0002/mcf_base.infra-baseline_O2 inp.in
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 16:41:37 2026 (1782895297)
+Stop command: Wed Jul  1 16:43:40 2026 (1782895420)
+Elapsed time for command: 00:02:03 (123)
+Workload elapsed time (0:1) = 115.732484 seconds
+copy 0 finished @ Wed Jul  1 16:43:32 2026.  Total elapsed time: 115.732484
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 16:43:40 2026 (1782895420)
+Stop command: Wed Jul  1 16:43:42 2026 (1782895422)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Jul  1 16:41:37 2026 (1782895297)
+  Stop:     Wed Jul  1 16:43:40 2026 (1782895420)
+  Elapsed:  00:02:03 (123)
+  Reported: 115 732525000 115.732525
+ Success 429.mcf base ref ratio=78.80, runtime=115.732525
+
+-----------------------------------
+  Running (#2) 447.dealII ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000
+    -o log -e dealII.err ../run_base_ref_infra-baseline_O2.0000/dealII_base.infra-baseline_O2 23
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 16:43:42 2026 (1782895422)
+Stop command: Wed Jul  1 16:45:24 2026 (1782895524)
+Elapsed time for command: 00:01:42 (102)
+Workload elapsed time (0:1) = 93.243408 seconds
+copy 0 finished @ Wed Jul  1 16:45:16 2026.  Total elapsed time: 93.243408
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000'
+comparing 'grid-0.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-1.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-2.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-3.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-4.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-5.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-6.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-7.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-8.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-0.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-1.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-2.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-3.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-4.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-5.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-6.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-7.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-8.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-10.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-11.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-12.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-13.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-14.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-15.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-16.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-17.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-18.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-19.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-20.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-21.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-22.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-23.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-9.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'log' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-10.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-11.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-12.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-13.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-14.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-15.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-16.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-17.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-18.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-19.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-20.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-21.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-22.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-23.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-9.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 16:45:24 2026 (1782895524)
+Stop command: Wed Jul  1 16:45:38 2026 (1782895538)
+Elapsed time for command: 00:00:14 (14)
+Benchmark Times:
+  Start:    Wed Jul  1 16:43:42 2026 (1782895422)
+  Stop:     Wed Jul  1 16:45:24 2026 (1782895524)
+  Elapsed:  00:01:42 (102)
+  Reported: 93 243452000 93.243452
+ Success 447.dealII base ref ratio=122.69, runtime=93.243452
+
+-----------------------------------
+  Running (#2) 450.soplex ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr ../run_base_ref_infra-baseline_O2.0000/soplex_base.infra-baseline_O2 -s1 -e -m45000 pds-50.mps
+    -o ref.out -e ref.stderr ../run_base_ref_infra-baseline_O2.0000/soplex_base.infra-baseline_O2 -m3500 ref.mps
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 16:45:38 2026 (1782895538)
+Stop command: Wed Jul  1 16:47:23 2026 (1782895643)
+Elapsed time for command: 00:01:45 (105)
+Workload elapsed time (0:1) = 49.005283 seconds
+Workload elapsed time (0:2) = 48.390976 seconds
+copy 0 finished @ Wed Jul  1 16:47:15 2026.  Total elapsed time: 97.396259
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000'
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 16:47:23 2026 (1782895643)
+Stop command: Wed Jul  1 16:47:25 2026 (1782895645)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/.err'
+*** Miscompare of pds-50.mps.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/pds-50.mps.stderr.mis
+'pds-50.mps.stderr' long
+*** Miscompare of ref.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/ref.stderr.mis
+'ref.stderr' long
+Benchmark Times:
+  Start:    Wed Jul  1 16:45:38 2026 (1782895538)
+  Stop:     Wed Jul  1 16:47:23 2026 (1782895643)
+  Elapsed:  00:01:45 (105)
+  Reported: 97 396309000 97.396309
+ Error 450.soplex base ref ratio=85.63, runtime=97.396309
+
+-----------------------------------
+  Running (#2) 462.libquantum ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002
+    -o ref.out -e ref.err ../run_base_ref_infra-baseline_O2.0002/libquantum_base.infra-baseline_O2 1397 8
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 16:47:25 2026 (1782895645)
+Stop command: Wed Jul  1 16:51:07 2026 (1782895867)
+Elapsed time for command: 00:03:42 (222)
+Workload elapsed time (0:1) = 214.106161 seconds
+copy 0 finished @ Wed Jul  1 16:50:59 2026.  Total elapsed time: 214.106161
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 16:51:07 2026 (1782895867)
+Stop command: Wed Jul  1 16:51:10 2026 (1782895870)
+Elapsed time for command: 00:00:03 (3)
+Benchmark Times:
+  Start:    Wed Jul  1 16:47:25 2026 (1782895645)
+  Stop:     Wed Jul  1 16:51:07 2026 (1782895867)
+  Elapsed:  00:03:42 (222)
+  Reported: 214 106201000 214.106201
+ Success 462.libquantum base ref ratio=96.77, runtime=214.106201
+
+-----------------------------------
+  Running (#2) 473.astar ref base infra-baseline_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001
+    -o BigLakes2048.out -e BigLakes2048.err ../run_base_ref_infra-baseline_O2.0001/astar_base.infra-baseline_O2 BigLakes2048.cfg
+    -o rivers.out -e rivers.err ../run_base_ref_infra-baseline_O2.0001/astar_base.infra-baseline_O2 rivers.cfg
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 16:51:10 2026 (1782895870)
+Stop command: Wed Jul  1 16:54:01 2026 (1782896041)
+Elapsed time for command: 00:02:51 (171)
+Workload elapsed time (0:1) = 55.146423 seconds
+Workload elapsed time (0:2) = 108.184182 seconds
+copy 0 finished @ Wed Jul  1 16:53:53 2026.  Total elapsed time: 163.330605
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 16:54:01 2026 (1782896041)
+Stop command: Wed Jul  1 16:54:03 2026 (1782896043)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Jul  1 16:51:10 2026 (1782895870)
+  Stop:     Wed Jul  1 16:54:01 2026 (1782896041)
+  Elapsed:  00:02:51 (171)
+  Reported: 163 330648000 163.330648
+ Success 473.astar base ref ratio=42.98, runtime=163.330648
+
+-----------------------------------
+  Running (#3) 429.mcf ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002
+    -o inp.out -e inp.err ../run_base_ref_infra-baseline_O2.0002/mcf_base.infra-baseline_O2 inp.in
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 16:54:03 2026 (1782896043)
+Stop command: Wed Jul  1 16:56:07 2026 (1782896167)
+Elapsed time for command: 00:02:04 (124)
+Workload elapsed time (0:1) = 116.429247 seconds
+copy 0 finished @ Wed Jul  1 16:55:59 2026.  Total elapsed time: 116.429247
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 16:56:07 2026 (1782896167)
+Stop command: Wed Jul  1 16:56:09 2026 (1782896169)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Jul  1 16:54:03 2026 (1782896043)
+  Stop:     Wed Jul  1 16:56:07 2026 (1782896167)
+  Elapsed:  00:02:04 (124)
+  Reported: 116 429291000 116.429291
+ Success 429.mcf base ref ratio=78.33, runtime=116.429291
+
+-----------------------------------
+  Running (#3) 447.dealII ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000
+    -o log -e dealII.err ../run_base_ref_infra-baseline_O2.0000/dealII_base.infra-baseline_O2 23
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 16:56:09 2026 (1782896169)
+Stop command: Wed Jul  1 16:57:49 2026 (1782896269)
+Elapsed time for command: 00:01:40 (100)
+Workload elapsed time (0:1) = 91.979708 seconds
+copy 0 finished @ Wed Jul  1 16:57:41 2026.  Total elapsed time: 91.979708
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000'
+comparing 'grid-0.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-1.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-2.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-3.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-4.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-5.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-6.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-7.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-8.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-0.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-1.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-2.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-3.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-4.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-5.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-6.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-7.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-8.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-10.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-11.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-12.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-13.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-14.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-15.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-16.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-17.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-18.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-19.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-20.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-21.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-22.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-23.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-9.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'log' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-10.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-11.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-12.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-13.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-14.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-15.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-16.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-17.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-18.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-19.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-20.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-21.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-22.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-23.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-9.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 16:57:49 2026 (1782896269)
+Stop command: Wed Jul  1 16:58:04 2026 (1782896284)
+Elapsed time for command: 00:00:15 (15)
+Benchmark Times:
+  Start:    Wed Jul  1 16:56:09 2026 (1782896169)
+  Stop:     Wed Jul  1 16:57:49 2026 (1782896269)
+  Elapsed:  00:01:40 (100)
+  Reported: 91 979753000 91.979753
+ Success 447.dealII base ref ratio=124.38, runtime=91.979753
+
+-----------------------------------
+  Running (#3) 450.soplex ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr ../run_base_ref_infra-baseline_O2.0000/soplex_base.infra-baseline_O2 -s1 -e -m45000 pds-50.mps
+    -o ref.out -e ref.stderr ../run_base_ref_infra-baseline_O2.0000/soplex_base.infra-baseline_O2 -m3500 ref.mps
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 16:58:04 2026 (1782896284)
+Stop command: Wed Jul  1 16:59:49 2026 (1782896389)
+Elapsed time for command: 00:01:45 (105)
+Workload elapsed time (0:1) = 48.944562 seconds
+Workload elapsed time (0:2) = 48.425437 seconds
+copy 0 finished @ Wed Jul  1 16:59:41 2026.  Total elapsed time: 97.369999
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000'
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 16:59:49 2026 (1782896389)
+Stop command: Wed Jul  1 16:59:51 2026 (1782896391)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/.err'
+*** Miscompare of pds-50.mps.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/pds-50.mps.stderr.mis
+'pds-50.mps.stderr' long
+*** Miscompare of ref.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/ref.stderr.mis
+'ref.stderr' long
+Benchmark Times:
+  Start:    Wed Jul  1 16:58:04 2026 (1782896284)
+  Stop:     Wed Jul  1 16:59:49 2026 (1782896389)
+  Elapsed:  00:01:45 (105)
+  Reported: 97 370048000 97.370048
+ Error 450.soplex base ref ratio=85.65, runtime=97.370048
+
+-----------------------------------
+  Running (#3) 462.libquantum ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002
+    -o ref.out -e ref.err ../run_base_ref_infra-baseline_O2.0002/libquantum_base.infra-baseline_O2 1397 8
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 16:59:51 2026 (1782896391)
+Stop command: Wed Jul  1 17:03:33 2026 (1782896613)
+Elapsed time for command: 00:03:42 (222)
+Workload elapsed time (0:1) = 214.118855 seconds
+copy 0 finished @ Wed Jul  1 17:03:25 2026.  Total elapsed time: 214.118855
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 17:03:33 2026 (1782896613)
+Stop command: Wed Jul  1 17:03:35 2026 (1782896615)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Jul  1 16:59:51 2026 (1782896391)
+  Stop:     Wed Jul  1 17:03:33 2026 (1782896613)
+  Elapsed:  00:03:42 (222)
+  Reported: 214 118898000 214.118898
+ Success 462.libquantum base ref ratio=96.77, runtime=214.118898
+
+-----------------------------------
+  Running (#3) 473.astar ref base infra-baseline_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001
+    -o BigLakes2048.out -e BigLakes2048.err ../run_base_ref_infra-baseline_O2.0001/astar_base.infra-baseline_O2 BigLakes2048.cfg
+    -o rivers.out -e rivers.err ../run_base_ref_infra-baseline_O2.0001/astar_base.infra-baseline_O2 rivers.cfg
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 17:03:35 2026 (1782896615)
+Stop command: Wed Jul  1 17:06:26 2026 (1782896786)
+Elapsed time for command: 00:02:51 (171)
+Workload elapsed time (0:1) = 54.931824 seconds
+Workload elapsed time (0:2) = 108.148862 seconds
+copy 0 finished @ Wed Jul  1 17:06:18 2026.  Total elapsed time: 163.080686
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 17:06:26 2026 (1782896786)
+Stop command: Wed Jul  1 17:06:28 2026 (1782896788)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Jul  1 17:03:35 2026 (1782896615)
+  Stop:     Wed Jul  1 17:06:26 2026 (1782896786)
+  Elapsed:  00:02:51 (171)
+  Reported: 163 80733000 163.080733
+ Success 473.astar base ref ratio=43.05, runtime=163.080733
+
+-----------------------------------
+  Running (#4) 429.mcf ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002
+    -o inp.out -e inp.err ../run_base_ref_infra-baseline_O2.0002/mcf_base.infra-baseline_O2 inp.in
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 17:06:28 2026 (1782896788)
+Stop command: Wed Jul  1 17:08:32 2026 (1782896912)
+Elapsed time for command: 00:02:04 (124)
+Workload elapsed time (0:1) = 115.421531 seconds
+copy 0 finished @ Wed Jul  1 17:08:24 2026.  Total elapsed time: 115.421531
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 17:08:32 2026 (1782896912)
+Stop command: Wed Jul  1 17:08:34 2026 (1782896914)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Jul  1 17:06:28 2026 (1782896788)
+  Stop:     Wed Jul  1 17:08:32 2026 (1782896912)
+  Elapsed:  00:02:04 (124)
+  Reported: 115 421574000 115.421574
+ Success 429.mcf base ref ratio=79.01, runtime=115.421574
+
+-----------------------------------
+  Running (#4) 447.dealII ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000
+    -o log -e dealII.err ../run_base_ref_infra-baseline_O2.0000/dealII_base.infra-baseline_O2 23
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 17:08:34 2026 (1782896914)
+Stop command: Wed Jul  1 17:10:14 2026 (1782897014)
+Elapsed time for command: 00:01:40 (100)
+Workload elapsed time (0:1) = 92.007802 seconds
+copy 0 finished @ Wed Jul  1 17:10:06 2026.  Total elapsed time: 92.007802
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000'
+comparing 'grid-0.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-1.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-2.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-3.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-4.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-5.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-6.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-7.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-8.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-0.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-1.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-2.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-3.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-4.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-5.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-6.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-7.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-8.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-10.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-11.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-12.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-13.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-14.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-15.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-16.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-17.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-18.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-19.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-20.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-21.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-22.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-23.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-9.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'log' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-10.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-11.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-12.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-13.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-14.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-15.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-16.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-17.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-18.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-19.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-20.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-21.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-22.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-23.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-9.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 17:10:14 2026 (1782897014)
+Stop command: Wed Jul  1 17:10:28 2026 (1782897028)
+Elapsed time for command: 00:00:14 (14)
+Benchmark Times:
+  Start:    Wed Jul  1 17:08:34 2026 (1782896914)
+  Stop:     Wed Jul  1 17:10:14 2026 (1782897014)
+  Elapsed:  00:01:40 (100)
+  Reported: 92 7848000 92.007848
+ Success 447.dealII base ref ratio=124.34, runtime=92.007848
+
+-----------------------------------
+  Running (#4) 450.soplex ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr ../run_base_ref_infra-baseline_O2.0000/soplex_base.infra-baseline_O2 -s1 -e -m45000 pds-50.mps
+    -o ref.out -e ref.stderr ../run_base_ref_infra-baseline_O2.0000/soplex_base.infra-baseline_O2 -m3500 ref.mps
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 17:10:28 2026 (1782897028)
+Stop command: Wed Jul  1 17:12:14 2026 (1782897134)
+Elapsed time for command: 00:01:46 (106)
+Workload elapsed time (0:1) = 48.991411 seconds
+Workload elapsed time (0:2) = 48.57249 seconds
+copy 0 finished @ Wed Jul  1 17:12:06 2026.  Total elapsed time: 97.563901
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000'
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 17:12:14 2026 (1782897134)
+Stop command: Wed Jul  1 17:12:16 2026 (1782897136)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/.err'
+*** Miscompare of pds-50.mps.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/pds-50.mps.stderr.mis
+'pds-50.mps.stderr' long
+*** Miscompare of ref.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/ref.stderr.mis
+'ref.stderr' long
+Benchmark Times:
+  Start:    Wed Jul  1 17:10:28 2026 (1782897028)
+  Stop:     Wed Jul  1 17:12:14 2026 (1782897134)
+  Elapsed:  00:01:46 (106)
+  Reported: 97 563950000 97.56395
+ Error 450.soplex base ref ratio=85.48, runtime=97.563950
+
+-----------------------------------
+  Running (#4) 462.libquantum ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002
+    -o ref.out -e ref.err ../run_base_ref_infra-baseline_O2.0002/libquantum_base.infra-baseline_O2 1397 8
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 17:12:16 2026 (1782897136)
+Stop command: Wed Jul  1 17:15:59 2026 (1782897359)
+Elapsed time for command: 00:03:43 (223)
+Workload elapsed time (0:1) = 215.144552 seconds
+copy 0 finished @ Wed Jul  1 17:15:51 2026.  Total elapsed time: 215.144552
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 17:15:59 2026 (1782897359)
+Stop command: Wed Jul  1 17:16:01 2026 (1782897361)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Jul  1 17:12:16 2026 (1782897136)
+  Stop:     Wed Jul  1 17:15:59 2026 (1782897359)
+  Elapsed:  00:03:43 (223)
+  Reported: 215 144593000 215.144593
+ Success 462.libquantum base ref ratio=96.31, runtime=215.144593
+
+-----------------------------------
+  Running (#4) 473.astar ref base infra-baseline_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001
+    -o BigLakes2048.out -e BigLakes2048.err ../run_base_ref_infra-baseline_O2.0001/astar_base.infra-baseline_O2 BigLakes2048.cfg
+    -o rivers.out -e rivers.err ../run_base_ref_infra-baseline_O2.0001/astar_base.infra-baseline_O2 rivers.cfg
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 17:16:01 2026 (1782897361)
+Stop command: Wed Jul  1 17:18:52 2026 (1782897532)
+Elapsed time for command: 00:02:51 (171)
+Workload elapsed time (0:1) = 54.968538 seconds
+Workload elapsed time (0:2) = 108.133921 seconds
+copy 0 finished @ Wed Jul  1 17:18:44 2026.  Total elapsed time: 163.102459
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 17:18:52 2026 (1782897532)
+Stop command: Wed Jul  1 17:18:54 2026 (1782897534)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Jul  1 17:16:01 2026 (1782897361)
+  Stop:     Wed Jul  1 17:18:52 2026 (1782897532)
+  Elapsed:  00:02:51 (171)
+  Reported: 163 102505000 163.102505
+ Success 473.astar base ref ratio=43.04, runtime=163.102505
+
+-----------------------------------
+  Running (#5) 429.mcf ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002
+    -o inp.out -e inp.err ../run_base_ref_infra-baseline_O2.0002/mcf_base.infra-baseline_O2 inp.in
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 17:18:54 2026 (1782897534)
+Stop command: Wed Jul  1 17:20:58 2026 (1782897658)
+Elapsed time for command: 00:02:04 (124)
+Workload elapsed time (0:1) = 115.240269 seconds
+copy 0 finished @ Wed Jul  1 17:20:50 2026.  Total elapsed time: 115.240269
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/429.mcf/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 17:20:58 2026 (1782897658)
+Stop command: Wed Jul  1 17:21:00 2026 (1782897660)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Jul  1 17:18:54 2026 (1782897534)
+  Stop:     Wed Jul  1 17:20:58 2026 (1782897658)
+  Elapsed:  00:02:04 (124)
+  Reported: 115 240313000 115.240313
+ Success 429.mcf base ref ratio=79.14, runtime=115.240313
+
+-----------------------------------
+  Running (#5) 447.dealII ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000
+    -o log -e dealII.err ../run_base_ref_infra-baseline_O2.0000/dealII_base.infra-baseline_O2 23
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 17:21:00 2026 (1782897660)
+Stop command: Wed Jul  1 17:22:40 2026 (1782897760)
+Elapsed time for command: 00:01:40 (100)
+Workload elapsed time (0:1) = 92.547426 seconds
+copy 0 finished @ Wed Jul  1 17:22:32 2026.  Total elapsed time: 92.547426
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000'
+comparing 'grid-0.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-1.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-2.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-3.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-4.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-5.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-6.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-7.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-8.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-0.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-1.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-2.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-3.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-4.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-5.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-6.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-7.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-8.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-10.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-11.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-12.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-13.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-14.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-15.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-16.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-17.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-18.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-19.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-20.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-21.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-22.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-23.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'grid-9.eps' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'log' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-10.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-11.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-12.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-13.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-14.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-15.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-16.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-17.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-18.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-19.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-20.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-21.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-22.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-23.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'solution-9.gmv' with abstol=1e-07, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/447.dealII/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 17:22:40 2026 (1782897760)
+Stop command: Wed Jul  1 17:22:54 2026 (1782897774)
+Elapsed time for command: 00:00:14 (14)
+Benchmark Times:
+  Start:    Wed Jul  1 17:21:00 2026 (1782897660)
+  Stop:     Wed Jul  1 17:22:40 2026 (1782897760)
+  Elapsed:  00:01:40 (100)
+  Reported: 92 547469000 92.547469
+ Success 447.dealII base ref ratio=123.61, runtime=92.547469
+
+-----------------------------------
+  Running (#5) 450.soplex ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr ../run_base_ref_infra-baseline_O2.0000/soplex_base.infra-baseline_O2 -s1 -e -m45000 pds-50.mps
+    -o ref.out -e ref.stderr ../run_base_ref_infra-baseline_O2.0000/soplex_base.infra-baseline_O2 -m3500 ref.mps
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 17:22:54 2026 (1782897774)
+Stop command: Wed Jul  1 17:24:40 2026 (1782897880)
+Elapsed time for command: 00:01:46 (106)
+Workload elapsed time (0:1) = 49.09226 seconds
+Workload elapsed time (0:2) = 48.427318 seconds
+copy 0 finished @ Wed Jul  1 17:24:32 2026.  Total elapsed time: 97.519578
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000'
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 17:24:40 2026 (1782897880)
+Stop command: Wed Jul  1 17:24:42 2026 (1782897882)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/.err'
+*** Miscompare of pds-50.mps.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/pds-50.mps.stderr.mis
+'pds-50.mps.stderr' long
+*** Miscompare of ref.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-baseline_O2.0000/ref.stderr.mis
+'ref.stderr' long
+Benchmark Times:
+  Start:    Wed Jul  1 17:22:54 2026 (1782897774)
+  Stop:     Wed Jul  1 17:24:40 2026 (1782897880)
+  Elapsed:  00:01:46 (106)
+  Reported: 97 519628000 97.519628
+ Error 450.soplex base ref ratio=85.52, runtime=97.519628
+
+-----------------------------------
+  Running (#5) 462.libquantum ref base infra-baseline_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002
+    -o ref.out -e ref.err ../run_base_ref_infra-baseline_O2.0002/libquantum_base.infra-baseline_O2 1397 8
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 17:24:42 2026 (1782897882)
+Stop command: Wed Jul  1 17:28:24 2026 (1782898104)
+Elapsed time for command: 00:03:42 (222)
+Workload elapsed time (0:1) = 213.643168 seconds
+copy 0 finished @ Wed Jul  1 17:28:16 2026.  Total elapsed time: 213.643168
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/462.libquantum/run/run_base_ref_infra-baseline_O2.0002 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 17:28:24 2026 (1782898104)
+Stop command: Wed Jul  1 17:28:26 2026 (1782898106)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Jul  1 17:24:42 2026 (1782897882)
+  Stop:     Wed Jul  1 17:28:24 2026 (1782898104)
+  Elapsed:  00:03:42 (222)
+  Reported: 213 643210000 213.64321
+ Success 462.libquantum base ref ratio=96.98, runtime=213.643210
+
+-----------------------------------
+  Running (#5) 473.astar ref base infra-baseline_O2 default
+Commands to run: 
+    -C /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001
+    -o BigLakes2048.out -e BigLakes2048.err ../run_base_ref_infra-baseline_O2.0001/astar_base.infra-baseline_O2 BigLakes2048.cfg
+    -o rivers.out -e rivers.err ../run_base_ref_infra-baseline_O2.0001/astar_base.infra-baseline_O2 rivers.cfg
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Wed Jul  1 17:28:26 2026 (1782898106)
+Stop command: Wed Jul  1 17:31:17 2026 (1782898277)
+Elapsed time for command: 00:02:51 (171)
+Workload elapsed time (0:1) = 55.128672 seconds
+Workload elapsed time (0:2) = 107.960253 seconds
+copy 0 finished @ Wed Jul  1 17:31:09 2026.  Total elapsed time: 163.088925
+comparing files in '/home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /home/hahafish/speccpu2006/benchspec/CPU2006/473.astar/run/run_base_ref_infra-baseline_O2.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Wed Jul  1 17:31:17 2026 (1782898277)
+Stop command: Wed Jul  1 17:31:19 2026 (1782898279)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Wed Jul  1 17:28:26 2026 (1782898106)
+  Stop:     Wed Jul  1 17:31:17 2026 (1782898277)
+  Elapsed:  00:02:51 (171)
+  Reported: 163 88971000 163.088971
+ Success 473.astar base ref ratio=43.04, runtime=163.088971
+Error: 5x450.soplex
+Success: 5x429.mcf 5x447.dealII 5x462.libquantum 5x473.astar
+Producing Reports
+mach: default
+  ext: infra-baseline_O2
+    size: ref
+      set: int
+           Flag reduction took 0.0006340s
+        format: raw -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1865.rsf
+        format: flags -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1865.flags.html
+        format: ASCII -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1865.txt
+        format: HTML -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1865.html, CINT2006.1865.gif
+      set: fp
+           Flag reduction took 0.0004311s
+        format: raw -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CFP2006.1865.rsf
+        format: flags -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CFP2006.1865.flags.html
+        format: ASCII -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CFP2006.1865.txt
+        format: HTML -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CFP2006.1865.html, CFP2006.1865.gif
+
+The log for this run is in /media/hahafish/Data/ForUbuntu/speccpu2006/result/CPU2006.1865.log
+
+runspec finished at Wed Jul  1 17:31:19 2026; 3745 total seconds elapsed

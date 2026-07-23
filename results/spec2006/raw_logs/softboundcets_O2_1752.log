@@ -1,0 +1,261 @@
+runspec started at Thu Jun 18 22:32:02 2026 on "Ubuntu"
+runspec is: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/runspec
+runspec: runspec --config=infra-softboundcets_O2 --nobuild --iterations 3 --ignore_errors 400.perlbench
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/media/hahafish/Data/ForUbuntu/speccpu2006/config/infra-softboundcets_O2.cfg'
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = infra-softboundcets_O2
+Size      = ref
+Machine   = default
+benchmarks= 400.perlbench
+outputs   = raw,flags,ASCII,HTML
+username  = hahafish
+Benchmarks selected: 400.perlbench
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 400.perlbench ref base infra-softboundcets_O2 default
+
+
+Parsing Flags
+  Looking at 400.perlbench base infra-softboundcets_O2 default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 400.perlbench ref base infra-softboundcets_O2 default: created (run_base_ref_infra-softboundcets_O2.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running (#1) 400.perlbench ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err ../run_base_ref_infra-softboundcets_O2.0000/perlbench_base.infra-softboundcets_O2 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err ../run_base_ref_infra-softboundcets_O2.0000/perlbench_base.infra-softboundcets_O2 -I./lib diffmail.pl 4 800 10 17 19 300
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err ../run_base_ref_infra-softboundcets_O2.0000/perlbench_base.infra-softboundcets_O2 -I./lib splitmail.pl 1600 12 26 16 4500
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 22:32:08 2026 (1781793128)
+Stop command: Thu Jun 18 22:35:24 2026 (1781793324)
+Elapsed time for command: 00:03:16 (196)
+
+400.perlbench: copy #0 non-zero return code (rc=139, signal=0)
+
+
+****************************************
+Contents of checkspam.2500.5.25.11.150.1.1.1.1.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of diffmail.4.800.10.17.19.300.err
+****************************************
+[setup-report] begin rusage-counters
+[setup-report] maxrss: 1680204
+[setup-report] page_faults: 417482
+[setup-report] io_operations: 368
+[setup-report] context_switches: 9228
+[setup-report] estimated_runtime: 70.573
+[setup-report] end rusage-counters
+
+****************************************
+
+****************************************
+Contents of splitmail.1600.12.26.16.4500.err
+****************************************
+[setup-report] begin rusage-counters
+[setup-report] maxrss: 3433144
+[setup-report] page_faults: 858879
+[setup-report] io_operations: 596
+[setup-report] context_switches: 20605
+[setup-report] estimated_runtime: 110.905
+[setup-report] end rusage-counters
+
+****************************************
+Workload elapsed time (0:1) = 5.470386 seconds
+Workload elapsed time (0:2) = 70.642491 seconds
+Workload elapsed time (0:3) = 111.02235 seconds
+copy 0 finished @ Thu Jun 18 22:35:16 2026.  Total elapsed time: 187.135227
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 22:35:24 2026 (1781793324)
+Stop command: Thu Jun 18 22:35:26 2026 (1781793326)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000/.err'
+*** Miscompare of checkspam.2500.5.25.11.150.1.1.1.1.out, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000/checkspam.2500.5.25.11.150.1.1.1.1.out.mis
+'checkspam.2500.5.25.11.150.1.1.1.1.out' short
+Benchmark Times:
+  Start:    Thu Jun 18 22:32:08 2026 (1781793128)
+  Stop:     Thu Jun 18 22:35:24 2026 (1781793324)
+  Elapsed:  00:03:16 (196)
+  Reported: 187 135336000 187.135336
+ Error 400.perlbench base ref ratio=52.21, runtime=187.135336
+
+-----------------------------------
+  Running (#2) 400.perlbench ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err ../run_base_ref_infra-softboundcets_O2.0000/perlbench_base.infra-softboundcets_O2 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err ../run_base_ref_infra-softboundcets_O2.0000/perlbench_base.infra-softboundcets_O2 -I./lib diffmail.pl 4 800 10 17 19 300
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err ../run_base_ref_infra-softboundcets_O2.0000/perlbench_base.infra-softboundcets_O2 -I./lib splitmail.pl 1600 12 26 16 4500
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 22:35:26 2026 (1781793326)
+Stop command: Thu Jun 18 22:38:42 2026 (1781793522)
+Elapsed time for command: 00:03:16 (196)
+
+400.perlbench: copy #0 non-zero return code (rc=139, signal=0)
+
+
+****************************************
+Contents of checkspam.2500.5.25.11.150.1.1.1.1.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of diffmail.4.800.10.17.19.300.err
+****************************************
+[setup-report] begin rusage-counters
+[setup-report] maxrss: 1680152
+[setup-report] page_faults: 417480
+[setup-report] io_operations: 368
+[setup-report] context_switches: 9272
+[setup-report] estimated_runtime: 70.803
+[setup-report] end rusage-counters
+
+****************************************
+
+****************************************
+Contents of splitmail.1600.12.26.16.4500.err
+****************************************
+[setup-report] begin rusage-counters
+[setup-report] maxrss: 3433128
+[setup-report] page_faults: 858882
+[setup-report] io_operations: 596
+[setup-report] context_switches: 20069
+[setup-report] estimated_runtime: 111.767
+[setup-report] end rusage-counters
+
+****************************************
+Workload elapsed time (0:1) = 5.534507 seconds
+Workload elapsed time (0:2) = 70.870053 seconds
+Workload elapsed time (0:3) = 111.878291 seconds
+copy 0 finished @ Thu Jun 18 22:38:34 2026.  Total elapsed time: 188.282851
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 22:38:42 2026 (1781793522)
+Stop command: Thu Jun 18 22:38:44 2026 (1781793524)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000/.err'
+*** Miscompare of checkspam.2500.5.25.11.150.1.1.1.1.out, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000/checkspam.2500.5.25.11.150.1.1.1.1.out.mis
+'checkspam.2500.5.25.11.150.1.1.1.1.out' short
+Benchmark Times:
+  Start:    Thu Jun 18 22:35:26 2026 (1781793326)
+  Stop:     Thu Jun 18 22:38:42 2026 (1781793522)
+  Elapsed:  00:03:16 (196)
+  Reported: 188 282955000 188.282955
+ Error 400.perlbench base ref ratio=51.89, runtime=188.282955
+
+-----------------------------------
+  Running (#3) 400.perlbench ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err ../run_base_ref_infra-softboundcets_O2.0000/perlbench_base.infra-softboundcets_O2 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err ../run_base_ref_infra-softboundcets_O2.0000/perlbench_base.infra-softboundcets_O2 -I./lib diffmail.pl 4 800 10 17 19 300
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err ../run_base_ref_infra-softboundcets_O2.0000/perlbench_base.infra-softboundcets_O2 -I./lib splitmail.pl 1600 12 26 16 4500
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 22:38:44 2026 (1781793524)
+Stop command: Thu Jun 18 22:42:00 2026 (1781793720)
+Elapsed time for command: 00:03:16 (196)
+
+400.perlbench: copy #0 non-zero return code (rc=139, signal=0)
+
+
+****************************************
+Contents of checkspam.2500.5.25.11.150.1.1.1.1.err
+****************************************
+Segmentation fault
+
+****************************************
+
+****************************************
+Contents of diffmail.4.800.10.17.19.300.err
+****************************************
+[setup-report] begin rusage-counters
+[setup-report] maxrss: 1680108
+[setup-report] page_faults: 417480
+[setup-report] io_operations: 368
+[setup-report] context_switches: 9009
+[setup-report] estimated_runtime: 70.624
+[setup-report] end rusage-counters
+
+****************************************
+
+****************************************
+Contents of splitmail.1600.12.26.16.4500.err
+****************************************
+[setup-report] begin rusage-counters
+[setup-report] maxrss: 3433080
+[setup-report] page_faults: 858879
+[setup-report] io_operations: 596
+[setup-report] context_switches: 20810
+[setup-report] estimated_runtime: 110.994
+[setup-report] end rusage-counters
+
+****************************************
+Workload elapsed time (0:1) = 5.542186 seconds
+Workload elapsed time (0:2) = 70.692828 seconds
+Workload elapsed time (0:3) = 111.114131 seconds
+copy 0 finished @ Thu Jun 18 22:41:52 2026.  Total elapsed time: 187.349145
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 22:42:00 2026 (1781793720)
+Stop command: Thu Jun 18 22:42:02 2026 (1781793722)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000/.err'
+*** Miscompare of checkspam.2500.5.25.11.150.1.1.1.1.out, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/400.perlbench/run/run_base_ref_infra-softboundcets_O2.0000/checkspam.2500.5.25.11.150.1.1.1.1.out.mis
+'checkspam.2500.5.25.11.150.1.1.1.1.out' short
+Benchmark Times:
+  Start:    Thu Jun 18 22:38:44 2026 (1781793524)
+  Stop:     Thu Jun 18 22:42:00 2026 (1781793720)
+  Elapsed:  00:03:16 (196)
+  Reported: 187 349272000 187.349272
+ Error 400.perlbench base ref ratio=52.15, runtime=187.349272
+Error: 3x400.perlbench
+Producing Reports
+mach: default
+  ext: infra-softboundcets_O2
+    size: ref
+      set: int
+           Flag reduction took 0.0003901s
+        format: raw -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1752.rsf
+        format: flags -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1752.flags.html
+        format: ASCII -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1752.txt
+        format: HTML -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CINT2006.1752.html, CINT2006.1752.gif
+      set: fp
+
+The log for this run is in /media/hahafish/Data/ForUbuntu/speccpu2006/result/CPU2006.1752.log
+
+runspec finished at Thu Jun 18 22:42:02 2026; 600 total seconds elapsed

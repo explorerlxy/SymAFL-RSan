@@ -1,0 +1,126 @@
+runspec started at Thu Jun 18 22:49:28 2026 on "Ubuntu"
+runspec is: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/runspec
+runspec: runspec --config=infra-softboundcets_O2 --nobuild --iterations 3 --ignore_errors 444.namd
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/media/hahafish/Data/ForUbuntu/speccpu2006/config/infra-softboundcets_O2.cfg'
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = infra-softboundcets_O2
+Size      = ref
+Machine   = default
+benchmarks= 444.namd
+outputs   = raw,flags,ASCII,HTML
+username  = hahafish
+Benchmarks selected: 444.namd
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 444.namd ref base infra-softboundcets_O2 default
+
+
+Parsing Flags
+  Looking at 444.namd base infra-softboundcets_O2 default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 444.namd ref base infra-softboundcets_O2 default: created (run_base_ref_infra-softboundcets_O2.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running (#1) 444.namd ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000
+    -o namd.stdout -e namd.err ../run_base_ref_infra-softboundcets_O2.0000/namd_base.infra-softboundcets_O2 --input namd.input --iterations 38 --output namd.out 
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 22:49:31 2026 (1781794171)
+Stop command: Thu Jun 18 22:52:48 2026 (1781794368)
+Elapsed time for command: 00:03:17 (197)
+Workload elapsed time (0:1) = 188.992833 seconds
+copy 0 finished @ Thu Jun 18 22:52:40 2026.  Total elapsed time: 188.992833
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'namd.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 22:52:48 2026 (1781794368)
+Stop command: Thu Jun 18 22:52:50 2026 (1781794370)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jun 18 22:49:31 2026 (1781794171)
+  Stop:     Thu Jun 18 22:52:48 2026 (1781794368)
+  Elapsed:  00:03:17 (197)
+  Reported: 188 992882000 188.992882
+ Success 444.namd base ref ratio=42.44, runtime=188.992882
+
+-----------------------------------
+  Running (#2) 444.namd ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000
+    -o namd.stdout -e namd.err ../run_base_ref_infra-softboundcets_O2.0000/namd_base.infra-softboundcets_O2 --input namd.input --iterations 38 --output namd.out 
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 22:52:50 2026 (1781794370)
+Stop command: Thu Jun 18 22:56:07 2026 (1781794567)
+Elapsed time for command: 00:03:17 (197)
+Workload elapsed time (0:1) = 188.98908 seconds
+copy 0 finished @ Thu Jun 18 22:55:59 2026.  Total elapsed time: 188.98908
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'namd.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 22:56:07 2026 (1781794567)
+Stop command: Thu Jun 18 22:56:09 2026 (1781794569)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jun 18 22:52:50 2026 (1781794370)
+  Stop:     Thu Jun 18 22:56:07 2026 (1781794567)
+  Elapsed:  00:03:17 (197)
+  Reported: 188 989119000 188.989119
+ Success 444.namd base ref ratio=42.44, runtime=188.989119
+
+-----------------------------------
+  Running (#3) 444.namd ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000
+    -o namd.stdout -e namd.err ../run_base_ref_infra-softboundcets_O2.0000/namd_base.infra-softboundcets_O2 --input namd.input --iterations 38 --output namd.out 
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 22:56:09 2026 (1781794569)
+Stop command: Thu Jun 18 22:59:25 2026 (1781794765)
+Elapsed time for command: 00:03:16 (196)
+Workload elapsed time (0:1) = 188.587754 seconds
+copy 0 finished @ Thu Jun 18 22:59:17 2026.  Total elapsed time: 188.587754
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'namd.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/444.namd/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 22:59:25 2026 (1781794765)
+Stop command: Thu Jun 18 22:59:27 2026 (1781794767)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jun 18 22:56:09 2026 (1781794569)
+  Stop:     Thu Jun 18 22:59:25 2026 (1781794765)
+  Elapsed:  00:03:16 (196)
+  Reported: 188 587789000 188.587789
+ Success 444.namd base ref ratio=42.53, runtime=188.587789
+Success: 3x444.namd
+Producing Reports
+mach: default
+  ext: infra-softboundcets_O2
+    size: ref
+      set: int
+      set: fp
+           Flag reduction took 0.0003600s
+        format: raw -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CFP2006.1754.rsf
+        format: flags -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CFP2006.1754.flags.html
+        format: ASCII -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CFP2006.1754.txt
+        format: HTML -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CFP2006.1754.html, CFP2006.1754.gif
+
+The log for this run is in /media/hahafish/Data/ForUbuntu/speccpu2006/result/CPU2006.1754.log
+
+runspec finished at Thu Jun 18 22:59:27 2026; 599 total seconds elapsed

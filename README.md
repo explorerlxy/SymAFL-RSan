@@ -212,21 +212,6 @@ python3 setup.py report memtag_test results/last --field detected missed verdict
 cd tests/memtag && make all && ./run_tests.sh
 ```
 
-## Performance Optimization History
-
-MixSan has been optimized from 6.00× overhead to 1.45× (faster than RSan's 1.52×). Measurements on SPEC2006 429.mcf (baseline=133.7s):
-
-| Step | mcf Runtime | vs Baseline | Key Change |
-|------|-----------|-------------|------------|
-| Initial | 802.6s | 6.00× | 3-stage check + quarantine MemTag |
-| TSC+NOT tcmalloc | 232.3s | 1.74× | `rdtsc()` replaces `*meta_ptr` read in malloc |
-| Simplified SafeStack | 224.3s | 1.68× | Remove MemTag extraction from inline checks |
-| Unified check | 222.1s | 1.66× | Single subtraction replaces temporal+spatial OR |
-| Remove MetaMemTag | 197.5s | 1.48× | Drop redundant 3rd return value |
-| **Final** | **194.1s** | **1.45×** | Re-optimized after revert |
-
-Key insight: memory access (the `*meta_ptr` load in malloc hot path) dominated 85% of overhead before being replaced with `rdtsc()`.
-
 ## Troubleshooting
 
 | Symptom | Fix |

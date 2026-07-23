@@ -1,0 +1,156 @@
+runspec started at Thu Jun 18 23:10:14 2026 on "Ubuntu"
+runspec is: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/runspec
+runspec: runspec --config=infra-softboundcets_O2 --nobuild --iterations 3 --ignore_errors 450.soplex
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/media/hahafish/Data/ForUbuntu/speccpu2006/config/infra-softboundcets_O2.cfg'
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = infra-softboundcets_O2
+Size      = ref
+Machine   = default
+benchmarks= 450.soplex
+outputs   = raw,flags,ASCII,HTML
+username  = hahafish
+Benchmarks selected: 450.soplex
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 450.soplex ref base infra-softboundcets_O2 default
+
+
+Parsing Flags
+  Looking at 450.soplex base infra-softboundcets_O2 default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 450.soplex ref base infra-softboundcets_O2 default: created (run_base_ref_infra-softboundcets_O2.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running (#1) 450.soplex ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr ../run_base_ref_infra-softboundcets_O2.0000/soplex_base.infra-softboundcets_O2 -s1 -e -m45000 pds-50.mps
+    -o ref.out -e ref.stderr ../run_base_ref_infra-softboundcets_O2.0000/soplex_base.infra-softboundcets_O2 -m3500 ref.mps
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 23:10:20 2026 (1781795420)
+Stop command: Thu Jun 18 23:14:15 2026 (1781795655)
+Elapsed time for command: 00:03:55 (235)
+Workload elapsed time (0:1) = 114.015439 seconds
+Workload elapsed time (0:2) = 113.001519 seconds
+copy 0 finished @ Thu Jun 18 23:14:07 2026.  Total elapsed time: 227.016958
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 23:14:15 2026 (1781795655)
+Stop command: Thu Jun 18 23:14:17 2026 (1781795657)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000/.err'
+*** Miscompare of pds-50.mps.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000/pds-50.mps.stderr.mis
+'pds-50.mps.stderr' long
+*** Miscompare of ref.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000/ref.stderr.mis
+'ref.stderr' long
+Benchmark Times:
+  Start:    Thu Jun 18 23:10:20 2026 (1781795420)
+  Stop:     Thu Jun 18 23:14:15 2026 (1781795655)
+  Elapsed:  00:03:55 (235)
+  Reported: 227 17014000 227.017014
+ Error 450.soplex base ref ratio=36.74, runtime=227.017014
+
+-----------------------------------
+  Running (#2) 450.soplex ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr ../run_base_ref_infra-softboundcets_O2.0000/soplex_base.infra-softboundcets_O2 -s1 -e -m45000 pds-50.mps
+    -o ref.out -e ref.stderr ../run_base_ref_infra-softboundcets_O2.0000/soplex_base.infra-softboundcets_O2 -m3500 ref.mps
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 23:14:17 2026 (1781795657)
+Stop command: Thu Jun 18 23:18:12 2026 (1781795892)
+Elapsed time for command: 00:03:55 (235)
+Workload elapsed time (0:1) = 114.160446 seconds
+Workload elapsed time (0:2) = 112.804124 seconds
+copy 0 finished @ Thu Jun 18 23:18:04 2026.  Total elapsed time: 226.96457
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 23:18:12 2026 (1781795892)
+Stop command: Thu Jun 18 23:18:15 2026 (1781795895)
+Elapsed time for command: 00:00:03 (3)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000/.err'
+*** Miscompare of pds-50.mps.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000/pds-50.mps.stderr.mis
+'pds-50.mps.stderr' long
+*** Miscompare of ref.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000/ref.stderr.mis
+'ref.stderr' long
+Benchmark Times:
+  Start:    Thu Jun 18 23:14:17 2026 (1781795657)
+  Stop:     Thu Jun 18 23:18:12 2026 (1781795892)
+  Elapsed:  00:03:55 (235)
+  Reported: 226 964621000 226.964621
+ Error 450.soplex base ref ratio=36.75, runtime=226.964621
+
+-----------------------------------
+  Running (#3) 450.soplex ref base infra-softboundcets_O2 default
+Commands to run: 
+    -C /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000
+    -o pds-50.mps.out -e pds-50.mps.stderr ../run_base_ref_infra-softboundcets_O2.0000/soplex_base.infra-softboundcets_O2 -s1 -e -m45000 pds-50.mps
+    -o ref.out -e ref.stderr ../run_base_ref_infra-softboundcets_O2.0000/soplex_base.infra-softboundcets_O2 -m3500 ref.mps
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jun 18 23:18:15 2026 (1781795895)
+Stop command: Thu Jun 18 23:22:10 2026 (1781796130)
+Elapsed time for command: 00:03:55 (235)
+Workload elapsed time (0:1) = 114.010065 seconds
+Workload elapsed time (0:2) = 112.976742 seconds
+copy 0 finished @ Thu Jun 18 23:22:02 2026.  Total elapsed time: 226.986807
+comparing files in '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000'
+comparing 'pds-50.mps.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'pds-50.mps.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.02, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'ref.stderr' with abstol=20, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=0.0001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jun 18 23:22:10 2026 (1781796130)
+Stop command: Thu Jun 18 23:22:12 2026 (1781796132)
+Elapsed time for command: 00:00:02 (2)
+Error with '/media/hahafish/Data/ForUbuntu/speccpu2006/bin/specinvoke -E -d /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000/.err'
+*** Miscompare of pds-50.mps.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000/pds-50.mps.stderr.mis
+'pds-50.mps.stderr' long
+*** Miscompare of ref.stderr, see /media/hahafish/Data/ForUbuntu/speccpu2006/benchspec/CPU2006/450.soplex/run/run_base_ref_infra-softboundcets_O2.0000/ref.stderr.mis
+'ref.stderr' long
+Benchmark Times:
+  Start:    Thu Jun 18 23:18:15 2026 (1781795895)
+  Stop:     Thu Jun 18 23:22:10 2026 (1781796130)
+  Elapsed:  00:03:55 (235)
+  Reported: 226 986856000 226.986856
+ Error 450.soplex base ref ratio=36.74, runtime=226.986856
+Error: 3x450.soplex
+Producing Reports
+mach: default
+  ext: infra-softboundcets_O2
+    size: ref
+      set: int
+      set: fp
+           Flag reduction took 0.0003500s
+        format: raw -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CFP2006.1756.rsf
+        format: flags -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CFP2006.1756.flags.html
+        format: ASCII -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CFP2006.1756.txt
+        format: HTML -> /media/hahafish/Data/ForUbuntu/speccpu2006/result/CFP2006.1756.html, CFP2006.1756.gif
+
+The log for this run is in /media/hahafish/Data/ForUbuntu/speccpu2006/result/CPU2006.1756.log
+
+runspec finished at Thu Jun 18 23:22:12 2026; 718 total seconds elapsed

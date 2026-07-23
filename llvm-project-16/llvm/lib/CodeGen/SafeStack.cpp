@@ -153,7 +153,7 @@ bool isX86;
 static constexpr uint64_t IMPLICIT_MEMTAG_SHIFT = 57;
 static constexpr uint64_t EXPLICIT_MEMTAG_SHIFT = 56;
 static constexpr uint64_t MEMTAG_THRESHOLD = 1ULL << 56;
-static constexpr uint64_t MAX_SIZE_CLASS_SHIFT = 43;  // shr-43 zero-comparison optimization
+static constexpr uint64_t MAX_SIZE_CLASS_SHIFT = 56;  // shr-56 zero-comparison optimization
 Type* cursedType;
 
 using OffsetDir = uint8_t;
@@ -2029,7 +2029,7 @@ void SafeStack::InsertCheckRange(Instruction &I, Value *start, Value *end, Type*
     if(!size.isScalable()) AccessSizeVal = size.getFixedValue();
   }
 
-  // shr-43 zero-comparison: (Meta - (Ptr+n)) >> 43 != 0 -> error
+  // shr-56 zero-comparison: (Meta - (Ptr+n)) >> 56 != 0 -> error
   EndPtrVal = SlowBuilder.CreateAdd(EndPtrVal,
       SlowBuilder.getInt64(AccessSizeVal), "target_end");
   Value *Diff = SlowBuilder.CreateSub(Meta, EndPtrVal, "chk_diff");
@@ -2093,7 +2093,7 @@ std::tuple<Value *, Value *> SafeStack::InsertCheckMeta(Instruction &I, Value &a
 
   }
 
-  // shr-43 zero-comparison: (EndOfObj - (PtrVal+n)) >> 43 != 0 -> error
+  // shr-56 zero-comparison: (EndOfObj - (PtrVal+n)) >> 56 != 0 -> error
   uint64_t AccessSizeVal = 1;
   if (ptrType) {
     TypeSize sz = DL.getTypeStoreSize(ptrType);
@@ -2173,7 +2173,7 @@ std::tuple<Value *, Value *> SafeStack::InsertCheck(Instruction &I, Value &addr,
     if(!size.isScalable()) AccessSizeVal = size.getFixedValue();
   }
 
-  // shr-43 zero-comparison: (Meta - (Ptr+n)) >> 43 != 0 -> error
+  // shr-56 zero-comparison: (Meta - (Ptr+n)) >> 56 != 0 -> error
   Value *TargetEnd = builder.CreateAdd(PtrAsInt,
       builder.getInt64(AccessSizeVal), "target_end");
   Value *Diff = builder.CreateSub(Meta, TargetEnd, "check_diff");
@@ -4886,9 +4886,10 @@ bool SizedStackRuntime::finalize() {
   // Replace static library stack pointer array with the newly allocated one.
   GlobalVariable *stackPointerArrayStatic = dyn_cast_or_null<GlobalVariable>(M.getNamedValue(kUnsafeStackPtrVar));
 
-  assert(stackPointerArrayStatic);
-  replaceUsesWithCast(stackPointerArrayStatic, stackPointerArrayFinal);
-  stackPointerArrayStatic->eraseFromParent();
+  if (stackPointerArrayStatic) {
+    replaceUsesWithCast(stackPointerArrayStatic, stackPointerArrayFinal);
+    stackPointerArrayStatic->eraseFromParent();
+  }
 
   // Replace static library size class array with a properly sized and initialized one.
   // The array might not exist; it gets optimized out when DISABLE_SLOWPATH is
@@ -4967,12 +4968,16 @@ GlobalVariable *SizedStackRuntime::createStackPtrArray(StringRef varName, size_t
 }
 
 GlobalVariable *SizedStackRuntime::createStackPtrCount(StringRef varName, size_t count) {
-  GlobalVariable *gv = cast<GlobalVariable>(M.getNamedValue(varName));
+  GlobalVariable *gv = dyn_cast_or_null<GlobalVariable>(M.getNamedValue(varName));
   IntegerType *type = IntegerType::get(M.getContext(), 64);
   Constant *init = ConstantInt::get(type, count);
-  gv->setInitializer(init);
-  gv->setConstant(true);
-  gv->setLinkage(GlobalValue::PrivateLinkage);
+  if (gv) {
+    gv->setInitializer(init);
+    gv->setConstant(true);
+    gv->setLinkage(GlobalValue::PrivateLinkage);
+  } else {
+    gv = new GlobalVariable(M, type, true, GlobalValue::PrivateLinkage, init, varName);
+  }
   return gv;
 }
 

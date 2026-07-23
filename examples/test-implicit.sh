@@ -32,3 +32,10 @@ echo -e "Done."
 
 echo -e "\nExecuting use-after-free testcase (expected: crash)"
 ./uaf
+
+echo -e "\nCompiling MemTag mismatch testcase..."
+$RSAN_C memtag_mismatch.c $RSAN_CFLAGS -o memtag_mismatch $RSAN_LDFLAGS $RSAN_TCMALLOC
+echo -e "Done."
+
+echo -e "\nExecuting altered-MemTag testcase (expected: crash)"
+./memtag_mismatch

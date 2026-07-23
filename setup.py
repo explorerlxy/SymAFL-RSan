@@ -97,6 +97,38 @@ class MixSan(infra.Instance):
         ctx.cxxflags += self.opt + STD_CFLAGS + RSAN_CFLAGS + _impl_cflags(LNK_MIX, DL_MIX)
         ctx.ldflags += STD_LDFLAGS + get_tcmalloc_ldflags(TC_MIX) + RSAN_LDFLAGS + _impl_ldflags(LNK_MIX, DL_MIX)
 
+class RSanOrigWoCheck(infra.Instance):
+    """Original RSan implicit tagging WITHOUT SafeStack checks.
+       Isolates pure allocator overhead (implicit + quarantine + infrastructure).
+       Compare with baseline-rsan-pie_O2 → pure tcmalloc diff (vanilla vs implicit+quarantine)."""
+    name = 'rsan-orig-wo-check'
+    def __init__(self, opt_level):
+        self.name += "_" + opt_level
+        self.opt = ["-" + opt_level]
+    def configure(self, ctx):
+        ctx.cc = CC_ORIG
+        ctx.cxx = CXX_ORIG
+        # NO RSAN_CFLAGS / RSAN_LDFLAGS → no SafeStack
+        ctx.cflags += self.opt + STD_CFLAGS + _impl_cflags(LNK_ORIG, DL_ORIG)
+        ctx.cxxflags += self.opt + STD_CFLAGS + _impl_cflags(LNK_ORIG, DL_ORIG)
+        ctx.ldflags += STD_LDFLAGS + get_tcmalloc_ldflags(TC_IMPL) + _impl_ldflags(LNK_ORIG, DL_ORIG)
+
+class MixSanWoCheck(infra.Instance):
+    """SmartMixSan-LAM WITHOUT SafeStack checks.
+       Isolates pure allocator overhead (implicit + MemTag + infrastructure).
+       Compare with baseline-mix-pie_O2 → pure MixSan tcmalloc diff (vanilla vs implicit+MemTag)."""
+    name = 'mixsan-wo-check'
+    def __init__(self, opt_level):
+        self.name += "_" + opt_level
+        self.opt = ["-" + opt_level]
+    def configure(self, ctx):
+        ctx.cc = CC_MIX
+        ctx.cxx = CXX_MIX
+        # NO RSAN_CFLAGS / RSAN_LDFLAGS → no SafeStack
+        ctx.cflags += self.opt + STD_CFLAGS + _impl_cflags(LNK_MIX, DL_MIX)
+        ctx.cxxflags += self.opt + STD_CFLAGS + _impl_cflags(LNK_MIX, DL_MIX)
+        ctx.ldflags += STD_LDFLAGS + get_tcmalloc_ldflags(TC_MIX) + _impl_ldflags(LNK_MIX, DL_MIX)
+
 class MixSanCompilerRSanTC(infra.Instance):
     """MixSan compiler (3-stage check) + RSan tcmalloc (quarantine, no MemTag).
        Isolates compiler pass overhead: MemTag=0 → Stage 2 skipped, spatial-only."""
@@ -110,6 +142,46 @@ class MixSanCompilerRSanTC(infra.Instance):
         ctx.cflags += self.opt + STD_CFLAGS + RSAN_CFLAGS + _impl_cflags(LNK_ORIG, DL_ORIG)
         ctx.cxxflags += self.opt + STD_CFLAGS + RSAN_CFLAGS + _impl_cflags(LNK_ORIG, DL_ORIG)
         ctx.ldflags += STD_LDFLAGS + get_tcmalloc_ldflags(TC_IMPL) + RSAN_LDFLAGS + _impl_ldflags(LNK_ORIG, DL_ORIG)
+
+# ============================================================
+# Controlled-baseline instances — isolate infrastructure overhead
+# from tcmalloc overhead.  These use the same -no-pie, -mbmi2,
+# linker script, and custom dynamic linker as the RSan/MixSan
+# wo-check instances, but link against vanilla tcmalloc-baseline.
+# ============================================================
+
+class BaselineRSanPie(infra.Instance):
+    """Baseline tcmalloc + RSan infrastructure (no-pie, linker script, pld.so).
+       Isolates infrastructure overhead: compare with baseline_O2.
+       Isolates pure tcmalloc overhead: compare with rsan-orig-wo-check_O2."""
+    name = 'baseline-rsan-pie'
+    def __init__(self, opt_level):
+        self.name += "_" + opt_level
+        self.opt = ["-" + opt_level]
+    def configure(self, ctx):
+        ctx.cc = CC_ORIG
+        ctx.cxx = CXX_ORIG
+        ctx.cflags += self.opt + STD_CFLAGS + _impl_cflags(LNK_ORIG, DL_ORIG)
+        ctx.cxxflags += self.opt + STD_CFLAGS + _impl_cflags(LNK_ORIG, DL_ORIG)
+        # baseline tcmalloc + RSan infrastructure (no SafeStack)
+        ctx.ldflags += STD_LDFLAGS + get_tcmalloc_ldflags(TC_BASE) + _impl_ldflags(LNK_ORIG, DL_ORIG)
+
+class BaselineMixPie(infra.Instance):
+    """Baseline tcmalloc + MixSan infrastructure (no-pie, linker script, pld.so).
+       Isolates compile/linker infrastructure diff between worktree and main dir.
+       Compare with baseline-rsan-pie_O2 → compiler difference.
+       Compare with mixsan-wo-check_O2 → pure MixSan tcmalloc overhead."""
+    name = 'baseline-mix-pie'
+    def __init__(self, opt_level):
+        self.name += "_" + opt_level
+        self.opt = ["-" + opt_level]
+    def configure(self, ctx):
+        ctx.cc = CC_MIX
+        ctx.cxx = CXX_MIX
+        ctx.cflags += self.opt + STD_CFLAGS + _impl_cflags(LNK_MIX, DL_MIX)
+        ctx.cxxflags += self.opt + STD_CFLAGS + _impl_cflags(LNK_MIX, DL_MIX)
+        # baseline tcmalloc + MixSan infrastructure (no SafeStack)
+        ctx.ldflags += STD_LDFLAGS + get_tcmalloc_ldflags(TC_BASE) + _impl_ldflags(LNK_MIX, DL_MIX)
 
 class RSanExplicit(infra.Instance):
     """RSan with explicit tagging (for additional comparison). Uses worktree builds."""
@@ -127,7 +199,9 @@ class RSanExplicit(infra.Instance):
             os.getenv("RSAN_ORIG_TC_EXPL_BUILD", "")) + RSAN_LDFLAGS
 
 class ASan(infra.Instance):
-    """AddressSanitizer (for additional comparison). Uses worktree compiler."""
+    """AddressSanitizer (for additional comparison). Uses worktree compiler.
+       ⚠️ WARNING: Inherits STD_CFLAGS (-fno-builtin-malloc, -flto=full, -g)
+       which are harmful for ASan performance.  Use ASanClean for fair comparison."""
     name = 'asan'
     ASAN_CFLAGS = ["-fsanitize=address", "-fno-sanitize-address-use-after-scope", "-fsanitize-address-use-after-return=never"]
     ASAN_LDFLAGS = ["-fsanitize=address", "-fno-sanitize-address-use-after-scope", "-fsanitize-address-use-after-return=never"]
@@ -142,6 +216,97 @@ class ASan(infra.Instance):
         ctx.ldflags += STD_LDFLAGS + self.ASAN_LDFLAGS
     def prepare_run(self, ctx):
         ctx.runenv["ASAN_OPTIONS"] = "alloc_dealloc_mismatch=0,detect_odr_violation=0,detect_leaks=0,detect_stack_use_after_return=0,detect_stack_use_after_scope=0"
+
+class ASanClean(infra.Instance):
+    """Minimal ASan — clean flags for fair comparison with published results.
+       NO -fno-builtin-malloc, NO -flto, NO -g, NO tcmalloc.
+       Standard: -O2 -fsanitize=address + standard ASan optimizations."""
+    name = 'asan-clean'
+    ASAN_CFLAGS = ["-fsanitize=address", "-fno-sanitize-address-use-after-scope", "-fsanitize-address-use-after-return=never"]
+    ASAN_LDFLAGS = ["-fsanitize=address", "-fno-sanitize-address-use-after-scope", "-fsanitize-address-use-after-return=never"]
+    def __init__(self, opt_level):
+        self.name += "_" + opt_level
+        self.opt = ["-" + opt_level]
+    def configure(self, ctx):
+        ctx.cc = CC_ORIG
+        ctx.cxx = CXX_ORIG
+        # Minimal flags: NO -fno-builtin-*, NO -flto, NO -g
+        ctx.cflags += self.opt + self.ASAN_CFLAGS + ["-Wno-int-conversion", "-Wno-deprecated-non-prototype"]
+        ctx.cxxflags += self.opt + self.ASAN_CFLAGS + ["-Wno-int-conversion", "-Wno-deprecated-non-prototype"]
+        ctx.ldflags += self.ASAN_LDFLAGS + ["-fuse-ld=lld"]
+    def prepare_run(self, ctx):
+        ctx.runenv["ASAN_OPTIONS"] = "alloc_dealloc_mismatch=0,detect_odr_violation=0,detect_leaks=0,detect_stack_use_after_return=0,detect_stack_use_after_scope=0"
+
+
+# ============================================================
+# SoftBoundCETS — LLVM 12 + SoftBound+CETS LTO pass
+# ============================================================
+
+SB_DIR = "/home/hahafish/softboundcets/build"
+SB_RT_DIR = SB_DIR + "/lib/clang/12.0.1/lib/linux"
+
+class SoftBoundCETS(infra.Instance):
+    """SoftBound+CETS: spatial + temporal memory safety via pointer metadata.
+       Uses LTO pass to instrument all pointer operations.  No tcmalloc needed."""
+    name = 'softboundcets'
+    SB_CFLAGS = ["-flto", "-fno-vectorize", "-fno-slp-vectorize", "-Wno-unused-command-line-argument"]
+    def __init__(self, opt_level):
+        self.name += "_" + opt_level
+        self.opt = ["-" + opt_level]
+    def configure(self, ctx):
+        ctx.cc = SB_DIR + "/bin/clang"
+        ctx.cxx = SB_DIR + "/bin/clang++"
+        # Minimal flags — NO -fno-builtin-malloc (SoftBoundCETS instruments malloc, doesn't replace it)
+        ctx.cflags += self.opt + self.SB_CFLAGS + ["-Wno-int-conversion", "-Wno-deprecated-non-prototype"]
+        ctx.cxxflags += self.opt + self.SB_CFLAGS + ["-Wno-int-conversion", "-Wno-deprecated-non-prototype"]
+        # LTO link: load SoftBoundCETS pass + link static inlined runtime
+        ctx.ldflags += [
+            "-fuse-ld=" + SB_DIR + "/bin/ld.lld",
+            "-flto",
+            "-Wl,-mllvm=-load=" + SB_DIR + "/lib/LLVMSoftBoundCETSLTO.so",
+            "-Wl,-mllvm=-softboundcets-inline-rtlib-functions",
+            "-Wl,-mllvm=-softboundcets-create-secondary-tries=true",
+            "-Wl,--disable-verify",  # Required for xalancbmk ODR type mismatch in LTO
+            "-Wl,--whole-archive",
+            "-L" + SB_RT_DIR,
+            "-Bstatic",
+            "-l:libclang_rt.softboundcets_benchmark_inlining_invalid_locks-x86_64.a",
+            "-Bdynamic",
+            "-Wl,--no-whole-archive",
+            "-lpthread", "-lrt", "-ldl",
+        ]
+
+
+class SoftBoundCETSDetect(infra.Instance):
+    """SoftBound+CETS for vulnerability DETECTION (non-benchmarking runtime).
+       Uses custom runtime where __softboundcets_abort() actually aborts → SIGABRT(134).
+       This is separate from the benchmarking SoftBoundCETS class used for SPEC performance."""
+    name = 'softboundcets-detect'
+    SB_CFLAGS = ["-flto", "-fno-vectorize", "-fno-slp-vectorize", "-Wno-unused-command-line-argument"]
+    def __init__(self, opt_level):
+        self.name += "_" + opt_level
+        self.opt = ["-" + opt_level]
+    def configure(self, ctx):
+        ctx.cc = SB_DIR + "/bin/clang"
+        ctx.cxx = SB_DIR + "/bin/clang++"
+        ctx.cflags += self.opt + self.SB_CFLAGS + ["-Wno-int-conversion", "-Wno-deprecated-non-prototype"]
+        ctx.cxxflags += self.opt + self.SB_CFLAGS + ["-Wno-int-conversion", "-Wno-deprecated-non-prototype"]
+        # LTO link: load SoftBoundCETS pass + custom non-benchmarking _invalid_locks runtime
+        ctx.ldflags += [
+            "-fuse-ld=" + SB_DIR + "/bin/ld.lld",
+            "-flto",
+            "-Wl,-mllvm=-load=" + SB_DIR + "/lib/LLVMSoftBoundCETSLTO.so",
+            "-Wl,-mllvm=-softboundcets-inline-rtlib-functions",
+            "-Wl,-mllvm=-softboundcets-create-secondary-tries=true",
+            "-Wl,--disable-verify",
+            "-Wl,--whole-archive",
+            "-L" + SB_RT_DIR,
+            "-Bstatic",
+            "-l:libclang_rt.softboundcets_custom_inlining_invalid_locks-x86_64.a",
+            "-Bdynamic",
+            "-Wl,--no-whole-archive",
+            "-lpthread", "-lrt", "-ldl",
+        ]
 
 
 # ============================================================
@@ -255,16 +420,23 @@ if __name__ == "__main__":
         setup.add_instance(RSanOrig(opt))
         setup.add_instance(MixSan(opt))
         setup.add_instance(MixSanCompilerRSanTC(opt))  # temporary: isolate compiler pass overhead
+        setup.add_instance(RSanOrigWoCheck(opt))       # rSan allocator WITHOUT SafeStack (pure tcmalloc+quarantine overhead)
+        setup.add_instance(MixSanWoCheck(opt))         # MixSan allocator WITHOUT SafeStack (pure tcmalloc+MemTag overhead)
+        setup.add_instance(BaselineRSanPie(opt))       # baseline tcmalloc + RSan infrastructure → isolates infra overhead
+        setup.add_instance(BaselineMixPie(opt))        # baseline tcmalloc + MixSan infrastructure → isolates compiler+linker diff
 
     # Additional comparison instances
     for opt in ("O0", "O2"):
         setup.add_instance(RSanExplicit(opt))
         setup.add_instance(ASan(opt))
+        setup.add_instance(ASanClean(opt))
+        setup.add_instance(SoftBoundCETS(opt))
+        setup.add_instance(SoftBoundCETSDetect(opt))
 
     # SPEC CPU2006
     if SPEC2006_DIR and os.path.exists(SPEC2006_DIR):
         setup.add_target(infra.targets.SPEC2006(
-            force_cpu = 0,
+            force_cpu = 2,
             source = SPEC2006_DIR,
             source_type = "installed",
             patches = ["dealII-stddef", "gcc-init-ptr", "omnetpp-invalid-ptrcheck", "asan", "rsan"],

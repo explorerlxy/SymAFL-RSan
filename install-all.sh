@@ -6,9 +6,8 @@ set -x
 ROOT_DIR=$(pwd)
 
 # Sanity check: was env.sh loaded?
-if [ -z $RSAN_C ]
+if [ -z "$RSAN_C" ]
 then
-    echo $RSAN_C
     echo "Environment not set up! Execute source env.sh"
     exit 1
 fi
@@ -43,20 +42,9 @@ then
   exit 1
 fi
 
-# Build TCMalloc baseline (clean TCMalloc v2.15)
-if [[ ! -f $RSAN_TC_BASE_BUILD/lib/libtcmalloc.a ]]; then
-    cd $ROOT_DIR
-    git clone https://github.com/gperftools/gperftools.git --branch gperftools-2.15 tcmalloc-baseline
-    cd $RSAN_TC_BASE
-    autoreconf -i
-    ./autogen.sh || true
-
-    mkdir -p $ROOT_DIR/tcmalloc-baseline-build
-    cd $RSAN_TC_BASE_BUILD
-    ../tcmalloc-baseline/configure --prefix=$ROOT_DIR/tcmalloc-baseline-build
-    make -j $(nproc)
-    make install
-fi
+# NOTE: the tcmalloc-baseline (clean gperftools v2.15) build was removed —
+# SymAFL only uses the tagged allocator (tcmalloc-implicit on x86), so the
+# baseline is no longer cloned or built.
 
 # Build TCMalloc-implicit: currently assumes x86
 if [ $ARCH == "x86_64" ] && [[ ! -f $RSAN_TC_IMPL_BUILD/lib/libtcmalloc.a ]]; then

@@ -85,6 +85,32 @@ void Symbolizer::shortCircuitExpressionUses() {
     assert(!symbolicComputation.inputs.empty() &&
            "Symbolic computation has no inputs");
 
+    // Some optimized targets produce vector SSA values (SSE/CLMUL). We can
+    // represent fixed vectors of up to 128 bits as integers, but larger or
+    // scalable vectors have no runtime expression representation. Keep those
+    // computations on the always-executed path instead of crashing while
+    // short-circuiting them.
+    bool canShortCircuit = true;
+    for (const auto &input : symbolicComputation.inputs) {
+      auto *concreteType = input.concreteValue->getType();
+      if (concreteType->isVectorTy()) {
+        auto *vectorType = cast<VectorType>(concreteType);
+        if (vectorType->getElementCount().isScalable() ||
+            vectorType->getPrimitiveSizeInBits() > 128) {
+          canShortCircuit = false;
+          break;
+        }
+      } else if (!concreteType->isIntegerTy() &&
+                 !concreteType->isFloatingPointTy() &&
+                 !concreteType->isPointerTy() &&
+                 !concreteType->isStructTy()) {
+        canShortCircuit = false;
+        break;
+      }
+    }
+    if (!canShortCircuit)
+      continue;
+
     IRBuilder<> IRB(symbolicComputation.firstInstruction);
 
     // Build the check whether any input expression is non-null (i.e., there
@@ -963,6 +989,18 @@ Instruction *Symbolizer::createValueExpression(Value *V, IRBuilder<> &IRB) {
 
   if (isa<ConstantPointerNull>(V)) {
     return IRB.CreateCall(runtime.buildNullPointer, {});
+  }
+
+  if (auto *vectorType = dyn_cast<VectorType>(valueType)) {
+    // Fixed-width vector registers (for example SSE __m128i values) can be
+    // represented losslessly as one integer bit-vector. Scalable vectors and
+    // wider-than-128-bit vectors are rejected before short-circuiting.
+    auto bits = vectorType->getPrimitiveSizeInBits();
+    assert(!vectorType->getElementCount().isScalable() && bits <= 128 &&
+           "unsupported vector type for concrete expression");
+    auto *integerType = Type::getIntNTy(V->getContext(), bits);
+    V = IRB.CreateBitCast(V, integerType);
+    valueType = integerType;
   }
 
   if (valueType->isIntegerTy()) {

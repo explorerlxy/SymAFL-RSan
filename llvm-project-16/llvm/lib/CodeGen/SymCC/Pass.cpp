@@ -258,13 +258,18 @@ bool instrumentFunction(Function &F) {
     symbolizer.visit(instPtr);
 
   symbolizer.finalizePHINodes();
-  symbolizer.shortCircuitExpressionUses();
-
-  assert(!verifyFunction(F, &errs()) &&
-         "SymbolizePass produced invalid bitcode");
 
   // -----------------------------------------------------------------------------
-  // AFL coverage instrument
+  // AFL coverage instrument. This MUST run before
+  // shortCircuitExpressionUses(): afterwards the CFG contains the
+  // short-circuit guard/slow-path blocks, and assigning edge IDs there makes
+  // coverage depend on concrete-vs-symbolic mode (the slow-path blocks only
+  // execute when inputs are symbolic), which used to make AFL++ mark every
+  // admitted entry var_behavior. Inserting now keeps one edge ID per
+  // original basic block; later SplitBlock() calls keep these instructions
+  // in the always-executed head block, so coverage is mode-independent. The
+  // edge-log instructions are not in allInstructions, so they are not
+  // symbolized.
   Module &M = (*F.getParent());
   LLVMContext &C = M.getContext();
   IntegerType *Int8Ty  = IntegerType::getInt8Ty(C);
@@ -304,6 +309,11 @@ bool instrumentFunction(Function &F) {
         IRB.CreateStore(ConstantInt::get(Int32Ty, cur_loc >> 1), AFLPrevLoc);
     Store->setMetadata(M.getMDKindID("nosanitize"), MDNode::get(C, std::nullopt));
   }
+
+  symbolizer.shortCircuitExpressionUses();
+
+  assert(!verifyFunction(F, &errs()) &&
+         "SymbolizePass produced invalid bitcode");
 
   return true;
 }

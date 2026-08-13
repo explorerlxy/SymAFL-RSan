@@ -57,13 +57,18 @@
 #include "llvm/Pass.h"
 #include "llvm/Support/Casting.h"
 #include "llvm/Support/Debug.h"
+#include "llvm/Analysis/TargetTransformInfo.h"
+#include "llvm/CodeGen/SafeStack.h"
 #include "llvm/Support/ErrorHandling.h"
 #include "llvm/Support/MathExtras.h"
+#include "llvm/MC/TargetRegistry.h"
 #include "llvm/Support/raw_ostream.h"
 #include "llvm/Target/TargetMachine.h"
+#include "llvm/Target/TargetOptions.h"
 #include "llvm/Transforms/Utils/BasicBlockUtils.h"
 #include "llvm/Transforms/Utils/Cloning.h"
 #include "llvm/Transforms/Utils/Local.h"
+#include "llvm/Transforms/Utils/ModuleUtils.h"
 #include <algorithm>
 #include <cassert>
 #include <cstdint>
@@ -932,7 +937,8 @@ class SizedStackRuntime {
   static uint64_t roundUpToSizeClass(uint64_t Size);
 
 
-  GlobalVariable *createStackPtrArray(StringRef varName, size_t count);
+  GlobalVariable *createStackPtrArray(StringRef varName, size_t count,
+                                      bool IsExternal = false);
   GlobalVariable *createStackPtrCount(StringRef varName, size_t count);
   GlobalVariable *createSizeClassArray(StringRef varName);
 
@@ -961,6 +967,13 @@ public:
 
   bool initialize();
   bool finalize();
+
+  /// M2-A (ADR 0008): rewires the swiftsan runtime's references
+  /// (__sizedstack_ptrs / __sizedstack_sizeclasses declarations) to the
+  /// final arrays created by the front-end pass. Called at link time (from
+  /// the legacy pass or a later new-PM run) when the runtime objects are
+  /// finally part of the module and the instrumentation flag is already set.
+  void finalizeStaticReplace();
 
   std::string getStackID(const AllocaInst &AI);
   std::string getStackID(const Argument &Arg);
@@ -5072,35 +5085,61 @@ bool SizedStackRuntime::finalize() {
 #endif
 
   // Replace temporary stack pointer array with a properly sized one.
-  GlobalVariable *stackPointerArrayFinal = createStackPtrArray(kUnsafeStackPtrVarFinal, typeIndexNext);
+  GlobalVariable *stackPointerArrayFinal =
+      createStackPtrArray(kUnsafeStackPtrVarFinal, typeIndexNext,
+                          /*IsExternal=*/true);
   replaceUsesWithCast(stackPointerArray, stackPointerArrayFinal);
   stackPointerArray->eraseFromParent();
   stackPointerArray = nullptr;
 
-  // Replace static library stack pointer array with the newly allocated one.
-  GlobalVariable *stackPointerArrayStatic = dyn_cast_or_null<GlobalVariable>(M.getNamedValue(kUnsafeStackPtrVar));
+  // M2-A (ADR 0008): the size-class array must exist for the runtime to
+  // resolve even when the swiftsan static library is not part of this module
+  // yet (front-end pipeline). Create it unconditionally; finalizeStaticReplace
+  // later rewires the runtime's references to it.
+  GlobalVariable *sizeClassArrayFinal = dyn_cast_or_null<GlobalVariable>(
+      M.getNamedValue(kUnsafeStackSizeClassesVarFinal));
+  if (!sizeClassArrayFinal)
+    sizeClassArrayFinal = createSizeClassArray(kUnsafeStackSizeClassesVarFinal);
 
-  assert(stackPointerArrayStatic);
-  replaceUsesWithCast(stackPointerArrayStatic, stackPointerArrayFinal);
-  stackPointerArrayStatic->eraseFromParent();
+  // Provide stack pointer count and assigned size classes to static library.
+  GlobalVariable *StackPtrCountGV =
+      createStackPtrCount(kUnsafeStackPtrCountVar, typeIndexNext);
 
-  // Replace static library size class array with a properly sized and initialized one.
-  // The array might not exist; it gets optimized out when DISABLE_SLOWPATH is
-  // set in the static library
-  GlobalVariable *sizeClassArrayStatic = dyn_cast_or_null<GlobalVariable>(M.getNamedValue(kUnsafeStackSizeClassesVar));
-  if (sizeClassArrayStatic) {
-    GlobalVariable *sizeClassArrayFinal = createSizeClassArray(kUnsafeStackSizeClassesVarFinal);
+  // M2-A (ADR 0008): the runtime-facing globals are only referenced by the
+  // swiftsan runtime objects that enter the module at LTO link time; without
+  // a local use, GlobalOpt drops them in the front-end pipeline. Mark them
+  // compiler-used so the final symbols survive to the link.
+  appendToCompilerUsed(M, {stackPointerArrayFinal, sizeClassArrayFinal,
+                           StackPtrCountGV});
+
+  // Replace static library declarations with the newly allocated arrays when
+  // they are part of this module (link-time flow).
+  finalizeStaticReplace();
+
+  return true;
+}
+
+void SizedStackRuntime::finalizeStaticReplace() {
+  GlobalVariable *stackPointerArrayFinal = dyn_cast_or_null<GlobalVariable>(
+      M.getNamedValue(kUnsafeStackPtrVarFinal));
+  if (!stackPointerArrayFinal)
+    return; // front-end pass did not run (legacy-only flow does the full pass)
+
+  GlobalVariable *stackPointerArrayStatic =
+      dyn_cast_or_null<GlobalVariable>(M.getNamedValue(kUnsafeStackPtrVar));
+  if (stackPointerArrayStatic) {
+    replaceUsesWithCast(stackPointerArrayStatic, stackPointerArrayFinal);
+    stackPointerArrayStatic->eraseFromParent();
+  }
+
+  GlobalVariable *sizeClassArrayStatic = dyn_cast_or_null<GlobalVariable>(
+      M.getNamedValue(kUnsafeStackSizeClassesVar));
+  GlobalVariable *sizeClassArrayFinal = dyn_cast_or_null<GlobalVariable>(
+      M.getNamedValue(kUnsafeStackSizeClassesVarFinal));
+  if (sizeClassArrayStatic && sizeClassArrayFinal) {
     replaceUsesWithCast(sizeClassArrayStatic, sizeClassArrayFinal);
     sizeClassArrayStatic->eraseFromParent();
   }
-
-  // Provide stack pointer count and assigned size classes to static library.
-  createStackPtrCount(kUnsafeStackPtrCountVar, typeIndexNext);
-
-
-
-
-  return true;
 }
 
 size_t SizedStackRuntime::getTypeIndex(StringRef typeId) {
@@ -5134,7 +5173,9 @@ Value *SizedStackRuntime::getOrCreateUnsafeStackPtr(IRBuilder<> &IRB, Function &
   return IRB.CreateInBoundsGEP(cursedType, stackPointerArray, {IRB.getInt32(0), IRB.getInt32(typeIndex)});
 }
 
-GlobalVariable *SizedStackRuntime::createStackPtrArray(StringRef varName, size_t count) {
+GlobalVariable *SizedStackRuntime::createStackPtrArray(StringRef varName,
+                                                       size_t count,
+                                                       bool IsExternal) {
   // We need an array of count stack pointers.
   ArrayType *type = ArrayType::get(StackPtrTy, count);
   cursedType = type;
@@ -5147,12 +5188,20 @@ GlobalVariable *SizedStackRuntime::createStackPtrArray(StringRef varName, size_t
     initElements.push_back(initElement);
   Constant *init = ConstantArray::get(type, initElements);
 
+  // M2-A (ADR 0008): the final arrays must be visible across translation
+  // units when the pass runs in the front-end pipeline (each TU instruments
+  // independently and the LTO linker merges them). LinkOnceODR keeps one
+  // copy for identical definitions. The temporary array stays private.
+  GlobalValue::LinkageTypes Linkage = IsExternal
+      ? GlobalValue::LinkOnceODRLinkage
+      : GlobalValue::PrivateLinkage;
+
   // Create the global var.
   return new GlobalVariable(
       /*Module=*/M,
       /*Type=*/type,
       /*isConstant=*/false,
-      /*Linkage=*/GlobalValue::PrivateLinkage,
+      /*Linkage=*/Linkage,
       /*Initializer=*/init,
       /*Name=*/varName,
       /*InsertBefore=*/nullptr,
@@ -5161,12 +5210,21 @@ GlobalVariable *SizedStackRuntime::createStackPtrArray(StringRef varName, size_t
 }
 
 GlobalVariable *SizedStackRuntime::createStackPtrCount(StringRef varName, size_t count) {
-  GlobalVariable *gv = cast<GlobalVariable>(M.getNamedValue(varName));
+  GlobalVariable *gv = dyn_cast_or_null<GlobalVariable>(M.getNamedValue(varName));
+  // M2-A (ADR 0008): the runtime declaration may be absent when the pass
+  // runs in the front-end pipeline; create it (setInitializer below turns it
+  // into a definition).
+  if (!gv)
+    gv = new GlobalVariable(M, IntegerType::get(M.getContext(), 64), false,
+                            GlobalValue::ExternalLinkage, nullptr, varName);
   IntegerType *type = IntegerType::get(M.getContext(), 64);
   Constant *init = ConstantInt::get(type, count);
   gv->setInitializer(init);
   gv->setConstant(true);
-  gv->setLinkage(GlobalValue::PrivateLinkage);
+  // M2-A (ADR 0008): LinkOnceODR so the definition survives the LTO module
+  // merge when every front-end TU creates one (the runtime references the
+  // external symbol and must resolve to a single copy).
+  gv->setLinkage(GlobalValue::LinkOnceODRLinkage);
   return gv;
 }
 
@@ -5178,11 +5236,12 @@ GlobalVariable *SizedStackRuntime::createSizeClassArray(StringRef varName) {
     initElements.push_back(ConstantInt::get(Int64Ty, SC));
   Constant *init = ConstantArray::get(type, initElements);
 
+  // M2-A (ADR 0008): LinkOnceODR, see createStackPtrArray.
   return new GlobalVariable(
       /*Module=*/M,
       /*Type=*/type,
       /*isConstant=*/true,
-      /*Linkage=*/GlobalValue::PrivateLinkage,
+      /*Linkage=*/GlobalValue::LinkOnceODRLinkage,
       /*Initializer=*/init,
       /*Name=*/varName,
       /*InsertBefore=*/nullptr,
@@ -5369,6 +5428,19 @@ public:
 
   bool runOnModule(Module &M) override {
 
+    // M2-A (ADR 0008): the new-PM SafeStackPass (front-end pipeline, before
+    // OptimizerLast) has already instrumented this module; skip the codegen-
+    // level legacy pass to avoid double instrumentation. The swiftsan runtime
+    // objects are only present at link time, so rewire their references to
+    // the final arrays created by the front-end pass.
+    if (M.getModuleFlag("llvm.safestack.done")) {
+      LLVM_DEBUG(dbgs() << "[SafeStack] module already instrumented by new PM; "
+                           "skipping legacy pass\n");
+      SizedStackRuntime RT(M);
+      RT.finalizeStaticReplace();
+      return false;
+    }
+
     if(ClDelayInstrumentation){
       errs() << "ClDelayInstrumentation was set, two-stage LTO... do not instrument yet\n";
       return false;
@@ -5445,9 +5517,86 @@ public:
     M.print(OS2, nullptr);
 #endif
 
+    // M2-A (ADR 0008): mark the module instrumented so the new-PM
+    // SafeStackPass skips it on any later pipeline run.
+    M.addModuleFlag(llvm::Module::Error, "llvm.safestack.done", 1);
+
     return Changed;
   }
 };
+
+//===----------------------------------------------------------------------===//
+// M2-A (ADR 0008): new-PM entry points.
+//
+// SafeStackPass (registered in PassBuilderPipelines just before the
+// OptimizerLast extension point) runs the same instrumentation as the legacy
+// pass, but in the module optimization pipeline: RSan generates its checks
+// first, then SymSan's TaintPass (an OptimizerLast plugin) symbolizes them.
+// The TargetLowering needed for the unsafe-stack pointer location comes from
+// a TargetMachine built here (CPU/features default to "generic";
+// per-function target-cpu / target-features attributes are honored by
+// getSubtargetImpl). The legacy codegen pass is skipped via the
+// "llvm.safestack.done" module flag.
+//===----------------------------------------------------------------------===//
+
+static bool runOnFunctionNewPM(Function &F, FunctionAnalysisManager &FAM,
+                               const TargetMachine &TM, SizedStackRuntime &RT) {
+  if (!F.hasFnAttribute(Attribute::SafeStack)) {
+    LLVM_DEBUG(dbgs() << "[SafeStack]     safestack is not requested"
+                         " for this function\n");
+    return false;
+  }
+
+  if (F.isDeclaration()) {
+    LLVM_DEBUG(dbgs() << "[SafeStack]     function definition"
+                         " is not available\n");
+    return false;
+  }
+  if (F.hasFnAttribute(llvm::Attribute::DisableSanitizerInstrumentation)) {
+    errs() << "Not instrumenting function (Disable San): " << F.getName()
+           << "\n";
+    return false;
+  }
+
+  const TargetLoweringBase *TL = TM.getSubtargetImpl(F)->getTargetLowering();
+  if (!TL)
+    report_fatal_error("TargetLowering instance is required");
+
+  const DataLayout &DL = F.getParent()->getDataLayout();
+  auto &TLI = FAM.getResult<TargetLibraryAnalysis>(F);
+  auto &ACT = FAM.getResult<AssumptionAnalysis>(F);
+
+  DominatorTree &DT = FAM.getResult<DominatorTreeAnalysis>(F);
+
+  LoopInfo LI(DT);
+
+  DomTreeUpdater DTU(&DT, DomTreeUpdater::UpdateStrategy::Lazy);
+
+  ScalarEvolution SE(F, TLI, ACT, DT, LI);
+
+  DominanceFrontier DF;
+  DF.analyze(DT);
+
+  AliasAnalysis &AA = FAM.getResult<AAManager>(F);
+
+  bool r =
+      SafeStack(F, *TL, DL, &DTU, SE, DT, DF, RT, TLI, LI, &AA).run();
+
+  const TargetTransformInfo &TTI = FAM.getResult<TargetIRAnalysis>(F);
+
+  if (!F.hasOptNone()) {
+    // Recalculate DTU for simplifyCFG
+    DT.recalculate(F);
+    DTU.recalculate(F);
+
+    for (BasicBlock &BB : F) {
+      // Cleanup possible branch to unconditional branch (from conditional
+      // range optimizations)
+      simplifyCFG(&BB, TTI, &DTU);
+    }
+  }
+  return r;
+}
 
 } // end anonymous namespace
 
@@ -5465,3 +5614,94 @@ INITIALIZE_PASS_END(SafeStackLegacyPass, DEBUG_TYPE,
                     "Safe Stack instrumentation pass", false, false)
 
 ModulePass *llvm::createSafeStackPass() { return new SafeStackLegacyPass(); }
+
+//===----------------------------------------------------------------------===//
+// SafeStackPass (new PM)
+//===----------------------------------------------------------------------===//
+
+PreservedAnalyses SafeStackPass::run(Module &M, ModuleAnalysisManager &MAM) {
+  if (M.getModuleFlag("llvm.safestack.done")) {
+    LLVM_DEBUG(dbgs() << "[SafeStack] module already instrumented; skipping\n");
+    // M2-A (ADR 0008): a later pipeline run (e.g. the ThinLTO post-link
+    // pipeline) sees the swiftsan runtime objects; rewire their references to
+    // the final arrays created earlier.
+    SizedStackRuntime RT(M);
+    RT.finalizeStaticReplace();
+    return PreservedAnalyses::all();
+  }
+
+  if (ClDelayInstrumentation) {
+    errs() << "ClDelayInstrumentation was set, two-stage LTO... do not "
+              "instrument yet\n";
+    return PreservedAnalyses::all();
+  }
+
+#ifndef USE_GOLD_PASSES
+  if (!ClSizedStack) return PreservedAnalyses::all();
+#endif
+
+  Triple TargetTriple = Triple(M.getTargetTriple());
+  if (TargetTriple.getArch() == Triple::x86_64) {
+    // XXX: check if LAM is available
+    isImplicitTagging = true;
+    isX86 = true;
+  } else if (TargetTriple.isAArch64()) {
+    isImplicitTagging = false;
+    isX86 = false;
+  } else {
+    errs() << "SafeStack: Unsupported Arch\n";
+    return PreservedAnalyses::all();
+  }
+
+  bool isSafeStack = false;
+  for (Function &F : M) {
+    if (F.hasFnAttribute(Attribute::SafeStack)) {
+      isSafeStack = true;
+      break;
+    }
+  }
+
+  if (!isSafeStack) {
+    return PreservedAnalyses::all();
+  }
+
+  // Build a TargetMachine to obtain the TargetLoweringBase used for the
+  // unsafe-stack pointer location. CPU/features default to "generic";
+  // getSubtargetImpl honors per-function target-cpu / target-features
+  // attributes if present.
+  Triple TT(M.getTargetTriple());
+  std::string Error;
+  const Target *TheTarget = TargetRegistry::lookupTarget("", TT, Error);
+  if (!TheTarget) {
+    errs() << "SafeStack: cannot create TargetMachine for " << TT.str()
+           << ": " << Error << "\n";
+    return PreservedAnalyses::all();
+  }
+  TargetOptions TO;
+  std::unique_ptr<TargetMachine> TM(
+      TheTarget->createTargetMachine(TT.str(), "generic", "", TO,
+                                     std::nullopt));
+
+  auto &FAM =
+      MAM.getResult<FunctionAnalysisManagerModuleProxy>(M).getManager();
+
+  SizedStackRuntime RT(M);
+  bool Changed = RT.initialize();
+
+  for (Function &F : M) {
+    if (shouldInstrument(F)) {
+      Changed |= runOnFunctionNewPM(F, FAM, *TM, RT);
+    }
+  }
+
+  Changed |= RT.finalize();
+
+  GlobalRedzones GR;
+  GR.runOnModule(M);
+
+  // Prevent the legacy codegen-level pass (TargetPassConfig) from
+  // instrumenting this module a second time.
+  M.addModuleFlag(llvm::Module::Error, "llvm.safestack.done", 1);
+
+  return Changed ? PreservedAnalyses::none() : PreservedAnalyses::all();
+}

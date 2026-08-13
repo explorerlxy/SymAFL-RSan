@@ -23,6 +23,7 @@
 #include "llvm/Analysis/ProfileSummaryInfo.h"
 #include "llvm/Analysis/ScopedNoAliasAA.h"
 #include "llvm/Analysis/TypeBasedAliasAnalysis.h"
+#include "llvm/CodeGen/SafeStack.h"
 #include "llvm/IR/PassManager.h"
 #include "llvm/Passes/OptimizationLevel.h"
 #include "llvm/Passes/PassBuilder.h"
@@ -1354,6 +1355,13 @@ PassBuilder::buildModuleOptimizationPipeline(OptimizationLevel Level,
   // Add the core optimizing pipeline.
   MPM.addPass(createModuleToFunctionPassAdaptor(std::move(OptimizePM),
                                                 PTO.EagerlyInvalidateAnalyses));
+
+  // M2-A (ADR 0008): RSan (SafeStackPass) must instrument before the
+  // OptimizerLast extension point so SymSan's TaintPass plugin (an
+  // OptimizerLast callback) symbolizes the generated memory-safety checks.
+  // The legacy codegen-level registration (TargetPassConfig) is skipped via
+  // the "llvm.safestack.done" module flag.
+  MPM.addPass(SafeStackPass());
 
   for (auto &C : OptimizerLastEPCallbacks)
     C(MPM, Level);
